@@ -22,7 +22,7 @@ class PhrasesController < ApplicationController
         phrase_parse
       else
         format.html { render :new }
-        format.json { render json: @grumble.errors, status: :unprocessable_entity }
+        format.json { render json: @phrase.errors, status: :unprocessable_entity }
       end
     end
   end
