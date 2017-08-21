@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20170818172727) do
   enable_extension "plpgsql"
 
   create_table "photos", force: :cascade do |t|
-    t.text "photo_url"
+    t.string "photo_url"
     t.string "tags"
     t.datetime "created_on"
     t.bigint "phrase_id"
