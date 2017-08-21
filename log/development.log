@@ -4489,3 +4489,967 @@ Completed 200 OK in 2165ms (Views: 27.1ms | ActiveRecord: 17.6ms)
   [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" LIMIT $1[0m  [["LIMIT", 11]]
   [1m[36mPhoto Load (6.0ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE (Country) LIMIT $1[0m  [["LIMIT", 11]]
   [1m[36mPhoto Load (1.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3784842769760408160)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3784842769760408160)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (324.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "TweetPics_development"[0m
+  [1m[35m (304.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "TweetPics_test"[0m
+  [1m[35m (457.9ms)[0m  [1m[35mCREATE DATABASE "TweetPics_development" ENCODING = 'unicode'[0m
+  [1m[35m (426.6ms)[0m  [1m[35mCREATE DATABASE "TweetPics_test" ENCODING = 'unicode'[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3784842769760408160)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePhrases (20170818172129)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "phrases" ("id" bigserial primary key, "content" character varying, "created_on" timestamp)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170818172129"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePhotos (20170818172727)
+  [1m[35m (5.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "photos" ("id" bigserial primary key, "photo_url" character varying, "tags" character varying, "created_on" timestamp, "phrase_id" bigint)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_photos_on_phrase_id" ON "photos"  ("phrase_id")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170818172727"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-08-21 19:21:56.683311"], ["updated_at", "2017-08-21 19:21:56.683311"]]
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3784842769760408160)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/twics" for 127.0.0.1 at 2017-08-21 15:22:07 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/twics"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-08-21 15:22:22 -0400
+Processing by PhrasesController#index as HTML
+  Rendering phrases/index.html.erb within layouts/application
+  Rendered phrases/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 198ms (Views: 188.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-21 15:22:26 -0400
+Processing by PhrasesController#index as HTML
+  Rendering phrases/index.html.erb within layouts/application
+  Rendered phrases/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2017-08-21 15:22:28 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/players"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/phrases/new" for 127.0.0.1 at 2017-08-21 15:22:28 -0400
+Processing by PhrasesController#new as HTML
+  Rendering phrases/new.html.erb within layouts/application
+  Rendered phrases/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 70ms (Views: 19.2ms | ActiveRecord: 18.4ms)
+
+
+Started GET "/phrases/new" for 127.0.0.1 at 2017-08-21 15:22:29 -0400
+Processing by PhrasesController#new as HTML
+  Rendering phrases/new.html.erb within layouts/application
+  Rendered phrases/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-21 15:22:33 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4g6QvueH9wjO9f8qYWEvEc/XhjCUmVTvJHlSKRRq8fBRcvSpfjR5C3HBBbWcebhz69hdEiN6xkAQxbhE8M0xVA==", "phrase"=>{"content"=>"hello world"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.0ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "hello world"], ["created_on", "2017-08-21 19:22:33.634587"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/phrases/1
+Completed 302 Found in 10ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/phrases/1" for 127.0.0.1 at 2017-08-21 15:22:33 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.5ms)
+
+
+  
+FlickRaw::FlickrAppNotConfigured (No API key defined!):
+  
+app/controllers/phrases_controller.rb:34:in `block in query_flickr'
+app/controllers/phrases_controller.rb:31:in `each'
+app/controllers/phrases_controller.rb:31:in `query_flickr'
+app/controllers/phrases_controller.rb:26:in `phrase_parse'
+app/controllers/phrases_controller.rb:52:in `show'
+Started GET "/twics" for 127.0.0.1 at 2017-08-21 15:26:28 -0400
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/twics"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/phrases/1" for 127.0.0.1 at 2017-08-21 15:26:35 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhrase Load (1.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 23.3ms)
+
+
+  
+FlickRaw::FlickrAppNotConfigured (No shared secret defined!):
+  
+app/controllers/phrases_controller.rb:34:in `block in query_flickr'
+app/controllers/phrases_controller.rb:31:in `each'
+app/controllers/phrases_controller.rb:31:in `query_flickr'
+app/controllers/phrases_controller.rb:26:in `phrase_parse'
+app/controllers/phrases_controller.rb:52:in `show'
+Started GET "/phrases/1" for 127.0.0.1 at 2017-08-21 15:26:37 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.4ms)
+
+
+  
+FlickRaw::FlickrAppNotConfigured (No shared secret defined!):
+  
+app/controllers/phrases_controller.rb:34:in `block in query_flickr'
+app/controllers/phrases_controller.rb:31:in `each'
+app/controllers/phrases_controller.rb:31:in `query_flickr'
+app/controllers/phrases_controller.rb:26:in `phrase_parse'
+app/controllers/phrases_controller.rb:52:in `show'
+Started GET "/phrases/new" for 127.0.0.1 at 2017-08-21 15:26:40 -0400
+Processing by PhrasesController#new as HTML
+  Rendering phrases/new.html.erb within layouts/application
+  Rendered phrases/new.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 185ms (Views: 182.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/phrases/new" for 127.0.0.1 at 2017-08-21 15:26:41 -0400
+Processing by PhrasesController#new as HTML
+  Rendering phrases/new.html.erb within layouts/application
+  Rendered phrases/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 38ms (Views: 36.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-21 15:26:49 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2WEzyBTwNnhBKfRRWROfAXgi3Gx6lKLV+8MkKMDQcVVqHVffjUO4e/4dDs6kCwhjXC0HTs13MHrPf85FJHex8Q==", "phrase"=>{"content"=>"hello world"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (15.1ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "hello world"], ["created_on", "2017-08-21 19:26:49.340289"]]
+  [1m[35m (94.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/phrases/2
+Completed 302 Found in 115ms (ActiveRecord: 110.1ms)
+
+
+Started GET "/phrases/2" for 127.0.0.1 at 2017-08-21 15:26:49 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPhrase Load (0.6ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.9ms)
+
+
+  
+FlickRaw::FlickrAppNotConfigured (No shared secret defined!):
+  
+app/controllers/phrases_controller.rb:34:in `block in query_flickr'
+app/controllers/phrases_controller.rb:31:in `each'
+app/controllers/phrases_controller.rb:31:in `query_flickr'
+app/controllers/phrases_controller.rb:26:in `phrase_parse'
+app/controllers/phrases_controller.rb:52:in `show'
+Started GET "/phrases/2" for 127.0.0.1 at 2017-08-21 15:27:28 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 8.9ms)
+
+
+  
+FlickRaw::FlickrAppNotConfigured (No shared secret defined!):
+  
+app/controllers/phrases_controller.rb:34:in `block in query_flickr'
+app/controllers/phrases_controller.rb:31:in `each'
+app/controllers/phrases_controller.rb:31:in `query_flickr'
+app/controllers/phrases_controller.rb:26:in `phrase_parse'
+app/controllers/phrases_controller.rb:52:in `show'
+Started GET "/phrases/new" for 127.0.0.1 at 2017-08-21 15:27:32 -0400
+Processing by PhrasesController#new as HTML
+  Rendering phrases/new.html.erb within layouts/application
+  Rendered phrases/new.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 221ms (Views: 218.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-21 15:27:37 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xXX57WJ69u9igrP4kRmEih90TZT61quJ8Wfv7VE2KqR2CZ36+8l47N22SWdsARPoO3uWtk01OSbF2wWAtZHqAA==", "phrase"=>{"content"=>"help me"}, "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "help me"], ["created_on", "2017-08-21 19:27:37.617928"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/phrases/3
+Completed 302 Found in 36ms (ActiveRecord: 21.0ms)
+
+
+Started GET "/phrases/3" for 127.0.0.1 at 2017-08-21 15:27:37 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPhrase Load (0.7ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.9ms)
+
+
+  
+FlickRaw::FlickrAppNotConfigured (No shared secret defined!):
+  
+app/controllers/phrases_controller.rb:34:in `block in query_flickr'
+app/controllers/phrases_controller.rb:31:in `each'
+app/controllers/phrases_controller.rb:31:in `query_flickr'
+app/controllers/phrases_controller.rb:26:in `phrase_parse'
+app/controllers/phrases_controller.rb:52:in `show'
+Started GET "/phrases/3" for 127.0.0.1 at 2017-08-21 15:28:27 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+FlickRaw::FlickrAppNotConfigured (No shared secret defined!):
+  
+app/controllers/phrases_controller.rb:34:in `block in query_flickr'
+app/controllers/phrases_controller.rb:31:in `each'
+app/controllers/phrases_controller.rb:31:in `query_flickr'
+app/controllers/phrases_controller.rb:26:in `phrase_parse'
+app/controllers/phrases_controller.rb:52:in `show'
+Started GET "/phrases/new" for 127.0.0.1 at 2017-08-21 15:28:32 -0400
+Processing by PhrasesController#new as HTML
+  Rendering phrases/new.html.erb within layouts/application
+  Rendered phrases/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 33ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-21 15:28:37 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xClqNmg6movT5+zZgTSY+3Xje8JldhPk8tstyvtR2gp3VQ4h8YkUiGzTFkZ8LA+ZUeyg4NKVgUvGZ8enH/Yarg==", "phrase"=>{"content"=>"hello world"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "hello world"], ["created_on", "2017-08-21 19:28:37.050013"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/phrases/4
+Completed 302 Found in 4ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/phrases/4" for 127.0.0.1 at 2017-08-21 15:28:37 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPhrase Load (0.5ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.6ms)
+
+
+  
+FlickRaw::FlickrAppNotConfigured (No shared secret defined!):
+  
+app/controllers/phrases_controller.rb:34:in `block in query_flickr'
+app/controllers/phrases_controller.rb:31:in `each'
+app/controllers/phrases_controller.rb:31:in `query_flickr'
+app/controllers/phrases_controller.rb:26:in `phrase_parse'
+app/controllers/phrases_controller.rb:52:in `show'
+Started GET "/phrases/4" for 127.0.0.1 at 2017-08-21 15:30:40 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+FlickRaw::FlickrAppNotConfigured (No shared secret defined!):
+  
+app/controllers/phrases_controller.rb:34:in `block in query_flickr'
+app/controllers/phrases_controller.rb:31:in `each'
+app/controllers/phrases_controller.rb:31:in `query_flickr'
+app/controllers/phrases_controller.rb:26:in `phrase_parse'
+app/controllers/phrases_controller.rb:52:in `show'
+Started GET "/phrases/new" for 127.0.0.1 at 2017-08-21 15:30:45 -0400
+Processing by PhrasesController#new as HTML
+  Rendering phrases/new.html.erb within layouts/application
+  Rendered phrases/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 42ms (Views: 39.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/phrases/new" for 127.0.0.1 at 2017-08-21 15:30:50 -0400
+Processing by PhrasesController#new as HTML
+  Rendering phrases/new.html.erb within layouts/application
+  Rendered phrases/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-21 15:30:57 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yr9p39IlIt3kyt8Z5CPYFfDvPwQL0GKT7xYXKr0Xn3nRww3IS5as3lv+JYYZO0931ODkJrwz8Dzbqv1HWbBf3Q==", "phrase"=>{"content"=>"rails work"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "rails work"], ["created_on", "2017-08-21 19:30:57.345468"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/phrases/5
+Completed 302 Found in 7ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/phrases/5" for 127.0.0.1 at 2017-08-21 15:30:57 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPhrase Load (0.6ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.6ms)
+
+
+  
+FlickRaw::FlickrAppNotConfigured (No shared secret defined!):
+  
+app/controllers/phrases_controller.rb:34:in `block in query_flickr'
+app/controllers/phrases_controller.rb:31:in `each'
+app/controllers/phrases_controller.rb:31:in `query_flickr'
+app/controllers/phrases_controller.rb:26:in `phrase_parse'
+app/controllers/phrases_controller.rb:52:in `show'
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/phrases" for 127.0.0.1 at 2017-08-21 15:36:19 -0400
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhrasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C1zo3UBu/Mh+9y6RQ3Uq2F1iaE6/XohC1ws4QrpGEIS4IIzK2d1yy8HD1A6+bb26eW2zbAi9Gu3jt9IvXuHQIA==", "phrase"=>{"content"=>"phrase 6"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "phrase 6"], ["created_on", "2017-08-21 19:36:19.723456"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/phrases/6
+Completed 302 Found in 42ms (ActiveRecord: 8.4ms)
+
+
+Started GET "/phrases/6" for 127.0.0.1 at 2017-08-21 15:36:19 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPhrase Load (0.6ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.6ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (7.3ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4333/36456937362_8ba5d0204c.jpg"], ["tags", "phrase"], ["created_on", "2017-08-21 19:36:21.022674"], ["phrase_id", 6]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4351/36545745312_ab6d731148.jpg"], ["tags", "6"], ["created_on", "2017-08-21 19:36:21.498439"], ["phrase_id", 6]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering phrases/show.html.erb within layouts/application
+  Rendered phrases/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 1972ms (Views: 207.3ms | ActiveRecord: 17.0ms)
+
+
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/phrases/new" for 127.0.0.1 at 2017-08-21 15:37:04 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhrasesController#new as HTML
+  Rendering phrases/new.html.erb within layouts/application
+  Rendered phrases/new.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 187ms (Views: 162.4ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-21 15:37:12 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vb/j3GvmqC9FVaKtyNk1TTEKCD5AZYc51nwSbAw8wakOw4fL8lUmLPphWDI1waIvFQXTHPeGFZbiwPgB6JsBDQ==", "phrase"=>{"content"=>"phrase 7"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.3ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "phrase 7"], ["created_on", "2017-08-21 19:37:12.745052"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/phrases/7
+Completed 302 Found in 34ms (ActiveRecord: 19.0ms)
+
+
+Started GET "/phrases/7" for 127.0.0.1 at 2017-08-21 15:37:12 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPhrase Load (0.5ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4333/36456937362_8ba5d0204c.jpg"], ["tags", "phrase"], ["created_on", "2017-08-21 19:37:13.645208"], ["phrase_id", 7]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4406/36319733040_c20aaf0f44.jpg"], ["tags", "7"], ["created_on", "2017-08-21 19:37:14.232294"], ["phrase_id", 7]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering phrases/show.html.erb within layouts/application
+  Rendered phrases/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1490ms (Views: 16.5ms | ActiveRecord: 15.5ms)
+
+
+Started GET "/phrases/new" for 127.0.0.1 at 2017-08-21 15:37:17 -0400
+Processing by PhrasesController#new as HTML
+  Rendering phrases/new.html.erb within layouts/application
+  Rendered phrases/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 27ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/phrases/new" for 127.0.0.1 at 2017-08-21 15:37:17 -0400
+Processing by PhrasesController#new as HTML
+  Rendering phrases/new.html.erb within layouts/application
+  Rendered phrases/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-21 15:37:21 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rtsIb+IYGBmotSRzNrLGruaL/RnUy9QNPBnVzBLf6NUdp2x4e6uWGheB3uzLqlHMwoQmO2MoRqIIpT+h9ngocQ==", "phrase"=>{"content"=>"phrase 8"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "phrase 8"], ["created_on", "2017-08-21 19:37:21.775543"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/phrases/8
+Completed 302 Found in 7ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/phrases/8" for 127.0.0.1 at 2017-08-21 15:37:21 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPhrase Load (1.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.1ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4333/36456937362_8ba5d0204c.jpg"], ["tags", "phrase"], ["created_on", "2017-08-21 19:37:22.322089"], ["phrase_id", 8]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (1.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4426/35877540694_6d99aa4e80.jpg"], ["tags", "8"], ["created_on", "2017-08-21 19:37:22.840346"], ["phrase_id", 8]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering phrases/show.html.erb within layouts/application
+  Rendered phrases/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 1071ms (Views: 16.4ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/phrases/new" for 127.0.0.1 at 2017-08-21 15:37:26 -0400
+Processing by PhrasesController#new as HTML
+  Rendering phrases/new.html.erb within layouts/application
+  Rendered phrases/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-21 15:37:30 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z7ykDtkV21Higq4PTEjQSux9f+fXRx9Lu/0BvJmi+gt8wMAZQKZVUl22VJCxUEcoyHKkxWCkjeSPQevRfQU6rw==", "phrase"=>{"content"=>"phrase 9"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "phrase 9"], ["created_on", "2017-08-21 19:37:30.844160"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/phrases/9
+Completed 302 Found in 4ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/phrases/9" for 127.0.0.1 at 2017-08-21 15:37:30 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4333/36456937362_8ba5d0204c.jpg"], ["tags", "phrase"], ["created_on", "2017-08-21 19:37:31.339382"], ["phrase_id", 9]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4433/36716654305_296eda8440.jpg"], ["tags", "9"], ["created_on", "2017-08-21 19:37:31.843711"], ["phrase_id", 9]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering phrases/show.html.erb within layouts/application
+  Rendered phrases/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1005ms (Views: 13.2ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/phrases/new" for 127.0.0.1 at 2017-08-21 15:37:35 -0400
+Processing by PhrasesController#new as HTML
+  Rendering phrases/new.html.erb within layouts/application
+  Rendered phrases/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 36ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-21 15:37:40 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e/YBKZBGqEk1Kk8aLJjh5lun2C9pCwuJ928rPcaLxpfIimU+CfUmSooetYXRgHaEf6gDDd7omSbD08FQIiwGMw==", "phrase"=>{"content"=>"phrase 10"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "phrase 10"], ["created_on", "2017-08-21 19:37:40.532637"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/phrases/10
+Completed 302 Found in 5ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/phrases/10" for 127.0.0.1 at 2017-08-21 15:37:40 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4333/36456937362_8ba5d0204c.jpg"], ["tags", "phrase"], ["created_on", "2017-08-21 19:37:41.164494"], ["phrase_id", 10]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4430/36672055346_1227382fe8.jpg"], ["tags", "10"], ["created_on", "2017-08-21 19:37:41.680845"], ["phrase_id", 10]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering phrases/show.html.erb within layouts/application
+  Rendered phrases/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1153ms (Views: 15.8ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/phrases/new" for 127.0.0.1 at 2017-08-21 15:37:45 -0400
+Processing by PhrasesController#new as HTML
+  Rendering phrases/new.html.erb within layouts/application
+  Rendered phrases/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-21 15:37:51 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qaTzhnny+N+2U+iApbgxWucwt1jAkHYoNTXilxGJuBoa2JeR4EF23AlnEh9YoKY4wz9sendz5IcBiQj69S54vg==", "phrase"=>{"content"=>"phrase 11"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "phrase 11"], ["created_on", "2017-08-21 19:37:51.045324"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/phrases/11
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/phrases/11" for 127.0.0.1 at 2017-08-21 15:37:51 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4333/36456937362_8ba5d0204c.jpg"], ["tags", "phrase"], ["created_on", "2017-08-21 19:37:51.617100"], ["phrase_id", 11]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4424/35909797633_e1e421989a.jpg"], ["tags", "11"], ["created_on", "2017-08-21 19:37:52.219557"], ["phrase_id", 11]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering phrases/show.html.erb within layouts/application
+  Rendered phrases/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 1181ms (Views: 17.4ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/phrases/new" for 127.0.0.1 at 2017-08-21 15:37:55 -0400
+Processing by PhrasesController#new as HTML
+  Rendering phrases/new.html.erb within layouts/application
+  Rendered phrases/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 25ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-21 15:37:59 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EaUDSpAi4qBFWB8wv3ChgzGojtpS2nlLaFjIEGMLVeOi2WddCZFso/ps5a9CaDbhFadV+OU56+Rc5CJ9h6yVRw==", "phrase"=>{"content"=>"phrase 12"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "phrase 12"], ["created_on", "2017-08-21 19:38:00.001388"]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/phrases/12
+Completed 302 Found in 6ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/phrases/12" for 127.0.0.1 at 2017-08-21 15:38:00 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4333/36456937362_8ba5d0204c.jpg"], ["tags", "phrase"], ["created_on", "2017-08-21 19:38:00.625624"], ["phrase_id", 12]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4428/36716684345_af6dbc52e3.jpg"], ["tags", "12"], ["created_on", "2017-08-21 19:38:01.235266"], ["phrase_id", 12]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering phrases/show.html.erb within layouts/application
+  Rendered phrases/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1246ms (Views: 18.6ms | ActiveRecord: 6.5ms)
+
+
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mPhrase Load (0.8ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
+Started GET "/" for 127.0.0.1 at 2017-08-21 15:50:54 -0400
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhrasesController#index as HTML
+  Rendering phrases/index.html.erb within layouts/application
+  Rendered phrases/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 288ms (Views: 260.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/twics" for 127.0.0.1 at 2017-08-21 15:51:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/twics"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/twics" for 127.0.0.1 at 2017-08-21 15:51:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/twics"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/phrases/12" for 127.0.0.1 at 2017-08-21 16:00:27 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPhrase Load (0.5ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4333/36456937362_8ba5d0204c.jpg"], ["tags", "phrase"], ["created_on", "2017-08-21 20:00:27.973092"], ["phrase_id", 12]]
+  [1m[35m (46.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4428/36716684345_af6dbc52e3.jpg"], ["tags", "12"], ["created_on", "2017-08-21 20:00:28.428612"], ["phrase_id", 12]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering phrases/show.html.erb within layouts/application
+  Rendered phrases/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 1439ms (Views: 70.8ms | ActiveRecord: 84.4ms)
+
+
+Started GET "/phrases/13" for 127.0.0.1 at 2017-08-21 16:00:30 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Phrase with 'id'=13):
+  
+app/controllers/phrases_controller.rb:49:in `show'
+Started GET "/phrases/12" for 127.0.0.1 at 2017-08-21 16:00:33 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+Started GET "/phrases/12" for 127.0.0.1 at 2017-08-21 16:00:33 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPhrase Load (0.9ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4333/36456937362_8ba5d0204c.jpg"], ["tags", "phrase"], ["created_on", "2017-08-21 20:00:33.959090"], ["phrase_id", 12]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4333/36456937362_8ba5d0204c.jpg"], ["tags", "phrase"], ["created_on", "2017-08-21 20:00:34.109547"], ["phrase_id", 12]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4428/36716684345_af6dbc52e3.jpg"], ["tags", "12"], ["created_on", "2017-08-21 20:00:34.274174"], ["phrase_id", 12]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering phrases/show.html.erb within layouts/application
+  Rendered phrases/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 753ms (Views: 17.4ms | ActiveRecord: 5.3ms)
+
+
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4428/36716684345_af6dbc52e3.jpg"], ["tags", "12"], ["created_on", "2017-08-21 20:00:34.479619"], ["phrase_id", 12]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering phrases/show.html.erb within layouts/application
+  Rendered phrases/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 880ms (Views: 23.7ms | ActiveRecord: 22.8ms)
+
+
+Started GET "/twics" for 127.0.0.1 at 2017-08-21 16:01:26 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/twics"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/twics" for 127.0.0.1 at 2017-08-21 16:01:28 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/twics"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/twics/10" for 127.0.0.1 at 2017-08-21 16:01:29 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/twics/10"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-08-21 16:01:48 -0400
+Processing by PhrasesController#index as HTML
+  Rendering phrases/index.html.erb within layouts/application
+  Rendered phrases/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/twics" for 127.0.0.1 at 2017-08-21 16:01:55 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/twics"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/twics" for 127.0.0.1 at 2017-08-21 16:01:56 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/twics"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
