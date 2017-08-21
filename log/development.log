@@ -4489,3 +4489,386 @@ Completed 200 OK in 2165ms (Views: 27.1ms | ActiveRecord: 17.6ms)
   [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" LIMIT $1[0m  [["LIMIT", 11]]
   [1m[36mPhoto Load (6.0ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE (Country) LIMIT $1[0m  [["LIMIT", 11]]
   [1m[36mPhoto Load (1.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+Started GET "/phrases/new" for 127.0.0.1 at 2017-08-21 15:27:24 -0400
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhrasesController#new as HTML
+  Rendering phrases/new.html.erb within layouts/application
+  Rendered phrases/new.html.erb within layouts/application (33.7ms)
+Completed 200 OK in 796ms (Views: 696.8ms | ActiveRecord: 28.3ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-21 15:27:33 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OrF0Yq/c5U1dUdDwg9NiIu3GkKzjvdMvJq7G5efWe1QHKXWmB+4J1WhOlzEOqbVmdMoKUF5j7J/4maJYlFlIaw==", "phrase"=>{"content"=>"House Maid Dog"}, "commit"=>"Submit"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (26.9ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "House Maid Dog"], ["created_on", "2017-08-21 19:27:33.982233"]]
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/phrases/4
+Completed 302 Found in 71ms (ActiveRecord: 51.3ms)
+
+
+Started GET "/phrases/4" for 127.0.0.1 at 2017-08-21 15:27:34 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPhrase Load (0.8ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.1ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.5ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (3.6ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4402/36312552470_f29fc0474d.jpg"], ["tags", "House"], ["created_on", "2017-08-21 19:27:34.806439"], ["phrase_id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4338/35882559474_34123ab8a0.jpg"], ["tags", "Maid"], ["created_on", "2017-08-21 19:27:35.258541"], ["phrase_id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4364/36579308101_0dce5e6e3f.jpg"], ["tags", "Dog"], ["created_on", "2017-08-21 19:27:35.645537"], ["phrase_id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering phrases/show.html.erb within layouts/application
+  Rendered phrases/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1656ms (Views: 45.7ms | ActiveRecord: 27.8ms)
+
+
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/phrases/new" for 127.0.0.1 at 2017-08-21 15:28:13 -0400
+Processing by PhrasesController#new as HTML
+  Rendering phrases/new.html.erb within layouts/application
+  Rendered phrases/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 135ms (Views: 121.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-21 15:28:33 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wz2bMnV3UOtdVbj8GkPEwuMOn106S7Rw+7s2wibySkxal/8Cpe9RUFtfU4MVx7DH1tzs1d+2ZWr5vCSK7TJVpg==", "phrase"=>{"content"=>"Cat Dog Man Woman"}, "commit"=>"Submit"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "Cat Dog Man Woman"], ["created_on", "2017-08-21 19:28:33.878467"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/phrases/5
+Completed 302 Found in 27ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/phrases/5" for 127.0.0.1 at 2017-08-21 15:28:33 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPhrase Load (10.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.1ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.5ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (4.5ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4379/36672979646_56b98d2c0d.jpg"], ["tags", "Cat"], ["created_on", "2017-08-21 19:28:34.584179"], ["phrase_id", 5]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.5ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4364/36579308101_0dce5e6e3f.jpg"], ["tags", "Dog"], ["created_on", "2017-08-21 19:28:35.096612"], ["phrase_id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.8ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4406/35908885413_566ab6c703.jpg"], ["tags", "Man"], ["created_on", "2017-08-21 19:28:35.532923"], ["phrase_id", 5]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.5ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4391/36711787795_48a2946efa.jpg"], ["tags", "Woman"], ["created_on", "2017-08-21 19:28:35.991115"], ["phrase_id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering phrases/show.html.erb within layouts/application
+  Rendered phrases/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2073ms (Views: 24.5ms | ActiveRecord: 23.9ms)
+
+
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (139.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "TweetPics_development"[0m
+  [1m[35m (123.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "TweetPics_test"[0m
+  [1m[35m (376.8ms)[0m  [1m[35mCREATE DATABASE "TweetPics_development" ENCODING = 'unicode'[0m
+  [1m[35m (253.6ms)[0m  [1m[35mCREATE DATABASE "TweetPics_test" ENCODING = 'unicode'[0m
+  [1m[35m (46.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3784842769760408160)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePhrases (20170818172129)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.1ms)[0m  [1m[35mCREATE TABLE "phrases" ("id" bigserial primary key, "content" character varying, "created_on" timestamp)[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170818172129"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePhotos (20170818172727)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.4ms)[0m  [1m[35mCREATE TABLE "photos" ("id" bigserial primary key, "photo_url" character varying, "tags" character varying, "created_on" timestamp, "phrase_id" bigint)[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE  INDEX  "index_photos_on_phrase_id" ON "photos"  ("phrase_id")[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170818172727"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-08-21 19:31:46.707174"], ["updated_at", "2017-08-21 19:31:46.707174"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(3784842769760408160)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mPhrase Load (0.6ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
+Started GET "/phrases/new" for 127.0.0.1 at 2017-08-21 15:31:56 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhrasesController#new as HTML
+  Rendering phrases/new.html.erb within layouts/application
+  Rendered phrases/new.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 311ms (Views: 274.9ms | ActiveRecord: 6.6ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-21 15:32:10 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Excj0mT1iAkA0oo8HKVqz9eZroNLXmlqB1wU7KPqZGx8BPGfUrK9t/vdfbx23KWBkj+9tvYHbz6Ij2kCH6wMvg==", "phrase"=>{"content"=>"test school town"}, "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.6ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "test school town"], ["created_on", "2017-08-21 19:32:10.225697"]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/phrases/1
+Completed 302 Found in 22ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/phrases/1" for 127.0.0.1 at 2017-08-21 15:32:10 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhrase Load (1.1ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4365/36668352626_d674e6e23d.jpg"], ["tags", "test"], ["created_on", "2017-08-21 19:32:11.230327"], ["phrase_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4401/35909123673_9ddd28180e.jpg"], ["tags", "school"], ["created_on", "2017-08-21 19:32:11.651242"], ["phrase_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4401/36661802356_f50bf3971c.jpg"], ["tags", "town"], ["created_on", "2017-08-21 19:32:12.085304"], ["phrase_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering phrases/show.html.erb within layouts/application
+  Rendered phrases/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1860ms (Views: 26.2ms | ActiveRecord: 14.9ms)
+
+
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (5009.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "TweetPics_development"[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (133.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "TweetPics_development"[0m
+  [1m[35m (118.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "TweetPics_test"[0m
+  [1m[35m (326.5ms)[0m  [1m[35mCREATE DATABASE "TweetPics_development" ENCODING = 'unicode'[0m
+  [1m[35m (253.4ms)[0m  [1m[35mCREATE DATABASE "TweetPics_test" ENCODING = 'unicode'[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3784842769760408160)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePhrases (20170818172129)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "phrases" ("id" bigserial primary key, "content" character varying, "created_on" timestamp)[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170818172129"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePhotos (20170818172727)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "photos" ("id" bigserial primary key, "photo_url" text, "tags" character varying, "created_on" timestamp, "phrase_id" bigint)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE  INDEX  "index_photos_on_phrase_id" ON "photos"  ("phrase_id")[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170818172727"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-08-21 19:36:05.357992"], ["updated_at", "2017-08-21 19:36:05.357992"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3784842769760408160)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mPhrase Load (1.7ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
+Started GET "/phrases/1" for 127.0.0.1 at 2017-08-21 15:36:18 -0400
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhrase Load (0.6ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 47ms (ActiveRecord: 10.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Phrase with 'id'=1):
+  
+app/controllers/phrases_controller.rb:49:in `show'
+Started GET "/phrases/new" for 127.0.0.1 at 2017-08-21 15:36:21 -0400
+Processing by PhrasesController#new as HTML
+  Rendering phrases/new.html.erb within layouts/application
+  Rendered phrases/new.html.erb within layouts/application (41.2ms)
+Completed 200 OK in 415ms (Views: 333.3ms | ActiveRecord: 23.7ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-21 15:36:39 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1dT6Q6LnAilSaZLpvm9PFUW2z9d6dkdyyLkqJ5qg+qu6xygOlKA3l6lmZWnUFoBbABDc4scvQSZHalfJJuaSeQ==", "phrase"=>{"content"=>"dog jaguar monster fish tooth frog snail"}, "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.2ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "dog jaguar monster fish tooth frog snail"], ["created_on", "2017-08-21 19:36:39.329481"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/phrases/1
+Completed 302 Found in 159ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/phrases/1" for 127.0.0.1 at 2017-08-21 15:36:39 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhrase Load (1.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4390/36549601512_660e503f72.jpg"], ["tags", "dog"], ["created_on", "2017-08-21 19:36:40.525800"], ["phrase_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.5ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4336/36322095990_a739d4f89d.jpg"], ["tags", "jaguar"], ["created_on", "2017-08-21 19:36:40.973306"], ["phrase_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (3.9ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4344/36711231165_84a085427a.jpg"], ["tags", "monster"], ["created_on", "2017-08-21 19:36:41.626612"], ["phrase_id", 1]]
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4419/36579327571_110c9f03c6.jpg"], ["tags", "fish"], ["created_on", "2017-08-21 19:36:42.295376"], ["phrase_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.5ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4357/35881556824_6c2e3d17c6.jpg"], ["tags", "tooth"], ["created_on", "2017-08-21 19:36:42.909416"], ["phrase_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4399/36321151470_f1ca9b161a.jpg"], ["tags", "frog"], ["created_on", "2017-08-21 19:36:43.437147"], ["phrase_id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4398/36666932386_298df053b5.jpg"], ["tags", "snail"], ["created_on", "2017-08-21 19:36:44.049508"], ["phrase_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering phrases/show.html.erb within layouts/application
+  Rendered phrases/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 4589ms (Views: 40.8ms | ActiveRecord: 38.8ms)
+
+
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/phrases/new" for 127.0.0.1 at 2017-08-21 15:36:57 -0400
+Processing by PhrasesController#new as HTML
+  Rendering phrases/new.html.erb within layouts/application
+  Rendered phrases/new.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 184ms (Views: 158.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-21 15:37:08 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qyOqH6APPiguFqqhjHgC9+7IRrlxd7k0MEM0AepibQrEMHhSlkgLltUZXSHmAc25q25VjMwuv2C/kEnvViQF2A==", "phrase"=>{"content"=>"ball horn mop"}, "commit"=>"Submit"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "ball horn mop"], ["created_on", "2017-08-21 19:37:08.669544"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/phrases/2
+Completed 302 Found in 23ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/phrases/2" for 127.0.0.1 at 2017-08-21 15:37:08 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPhrase Load (3.1ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4341/35890247283_3b709ff5eb.jpg"], ["tags", "ball"], ["created_on", "2017-08-21 19:37:09.260911"], ["phrase_id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (10.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4367/35900284683_62bfd5cabb.jpg"], ["tags", "horn"], ["created_on", "2017-08-21 19:37:10.491426"], ["phrase_id", 2]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4433/36697971555_00c68f3114.jpg"], ["tags", "mop"], ["created_on", "2017-08-21 19:37:11.019033"], ["phrase_id", 2]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering phrases/show.html.erb within layouts/application
+  Rendered phrases/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2355ms (Views: 31.6ms | ActiveRecord: 22.1ms)
+
+
+  [1m[36mPhoto Load (4.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/phrases/new" for 127.0.0.1 at 2017-08-21 15:37:20 -0400
+Processing by PhrasesController#new as HTML
+  Rendering phrases/new.html.erb within layouts/application
+  Rendered phrases/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 43ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-21 15:37:29 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YTgX33/iqQcIJxBTBOjqmAwijRdcT+ZGdgz7TzjuIBEOK8WSSaWcufMo59NukSXWSYSeIuEW4BL534ahhKhIww==", "phrase"=>{"content"=>"cucumber carrot moccasin"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "cucumber carrot moccasin"], ["created_on", "2017-08-21 19:37:29.314855"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/phrases/3
+Completed 302 Found in 8ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/phrases/3" for 127.0.0.1 at 2017-08-21 15:37:29 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPhrase Load (1.1ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4380/36699108375_741fde4d45.jpg"], ["tags", "cucumber"], ["created_on", "2017-08-21 19:37:29.814767"], ["phrase_id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4437/36564633561_98aa98fbdc.jpg"], ["tags", "carrot"], ["created_on", "2017-08-21 19:37:30.428671"], ["phrase_id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4383/36585249666_5d4c6c51d9.jpg"], ["tags", "moccasin"], ["created_on", "2017-08-21 19:37:31.157530"], ["phrase_id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering phrases/show.html.erb within layouts/application
+  Rendered phrases/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1849ms (Views: 26.4ms | ActiveRecord: 6.4ms)
+
+
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (129.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "TweetPics_development"[0m
+  [1m[35m (121.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "TweetPics_test"[0m
+  [1m[35m (330.8ms)[0m  [1m[35mCREATE DATABASE "TweetPics_development" ENCODING = 'unicode'[0m
+  [1m[35m (248.3ms)[0m  [1m[35mCREATE DATABASE "TweetPics_test" ENCODING = 'unicode'[0m
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3784842769760408160)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePhrases (20170818172129)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "phrases" ("id" bigserial primary key, "content" character varying, "created_on" timestamp)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170818172129"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePhotos (20170818172727)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "photos" ("id" bigserial primary key, "photo_url" text, "tags" character varying, "created_on" timestamp, "phrase_id" bigint)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_photos_on_phrase_id" ON "photos"  ("phrase_id")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170818172727"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (6.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-08-21 19:39:16.497942"], ["updated_at", "2017-08-21 19:39:16.497942"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(3784842769760408160)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mPhrase Load (2.0ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
