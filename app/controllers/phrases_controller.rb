@@ -34,20 +34,16 @@ class PhrasesController < ApplicationController
   end
 
   def query_flickr
-    puts @phrase_arr
     for x in @phrase_arr
       FlickRaw.api_key=ENV['API_KEY']
       FlickRaw.shared_secret=ENV['SHARED_KEY']
       list = flickr.photos.search tags: x
-      puts list
-      puts list.length
       farm = list.first.farm
       server = list.first.server
       id = list.first.id
       secret = list.first.secret
       photo_url = "http://farm#{farm}.staticflickr.com/#{server}/#{id}_#{secret}.jpg"
       tags = x
-      puts x
       Photo.create!(photo_url: photo_url, tags: x, phrase_id: @phrase.id)
     end
   end
@@ -59,7 +55,6 @@ class PhrasesController < ApplicationController
       format.html { render :show }
       format.json { render json: @phrase }
     end
-    phrase_parse
   end
 
 private
