@@ -5,19 +5,26 @@ class PhrasesController < ApplicationController
 
   def index
     @phrases = Phrase.all
-  end
 
-  def new
-    @phrase = Phrase.new
+    respond_to do |format|
+      format.html { render :index }
+      format.json { render json: @phrases }
+    end
   end
 
   def create
-    @phrase = Phrase.create(phrase_params)
-    @phrase_arr = @phrase.content.split(' ')
-    # accepts new phrase
-    # @phrase = phrase.new!(phrase_params)
-    # @photo = Phrase.findphoto(@phrase)
-    redirect_to phrase_path(@phrase)
+    @phrase = Phrase.new(phrase_params)
+
+    respond_to do |format|
+      if @phrase.save!
+        format.html { redirect_to phrase_path(@phrase) }
+        format.json { render json: @phrase, status: :created, location: @phrase }
+        phrase_parse
+      else
+        format.html { render :new }
+        format.json { render json: @grumble.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def phrase_parse
@@ -47,8 +54,11 @@ class PhrasesController < ApplicationController
 
   def show
     @phrase = Phrase.find(params[:id])
-    # @phrase_arr = @phrase.content.split(' ')
-    # @photo_titles = @phrase.photo
+
+    respond_to do |format|
+      format.html { render :show }
+      format.json { render json: @phrase }
+    end
     phrase_parse
   end
 
