@@ -2403,3 +2403,443 @@ Processing by PhrasesController#show as JSON
 Completed 200 OK in 1669ms (Views: 0.5ms | ActiveRecord: 17.5ms)
 
 
+Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 10:53:20 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhrasesController#index as JSON
+  [1m[36mPhrase Load (1.7ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
+Completed 200 OK in 37ms (Views: 6.2ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 10:53:22 -0400
+Processing by PhrasesController#index as JSON
+  [1m[36mPhrase Load (1.8ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
+Completed 200 OK in 23ms (Views: 9.5ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 10:53:58 -0400
+Processing by PhrasesController#index as JSON
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" LIMIT $1[0m  [["LIMIT", 11]]
+NoMethodError (undefined method `photos' for #<Phrase::ActiveRecord_Relation:0x007f9bf4e21e58>):
+  
+app/controllers/phrases_controller.rb:8:in `index'
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" ORDER BY "photos"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/phrases" for 127.0.0.1 at 2017-08-22 10:55:00 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhrasesController#index as HTML
+  [1m[36mPhrase Load (1.1ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mPhrase Load (1.1ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" LIMIT $1[0m  [["LIMIT", 11]]
+NoMethodError (undefined method `photos' for #<Phrase::ActiveRecord_Relation:0x007fba65ae7910>):
+  
+app/controllers/phrases_controller.rb:8:in `index'
+Started GET "/photos.json" for 127.0.0.1 at 2017-08-22 10:55:01 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/photos.json"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/photos" for 127.0.0.1 at 2017-08-22 10:55:02 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/photos"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/phrases" for 127.0.0.1 at 2017-08-22 10:55:08 -0400
+Processing by PhrasesController#index as HTML
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" LIMIT $1[0m  [["LIMIT", 11]]
+NoMethodError (undefined method `photos' for #<Phrase::ActiveRecord_Relation:0x007fba689ac0e8>):
+  
+app/controllers/phrases_controller.rb:8:in `index'
+Started GET "/phrases/" for 127.0.0.1 at 2017-08-22 10:55:09 -0400
+Processing by PhrasesController#index as HTML
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" LIMIT $1[0m  [["LIMIT", 11]]
+NoMethodError (undefined method `photos' for #<Phrase::ActiveRecord_Relation:0x007fba68a642d8>):
+  
+app/controllers/phrases_controller.rb:8:in `index'
+Started GET "/phrases/3" for 127.0.0.1 at 2017-08-22 10:55:25 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4361/35922324253_d86e6a8d87.jpg"], ["tags", "Hi"], ["created_on", "2017-08-22 14:55:26.355167"], ["phrase_id", 3]]
+  [1m[35m (34.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4373/36722787935_48500122aa.jpg"], ["tags", "Kendall"], ["created_on", "2017-08-22 14:55:27.074124"], ["phrase_id", 3]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering phrases/show.html.erb within layouts/application
+  Rendered phrases/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1917ms (Views: 186.1ms | ActiveRecord: 42.3ms)
+
+
+Started GET "/phrases/3/photos" for 127.0.0.1 at 2017-08-22 10:55:27 -0400
+Processing by PhotosController#index as HTML
+  Parameters: {"phrase_id"=>"3"}
+  Rendering photos/index.html.erb within layouts/application
+  Rendered photos/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/phrases/3/photos" for 127.0.0.1 at 2017-08-22 10:58:23 -0400
+Processing by PhotosController#index as HTML
+  Parameters: {"phrase_id"=>"3"}
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 13ms (ActiveRecord: 6.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Phrase with 'id'=):
+  
+app/controllers/photos_controller.rb:4:in `index'
+Started GET "/phrases/16/photos" for 127.0.0.1 at 2017-08-22 10:58:36 -0400
+Processing by PhotosController#index as HTML
+  Parameters: {"phrase_id"=>"16"}
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Phrase with 'id'=):
+  
+app/controllers/photos_controller.rb:4:in `index'
+Started GET "/phrases/16/photo" for 127.0.0.1 at 2017-08-22 10:58:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/phrases/16/photo"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/phrases/16/photos" for 127.0.0.1 at 2017-08-22 10:58:46 -0400
+Processing by PhotosController#index as HTML
+  Parameters: {"phrase_id"=>"16"}
+  [1m[36mPhrase Load (17.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 43ms (ActiveRecord: 17.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Phrase with 'id'=):
+  
+app/controllers/photos_controller.rb:4:in `index'
+Started GET "/phrases/16/photos" for 127.0.0.1 at 2017-08-22 10:58:48 -0400
+Processing by PhotosController#index as HTML
+  Parameters: {"phrase_id"=>"16"}
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Phrase with 'id'=):
+  
+app/controllers/photos_controller.rb:4:in `index'
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" ORDER BY "phrases"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" ORDER BY "photos"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/phrases/3/photos" for 127.0.0.1 at 2017-08-22 10:59:49 -0400
+Started GET "/phrases/3/photos" for 127.0.0.1 at 2017-08-22 10:59:49 -0400
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhotosController#index as HTML
+  Parameters: {"phrase_id"=>"3"}
+  [1m[35m (24.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhotosController#index as HTML
+  Parameters: {"phrase_id"=>"3"}
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mPhrase Load (0.6ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 25ms (ActiveRecord: 7.4ms)
+
+
+Completed 404 Not Found in 13ms (ActiveRecord: 5.1ms)
+
+
+  
+  
+ActiveRecord::RecordNotFound (Couldn't find Phrase with 'id'=):
+ActiveRecord::RecordNotFound (Couldn't find Phrase with 'id'=):
+  
+  
+app/controllers/photos_controller.rb:4:in `index'
+app/controllers/photos_controller.rb:4:in `index'
+Started GET "/phrases/3/photos" for 127.0.0.1 at 2017-08-22 11:00:58 -0400
+Processing by PhotosController#index as HTML
+  Parameters: {"phrase_id"=>"3"}
+  [1m[36mPhrase Load (0.6ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 22ms (ActiveRecord: 15.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Phrase with 'id'=):
+  
+app/controllers/photos_controller.rb:4:in `index'
+Started GET "/phrase/3/photos" for 127.0.0.1 at 2017-08-22 11:01:38 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/phrase/3/photos"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/phrases/3/photos" for 127.0.0.1 at 2017-08-22 11:01:44 -0400
+Processing by PhotosController#index as HTML
+  Parameters: {"phrase_id"=>"3"}
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Phrase with 'id'=):
+  
+app/controllers/photos_controller.rb:4:in `index'
+Started GET "/phrases/3/photos" for 127.0.0.1 at 2017-08-22 11:01:50 -0400
+Processing by PhotosController#index as HTML
+  Parameters: {"phrase_id"=>"3"}
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Phrase with 'id'=):
+  
+app/controllers/photos_controller.rb:4:in `index'
+Started GET "/phrases/3/photos" for 127.0.0.1 at 2017-08-22 11:02:05 -0400
+Processing by PhotosController#index as HTML
+  Parameters: {"phrase_id"=>"3"}
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 10ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Phrase with 'id'=):
+  
+app/controllers/photos_controller.rb:4:in `index'
+Started GET "/phrases/3/photos" for 127.0.0.1 at 2017-08-22 11:02:37 -0400
+Processing by PhotosController#index as HTML
+  Parameters: {"phrase_id"=>"3"}
+  [1m[36mPhrase Load (0.5ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 3]]
+  Rendered photos/index.html.erb within layouts/application (33.4ms)
+Completed 200 OK in 227ms (Views: 212.0ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/phrases/3/photos.json" for 127.0.0.1 at 2017-08-22 11:03:11 -0400
+Processing by PhotosController#index as JSON
+  Parameters: {"phrase_id"=>"3"}
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/phrases/3/photos.json" for 127.0.0.1 at 2017-08-22 11:03:15 -0400
+Processing by PhotosController#index as JSON
+  Parameters: {"phrase_id"=>"3"}
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/phrases/3/photos" for 127.0.0.1 at 2017-08-22 11:03:16 -0400
+Processing by PhotosController#index as HTML
+  Parameters: {"phrase_id"=>"3"}
+  [1m[36mPhrase Load (2.6ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 3]]
+  Rendered photos/index.html.erb within layouts/application (24.4ms)
+Started GET "/phrases/3/photos" for 127.0.0.1 at 2017-08-22 11:03:16 -0400
+Completed 200 OK in 54ms (Views: 37.6ms | ActiveRecord: 13.9ms)
+
+
+Processing by PhotosController#index as HTML
+  Parameters: {"phrase_id"=>"3"}
+  [1m[36mPhrase Load (1.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (4.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 3]]
+  Rendered photos/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 34ms (Views: 23.0ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/phrases/3/photos.json" for 127.0.0.1 at 2017-08-22 11:03:42 -0400
+Processing by PhotosController#index as JSON
+  Parameters: {"phrase_id"=>"3"}
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/phrases/3/photos.json" for 127.0.0.1 at 2017-08-22 11:03:43 -0400
+Processing by PhotosController#index as JSON
+  Parameters: {"phrase_id"=>"3"}
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/phrases" for 127.0.0.1 at 2017-08-22 11:05:42 -0400
+  
+SyntaxError (/Users/CharlesCox/wdi/projects/project3/TWiCS---Server-Side/app/controllers/phrases_controller.rb:11: syntax error, unexpected '}', expecting ')'
+es.as_json(include:[:photos] }
+                              ^
+/Users/CharlesCox/wdi/projects/project3/TWiCS---Server-Side/app/controllers/phrases_controller.rb:65: syntax error, unexpected keyword_end, expecting '}'):
+  
+app/controllers/phrases_controller.rb:11: syntax error, unexpected '}', expecting ')'
+app/controllers/phrases_controller.rb:65: syntax error, unexpected keyword_end, expecting '}'
+Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 11:05:43 -0400
+  
+SyntaxError (/Users/CharlesCox/wdi/projects/project3/TWiCS---Server-Side/app/controllers/phrases_controller.rb:11: syntax error, unexpected '}', expecting ')'
+es.as_json(include:[:photos] }
+                              ^
+/Users/CharlesCox/wdi/projects/project3/TWiCS---Server-Side/app/controllers/phrases_controller.rb:65: syntax error, unexpected keyword_end, expecting '}'):
+  
+app/controllers/phrases_controller.rb:11: syntax error, unexpected '}', expecting ')'
+app/controllers/phrases_controller.rb:65: syntax error, unexpected keyword_end, expecting '}'
+Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 11:05:44 -0400
+  
+SyntaxError (/Users/CharlesCox/wdi/projects/project3/TWiCS---Server-Side/app/controllers/phrases_controller.rb:11: syntax error, unexpected '}', expecting ')'
+es.as_json(include:[:photos] }
+                              ^
+/Users/CharlesCox/wdi/projects/project3/TWiCS---Server-Side/app/controllers/phrases_controller.rb:65: syntax error, unexpected keyword_end, expecting '}'):
+  
+app/controllers/phrases_controller.rb:11: syntax error, unexpected '}', expecting ')'
+app/controllers/phrases_controller.rb:65: syntax error, unexpected keyword_end, expecting '}'
+Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 11:06:02 -0400
+Processing by PhrasesController#index as JSON
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 1]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 2]]
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 3]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 4]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 5]]
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 6]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 7]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 8]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 9]]
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 10]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 11]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 12]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 13]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 14]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 15]]
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 16]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 17]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 18]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 19]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 20]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 21]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 22]]
+Completed 200 OK in 77ms (Views: 1.9ms | ActiveRecord: 19.5ms)
+
+
