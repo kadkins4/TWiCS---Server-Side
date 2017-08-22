@@ -4221,3 +4221,18 @@ Processing by PhrasesController#index as JSON
 Completed 200 OK in 358ms (Views: 313.8ms | ActiveRecord: 42.2ms)
 
 
+Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 14:20:41 -0400
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhrasesController#index as JSON
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/CharlesCox/wdi/projects/project3/TWiCS---Server-Side/app/models/phrase.rb:7: syntax error, unexpected ...
+    photos.each do ...
+                      ^
+/Users/CharlesCox/wdi/projects/project3/TWiCS---Server-Side/app/models/phrase.rb:15: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/phrase.rb:7: syntax error, unexpected ...
+app/models/phrase.rb:15: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/phrases_controller.rb:7:in `index'
