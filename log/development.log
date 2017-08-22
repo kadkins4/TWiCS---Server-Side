@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Started POST "/twics" for 127.0.0.1 at 2017-08-21 17:07:44 -0400
   [1m[35m (4.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   
@@ -3570,3 +3571,5 @@ AbstractController::DoubleRenderError (Render and/or redirect were called multip
   
 app/controllers/phrases_controller.rb:21:in `block (2 levels) in show'
 app/controllers/phrases_controller.rb:19:in `show'
+=======
+>>>>>>> 70186938be0712a256ad49a1cd206a9d46c08754
