@@ -14,6 +14,7 @@ class PhrasesController < ApplicationController
 
   def show
     @phrase = Phrase.find(params[:id])
+    phrase_parse
 
     respond_to do |format|
       format.html { render :show }
@@ -28,11 +29,6 @@ class PhrasesController < ApplicationController
       if @phrase.save!
         format.html { redirect_to @phrase }
         format.json { render json: @phrase, status: :created, location: @phrase }
-        def phrase_parse
-          @phrase = Phrase.find(params[:id])
-          @phrase_arr = @phrase.content.split(' ')
-          query_flickr
-        end
       else
         format.html { render :new }
         format.json { render json: @phrase, status: :unprocessable_entity }
@@ -40,6 +36,11 @@ class PhrasesController < ApplicationController
     end
   end
 
+  def phrase_parse
+    @phrase = Phrase.find(params[:id])
+    @phrase_arr = @phrase.content.split(' ')
+    query_flickr
+  end
 
   def query_flickr
     for x in @phrase_arr
