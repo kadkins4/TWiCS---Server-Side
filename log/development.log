@@ -4221,3 +4221,259 @@ Processing by PhrasesController#index as JSON
 Completed 200 OK in 358ms (Views: 313.8ms | ActiveRecord: 42.2ms)
 
 
+Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 14:27:21 -0400
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/Kendall/wdi/projects/twics_server/app/controllers/phrases_controller.rb:35: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/phrases_controller.rb:35: syntax error, unexpected keyword_end, expecting end-of-input
+Started POST "/phrases.json" for 127.0.0.1 at 2017-08-22 14:27:30 -0400
+  
+SyntaxError (/Users/Kendall/wdi/projects/twics_server/app/controllers/phrases_controller.rb:35: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/phrases_controller.rb:35: syntax error, unexpected keyword_end, expecting end-of-input
+Started POST "/phrases.json" for 127.0.0.1 at 2017-08-22 14:27:45 -0400
+  
+SyntaxError (/Users/Kendall/wdi/projects/twics_server/app/controllers/phrases_controller.rb:35: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/phrases_controller.rb:35: syntax error, unexpected keyword_end, expecting end-of-input
+Started POST "/phrases" for 127.0.0.1 at 2017-08-22 14:27:54 -0400
+  
+SyntaxError (/Users/Kendall/wdi/projects/twics_server/app/controllers/phrases_controller.rb:35: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/phrases_controller.rb:35: syntax error, unexpected keyword_end, expecting end-of-input
+Started POST "/phrases" for 127.0.0.1 at 2017-08-22 14:29:48 -0400
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"Basketball soccer fun times", "phrase"=>{"content"=>"Basketball soccer fun times"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "Basketball soccer fun times"], ["created_on", "2017-08-22 18:29:49.016836"]]
+  [1m[35m (1.9ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 13.6ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/models/phrase.rb:17:in `query_flickr'
+app/models/phrase.rb:8:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:18:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-22 14:30:39 -0400
+Started POST "/phrases" for 127.0.0.1 at 2017-08-22 14:30:49 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"basketball plays", "phrase"=>{"content"=>"basketball plays"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "basketball plays"], ["created_on", "2017-08-22 18:30:49.712831"]]
+  [1m[35m (1.7ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 3.3ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/models/phrase.rb:13:in `phrase_parse'
+app/models/phrase.rb:7:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:18:in `create'
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"basketball plays", "phrase"=>{"content"=>"basketball plays"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "basketball plays"], ["created_on", "2017-08-22 18:30:50.639597"]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/models/phrase.rb:13:in `phrase_parse'
+app/models/phrase.rb:7:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:18:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-22 14:31:50 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"Testing this out", "phrase"=>{"content"=>"Testing this out"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "Testing this out"], ["created_on", "2017-08-22 18:31:50.203242"]]
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.4ms)
+
+
+  
+NameError (undefined local variable or method `params' for #<Phrase:0x007fc58500ba20>):
+  
+app/models/phrase.rb:15:in `phrase_parse'
+app/models/phrase.rb:7:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:18:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-22 14:32:40 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"please work right now", "phrase"=>{"content"=>"please work right now"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "please work right now"], ["created_on", "2017-08-22 18:32:40.853184"]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.9ms)
+
+
+  
+NameError (undefined local variable or method `parsed_phrase' for #<Phrase:0x007fc581274d10>
+Did you mean?  phrase_parse):
+  
+app/models/phrase.rb:9:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:18:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-22 14:33:12 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"here we go", "phrase"=>{"content"=>"here we go"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "here we go"], ["created_on", "2017-08-22 18:33:12.845874"]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.1ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/models/phrase.rb:18:in `query_flickr'
+app/models/phrase.rb:9:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:18:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-22 14:34:02 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"baby steps", "phrase"=>{"content"=>"baby steps"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "baby steps"], ["created_on", "2017-08-22 18:34:02.883866"]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 852ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/models/phrase.rb:28:in `block in query_flickr'
+app/models/phrase.rb:19:in `each'
+app/models/phrase.rb:19:in `query_flickr'
+app/models/phrase.rb:9:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:18:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-22 14:35:34 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"almost there", "phrase"=>{"content"=>"almost there"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "almost there"], ["created_on", "2017-08-22 18:35:34.665575"]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 545ms (ActiveRecord: 2.3ms)
+
+
+  
+NameError (undefined local variable or method `phrase' for #<Phrase:0x007fc5821c1200>):
+  
+app/models/phrase.rb:30:in `block in query_flickr'
+app/models/phrase.rb:21:in `each'
+app/models/phrase.rb:21:in `query_flickr'
+app/models/phrase.rb:11:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:18:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-22 14:37:31 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"test ing out at phrase", "phrase"=>{"content"=>"test ing out at phrase"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "test ing out at phrase"], ["created_on", "2017-08-22 18:37:31.314878"]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 552ms (ActiveRecord: 1.2ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/models/phrase.rb:30:in `block in query_flickr'
+app/models/phrase.rb:21:in `each'
+app/models/phrase.rb:21:in `query_flickr'
+app/models/phrase.rb:11:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:18:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-22 14:37:59 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"testing out local variabe", "phrase"=>{"content"=>"testing out local variabe"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "testing out local variabe"], ["created_on", "2017-08-22 18:37:59.487169"]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 534ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/models/phrase.rb:30:in `block in query_flickr'
+app/models/phrase.rb:21:in `each'
+app/models/phrase.rb:21:in `query_flickr'
+app/models/phrase.rb:11:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:18:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-22 14:39:00 -0400
+  
+NoMethodError (undefined method `id' for Phrase(id: integer, content: string, created_on: datetime):Class
+Did you mean?  ids):
+  
+app/models/phrase.rb:4:in `<class:Phrase>'
+app/models/phrase.rb:1:in `<top (required)>'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-22 14:39:40 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"self dot id is not working", "phrase"=>{"content"=>"self dot id is not working"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "self dot id is not working"], ["created_on", "2017-08-22 18:39:40.414471"]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 604ms (ActiveRecord: 9.7ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Phrase must exist):
+  
+app/models/phrase.rb:32:in `block in query_flickr'
+app/models/phrase.rb:23:in `each'
+app/models/phrase.rb:23:in `query_flickr'
+app/models/phrase.rb:13:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:18:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-22 14:40:44 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"hello its me", "phrase"=>{"content"=>"hello its me"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "hello its me"], ["created_on", "2017-08-22 18:40:44.472359"]]
+  [1m[36mPhrase Load (0.6ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4350/35884486194_919a80f4f5.jpg"], ["tags", "hello"], ["created_on", "2017-08-22 18:40:45.008032"], ["phrase_id", 32]]
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4413/36569489792_e15f79256a.jpg"], ["tags", "its"], ["created_on", "2017-08-22 18:40:45.593983"], ["phrase_id", 32]]
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4422/36570705022_bf64f07bbf.jpg"], ["tags", "me"], ["created_on", "2017-08-22 18:40:45.930896"], ["phrase_id", 32]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 1472ms (Views: 1.6ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/phrases" for 127.0.0.1 at 2017-08-22 14:40:46 -0400
+Processing by PhrasesController#index as HTML
+  [1m[36mPhrase Load (2.0ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
+  [1m[36mPhoto Load (1.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 1]]
+  [1m[36mPhoto Load (2.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 2]]
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 3]]
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 4]]
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 5]]
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 6]]
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 7]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 8]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 9]]
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 10]]
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 11]]
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 12]]
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 13]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 14]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 15]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 16]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 17]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 18]]
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 19]]
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 20]]
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 32]]
+Completed 200 OK in 453ms (Views: 435.4ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/phrases/32" for 127.0.0.1 at 2017-08-22 14:40:48 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mPhrase Load (0.8ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[36mPhoto Load (1.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 32]]
+Completed 200 OK in 25ms (Views: 16.4ms | ActiveRecord: 2.4ms)
+
+

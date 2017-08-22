@@ -3,10 +3,7 @@ class PhotosController < ApplicationController
   def index
     @phrase = Phrase.find(params[:phrase_id])
 
-    respond_to do |format|
-      format.html { render :index }
-      format.json { render json: @phrase }
-    end
+    render json: @phrase
   end
 
   def show
