@@ -25,7 +25,6 @@ class PhrasesController < ApplicationController
   def create
     @phrase = Phrase.new(phrase_params)
     @phrase.save!
-    @photo = nil
     respond_to do |format|
       if @phrase.save!
         format.html { redirect_to @phrase }
@@ -56,7 +55,6 @@ class PhrasesController < ApplicationController
       Photo.create!(photo_url: photo_url, tags: x, phrase_id: @phrase.id)
     end
   end
-
 
 private
   def phrase_params
