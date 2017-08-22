@@ -1,1 +1,7 @@
 <h1>Photos</h1>
+
+<%= @phrase.content %>
+
+<% for x in @phrase.photos do %>
+  <img src="<%= x.photo_url %>" alt="">
+<% end %>

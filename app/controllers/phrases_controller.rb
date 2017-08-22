@@ -8,7 +8,7 @@ class PhrasesController < ApplicationController
 
     respond_to do |format|
       format.html { render :index }
-      format.json { render json: @phrases }
+      format.json { render json: @phrases.as_json(include:[:photos]) }
     end
   end
 
