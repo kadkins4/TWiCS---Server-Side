@@ -3367,3 +3367,206 @@ SyntaxError (/Users/Kendall/wdi/projects/twics_server/app/controllers/phrases_co
                               ^):
   
 app/controllers/phrases_controller.rb:35: syntax error, unexpected ',', expecting =>
+Started GET "/phrases/11.json" for 127.0.0.1 at 2017-08-22 12:40:27 -0400
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/Kendall/wdi/projects/twics_server/app/controllers/phrases_controller.rb:12: `@' without identifiers is not allowed as an instance variable name
+/Users/Kendall/wdi/projects/twics_server/app/controllers/phrases_controller.rb:12: syntax error, unexpected end-of-input, expecting '('
+er json: @phrases, @phrases.@ }
+                              ^):
+  
+app/controllers/phrases_controller.rb:12: `@' without identifiers is not allowed as an instance variable name
+app/controllers/phrases_controller.rb:12: syntax error, unexpected end-of-input, expecting '('
+Started POST "/phrases.json" for 127.0.0.1 at 2017-08-22 12:40:36 -0400
+  
+SyntaxError (/Users/Kendall/wdi/projects/twics_server/app/controllers/phrases_controller.rb:12: `@' without identifiers is not allowed as an instance variable name
+/Users/Kendall/wdi/projects/twics_server/app/controllers/phrases_controller.rb:12: syntax error, unexpected end-of-input, expecting '('
+er json: @phrases, @phrases.@ }
+                              ^):
+  
+app/controllers/phrases_controller.rb:12: `@' without identifiers is not allowed as an instance variable name
+app/controllers/phrases_controller.rb:12: syntax error, unexpected end-of-input, expecting '('
+Started POST "/phrases.json" for 127.0.0.1 at 2017-08-22 12:41:01 -0400
+  
+SyntaxError (/Users/Kendall/wdi/projects/twics_server/app/controllers/phrases_controller.rb:12: `@' without identifiers is not allowed as an instance variable name
+/Users/Kendall/wdi/projects/twics_server/app/controllers/phrases_controller.rb:12: syntax error, unexpected end-of-input, expecting '('
+er json: @phrases, @phrases.@ }
+                              ^):
+  
+app/controllers/phrases_controller.rb:12: `@' without identifiers is not allowed as an instance variable name
+app/controllers/phrases_controller.rb:12: syntax error, unexpected end-of-input, expecting '('
+Started POST "/phrases.json" for 127.0.0.1 at 2017-08-22 12:42:05 -0400
+  
+SyntaxError (/Users/Kendall/wdi/projects/twics_server/app/controllers/phrases_controller.rb:12: syntax error, unexpected '}', expecting =>
+nder json: @phrases, @photos }
+                              ^
+/Users/Kendall/wdi/projects/twics_server/app/controllers/phrases_controller.rb:65: syntax error, unexpected keyword_end, expecting '}'):
+  
+app/controllers/phrases_controller.rb:12: syntax error, unexpected '}', expecting =>
+app/controllers/phrases_controller.rb:65: syntax error, unexpected keyword_end, expecting '}'
+Started POST "/phrases.json" for 127.0.0.1 at 2017-08-22 12:45:15 -0400
+Processing by PhrasesController#create as JSON
+  Parameters: {"content"=>"home hello run", "phrase"=>{"content"=>"home hello run"}}
+HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "home hello run"], ["created_on", "2017-08-22 16:45:15.374857"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 35ms (Views: 1.6ms | ActiveRecord: 19.3ms)
+
+
+Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 12:45:15 -0400
+Processing by PhrasesController#index as JSON
+  [1m[36mPhrase Load (6.7ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" LIMIT $1[0m  [["LIMIT", 11]]
+NoMethodError (undefined method `photos' for #<Phrase::ActiveRecord_Relation:0x007f9179f9bea8>):
+  
+app/controllers/phrases_controller.rb:8:in `index'
+Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 12:46:11 -0400
+Processing by PhrasesController#index as JSON
+  [1m[36mPhrase Load (8.7ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
+Completed 200 OK in 171ms (Views: 59.0ms | ActiveRecord: 85.3ms)
+
+
+Started POST "/phrases.json" for 127.0.0.1 at 2017-08-22 12:46:28 -0400
+Processing by PhrasesController#create as JSON
+  Parameters: {"content"=>"test suite yay", "phrase"=>{"content"=>"test suite yay"}}
+HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "test suite yay"], ["created_on", "2017-08-22 16:46:28.568214"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 13ms (Views: 1.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 12:46:28 -0400
+Processing by PhrasesController#index as JSON
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
+Completed 200 OK in 10ms (Views: 7.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/phrases/13.json" for 127.0.0.1 at 2017-08-22 12:46:30 -0400
+Processing by PhrasesController#show as JSON
+  Parameters: {"id"=>"13"}
+  [1m[36mPhrase Load (0.9ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.1ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4353/35927891803_688c84c3e3.jpg"], ["tags", "test"], ["created_on", "2017-08-22 16:46:31.662064"], ["phrase_id", 13]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.5ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4377/35896947434_56a3c24441.jpg"], ["tags", "suite"], ["created_on", "2017-08-22 16:46:32.074534"], ["phrase_id", 13]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4365/36725993785_939ac5ecff.jpg"], ["tags", "yay"], ["created_on", "2017-08-22 16:46:32.748832"], ["phrase_id", 13]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 1943ms (ActiveRecord: 21.4ms)
+
+
+  
+NoMethodError (undefined method `photos' for nil:NilClass):
+  
+app/controllers/phrases_controller.rb:18:in `show'
+Started GET "/phrases/13.json" for 127.0.0.1 at 2017-08-22 12:48:52 -0400
+Processing by PhrasesController#show as JSON
+  Parameters: {"id"=>"13"}
+  [1m[36mPhrase Load (0.6ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 18.4ms)
+
+
+  
+NoMethodError (undefined method `photos' for nil:NilClass):
+  
+app/controllers/phrases_controller.rb:46:in `query_flickr'
+app/controllers/phrases_controller.rb:42:in `phrase_parse'
+app/controllers/phrases_controller.rb:17:in `show'
+Started POST "/phrases.json" for 127.0.0.1 at 2017-08-22 12:49:18 -0400
+Processing by PhrasesController#create as JSON
+  Parameters: {"content"=>"shall we begin", "phrase"=>{"content"=>"shall we begin"}}
+HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "shall we begin"], ["created_on", "2017-08-22 16:49:18.260931"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 13ms (Views: 2.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 12:49:18 -0400
+Processing by PhrasesController#index as JSON
+  [1m[36mPhrase Load (2.2ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/phrases/14.json" for 127.0.0.1 at 2017-08-22 12:49:20 -0400
+Processing by PhrasesController#show as JSON
+  Parameters: {"id"=>"14"}
+  [1m[36mPhrase Load (3.9ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 3.9ms)
+
+
+  
+NoMethodError (undefined method `photos' for nil:NilClass):
+  
+app/controllers/phrases_controller.rb:46:in `query_flickr'
+app/controllers/phrases_controller.rb:42:in `phrase_parse'
+app/controllers/phrases_controller.rb:17:in `show'
+Started POST "/phrases.json" for 127.0.0.1 at 2017-08-22 12:51:00 -0400
+Processing by PhrasesController#create as JSON
+  Parameters: {"content"=>"last try til break", "phrase"=>{"content"=>"last try til break"}}
+HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "last try til break"], ["created_on", "2017-08-22 16:51:00.276586"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 18ms (Views: 1.4ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 12:51:00 -0400
+Processing by PhrasesController#index as JSON
+  [1m[36mPhrase Load (2.6ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
+Completed 200 OK in 37ms (Views: 31.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/phrases/15.json" for 127.0.0.1 at 2017-08-22 12:51:02 -0400
+Processing by PhrasesController#show as JSON
+  Parameters: {"id"=>"15"}
+  [1m[36mPhrase Load (0.8ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35mSQL (2.8ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4256/35499893871_e53a6f3a79.jpg"], ["tags", "last"], ["created_on", "2017-08-22 16:51:03.213204"], ["phrase_id", 15]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4432/36736883585_dba7832b03.jpg"], ["tags", "try"], ["created_on", "2017-08-22 16:51:03.837788"], ["phrase_id", 15]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4347/36562507992_3235c795d1.jpg"], ["tags", "til"], ["created_on", "2017-08-22 16:51:04.220400"], ["phrase_id", 15]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4331/36690502576_e0dd55c9bf.jpg"], ["tags", "break"], ["created_on", "2017-08-22 16:51:04.821279"], ["phrase_id", 15]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 15]]
+Completed 500 Internal Server Error in 2535ms (Views: 4.8ms | ActiveRecord: 17.8ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/phrases_controller.rb:21:in `block (2 levels) in show'
+app/controllers/phrases_controller.rb:19:in `show'

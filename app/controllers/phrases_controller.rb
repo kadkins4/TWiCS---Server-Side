@@ -54,6 +54,9 @@ class PhrasesController < ApplicationController
       photo_url = "http://farm#{farm}.staticflickr.com/#{server}/#{id}_#{secret}.jpg"
       Photo.create!(photo_url: photo_url, tags: x, phrase_id: @phrase.id)
     end
+    respond_to do |format|
+      format.json { render json: @photos }
+    end
   end
 
 private
