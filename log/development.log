@@ -3421,3 +3421,108 @@ Processing by PhrasesController#show as JSON
 Completed 200 OK in 2020ms (Views: 0.6ms | ActiveRecord: 6.1ms)
 
 
+Started GET "/phrases.json" for 127.0.0.1 at 2017-08-21 16:45:33 -0400
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhrasesController#index as JSON
+  [1m[36mPhrase Load (1.2ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
+Completed 200 OK in 34ms (Views: 4.9ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/phrases/1.json" for 127.0.0.1 at 2017-08-21 16:45:35 -0400
+Processing by PhrasesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPhrase Load (1.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (2.7ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4399/36713527735_348b09e7d1.jpg"], ["tags", "hello"], ["created_on", "2017-08-21 20:45:36.622060"], ["phrase_id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4359/35885673954_a54f1ce11d.jpg"], ["tags", "world"], ["created_on", "2017-08-21 20:45:36.917704"], ["phrase_id", 1]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 1119ms (Views: 0.4ms | ActiveRecord: 47.2ms)
+
+
+Started GET "/phrases.json" for 127.0.0.1 at 2017-08-21 16:46:06 -0400
+Processing by PhrasesController#index as JSON
+  [1m[36mPhrase Load (0.5ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/phrases/1.json" for 127.0.0.1 at 2017-08-21 16:46:08 -0400
+Processing by PhrasesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4399/36713527735_348b09e7d1.jpg"], ["tags", "hello"], ["created_on", "2017-08-21 20:46:08.952985"], ["phrase_id", 1]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4359/35885673954_a54f1ce11d.jpg"], ["tags", "world"], ["created_on", "2017-08-21 20:46:09.459270"], ["phrase_id", 1]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 1225ms (Views: 0.4ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/phrases/1.json" for 127.0.0.1 at 2017-08-21 16:51:14 -0400
+Processing by PhrasesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (1.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4399/36713527735_348b09e7d1.jpg"], ["tags", "hello"], ["created_on", "2017-08-21 20:51:15.249581"], ["phrase_id", 1]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4359/35885673954_a54f1ce11d.jpg"], ["tags", "world"], ["created_on", "2017-08-21 20:51:15.858438"], ["phrase_id", 1]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 1107ms (Views: 0.7ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/phrases/1.json" for 127.0.0.1 at 2017-08-21 16:51:50 -0400
+Processing by PhrasesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4399/36713527735_348b09e7d1.jpg"], ["tags", "hello"], ["created_on", "2017-08-21 20:51:51.294424"], ["phrase_id", 1]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4359/35885673954_a54f1ce11d.jpg"], ["tags", "world"], ["created_on", "2017-08-21 20:51:51.717536"], ["phrase_id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 752ms (Views: 0.4ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/phrases.json" for 127.0.0.1 at 2017-08-21 16:52:01 -0400
+Processing by PhrasesController#index as JSON
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/phrases.json" for 127.0.0.1 at 2017-08-21 16:52:19 -0400
+Processing by PhrasesController#index as JSON
+  [1m[36mPhrase Load (5.2ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
+Completed 200 OK in 10ms (Views: 3.8ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/phrases/1.json" for 127.0.0.1 at 2017-08-21 16:52:21 -0400
+Processing by PhrasesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4410/35873535174_3dd1b4a8dc.jpg"], ["tags", "hello"], ["created_on", "2017-08-21 20:52:22.424192"], ["phrase_id", 1]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4359/35885673954_a54f1ce11d.jpg"], ["tags", "world"], ["created_on", "2017-08-21 20:52:22.910080"], ["phrase_id", 1]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 941ms (Views: 0.4ms | ActiveRecord: 5.3ms)
+
+
