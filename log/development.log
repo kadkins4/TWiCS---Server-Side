@@ -1,2017 +1,3 @@
-<<<<<<< HEAD
-Started POST "/twics" for 127.0.0.1 at 2017-08-21 17:07:44 -0400
-  [1m[35m (4.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  
-ActionController::RoutingError (No route matches [POST] "/twics"):
-  
-actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
-web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
-rack (2.0.3) lib/rack/method_override.rb:22:in `call'
-rack (2.0.3) lib/rack/runtime.rb:22:in `call'
-activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
-rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
-rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
-railties (5.1.3) lib/rails/engine.rb:522:in `call'
-puma (3.10.0) lib/puma/configuration.rb:225:in `call'
-puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
-puma (3.10.0) lib/puma/server.rb:437:in `process_client'
-puma (3.10.0) lib/puma/server.rb:301:in `block in run'
-puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (18.1ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "This is a test post to see if this is an actual post"], ["created_on", "2017-08-21 21:15:27.738010"]]
-  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
-Started GET "/twics/index" for 127.0.0.1 at 2017-08-21 17:16:06 -0400
-Started GET "/twics/index" for 127.0.0.1 at 2017-08-21 17:16:16 -0400
-  
-ActionController::RoutingError (No route matches [GET] "/twics/index"):
-  
-  
-actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
-web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
-rack (2.0.3) lib/rack/method_override.rb:22:in `call'
-rack (2.0.3) lib/rack/runtime.rb:22:in `call'
-activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
-rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
-rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
-railties (5.1.3) lib/rails/engine.rb:522:in `call'
-puma (3.10.0) lib/puma/configuration.rb:225:in `call'
-puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
-puma (3.10.0) lib/puma/server.rb:437:in `process_client'
-puma (3.10.0) lib/puma/server.rb:301:in `block in run'
-puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-ActionController::RoutingError (No route matches [GET] "/twics/index"):
-  
-actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
-web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
-rack (2.0.3) lib/rack/method_override.rb:22:in `call'
-rack (2.0.3) lib/rack/runtime.rb:22:in `call'
-activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
-rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
-rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
-railties (5.1.3) lib/rails/engine.rb:522:in `call'
-puma (3.10.0) lib/puma/configuration.rb:225:in `call'
-puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
-puma (3.10.0) lib/puma/server.rb:437:in `process_client'
-puma (3.10.0) lib/puma/server.rb:301:in `block in run'
-puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-Started GET "/twics/index.json" for 127.0.0.1 at 2017-08-21 17:16:41 -0400
-  
-ActionController::RoutingError (No route matches [GET] "/twics/index.json"):
-  
-actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
-web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
-rack (2.0.3) lib/rack/method_override.rb:22:in `call'
-rack (2.0.3) lib/rack/runtime.rb:22:in `call'
-activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
-rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
-rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
-railties (5.1.3) lib/rails/engine.rb:522:in `call'
-puma (3.10.0) lib/puma/configuration.rb:225:in `call'
-puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
-puma (3.10.0) lib/puma/server.rb:437:in `process_client'
-puma (3.10.0) lib/puma/server.rb:301:in `block in run'
-puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-  [1m[36mPhrase Load (1.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" LIMIT $1[0m  [["LIMIT", 11]]
-Started GET "/twics/index" for 127.0.0.1 at 2017-08-21 17:18:24 -0400
-  
-ActionController::RoutingError (No route matches [GET] "/twics/index"):
-  
-actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
-web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
-rack (2.0.3) lib/rack/method_override.rb:22:in `call'
-rack (2.0.3) lib/rack/runtime.rb:22:in `call'
-activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
-rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
-rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
-railties (5.1.3) lib/rails/engine.rb:522:in `call'
-puma (3.10.0) lib/puma/configuration.rb:225:in `call'
-puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
-puma (3.10.0) lib/puma/server.rb:437:in `process_client'
-puma (3.10.0) lib/puma/server.rb:301:in `block in run'
-puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-Started POST "/twics" for 127.0.0.1 at 2017-08-21 17:34:27 -0400
-  [1m[35m (7.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  
-ActionController::RoutingError (No route matches [POST] "/twics"):
-  
-actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
-web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
-rack (2.0.3) lib/rack/method_override.rb:22:in `call'
-rack (2.0.3) lib/rack/runtime.rb:22:in `call'
-activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
-rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
-rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
-railties (5.1.3) lib/rails/engine.rb:522:in `call'
-puma (3.10.0) lib/puma/configuration.rb:225:in `call'
-puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
-puma (3.10.0) lib/puma/server.rb:437:in `process_client'
-puma (3.10.0) lib/puma/server.rb:301:in `block in run'
-puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-Started POST "/phrases" for 127.0.0.1 at 2017-08-21 17:35:02 -0400
-Processing by PhrasesController#create as HTML
-  Parameters: {"content"=>"test post", "phrase"=>{"content"=>"test post"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 21.3ms)
-
-
-  
-ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
-  
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:227:in `handle_unverified_request'
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:222:in `verify_authenticity_token'
-activesupport (5.1.3) lib/active_support/callbacks.rb:413:in `block in make_lambda'
-activesupport (5.1.3) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
-actionpack (5.1.3) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
-activesupport (5.1.3) lib/active_support/callbacks.rb:198:in `block in halting'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `block in invoke_before'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `each'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `invoke_before'
-activesupport (5.1.3) lib/active_support/callbacks.rb:130:in `run_callbacks'
-actionpack (5.1.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
-activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
-activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
-activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
-actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
-activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
-actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
-actionview (5.1.3) lib/action_view/rendering.rb:30:in `process'
-actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
-actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
-rack (2.0.3) lib/rack/etag.rb:25:in `call'
-rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
-rack (2.0.3) lib/rack/head.rb:12:in `call'
-rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
-rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
-activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
-activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
-actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
-web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
-rack (2.0.3) lib/rack/method_override.rb:22:in `call'
-rack (2.0.3) lib/rack/runtime.rb:22:in `call'
-activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
-rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
-rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
-railties (5.1.3) lib/rails/engine.rb:522:in `call'
-puma (3.10.0) lib/puma/configuration.rb:225:in `call'
-puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
-puma (3.10.0) lib/puma/server.rb:437:in `process_client'
-puma (3.10.0) lib/puma/server.rb:301:in `block in run'
-puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-  [1m[36mPhrase Load (21.8ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" LIMIT $1[0m  [["LIMIT", 11]]
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 17:36:15 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"testtting the post", "phrase"=>{"content"=>"testtting the post"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-Completed 422 Unprocessable Entity in 4ms (ActiveRecord: 0.0ms)
-
-
-  
-ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
-  
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:227:in `handle_unverified_request'
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:222:in `verify_authenticity_token'
-activesupport (5.1.3) lib/active_support/callbacks.rb:413:in `block in make_lambda'
-activesupport (5.1.3) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
-actionpack (5.1.3) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
-activesupport (5.1.3) lib/active_support/callbacks.rb:198:in `block in halting'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `block in invoke_before'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `each'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `invoke_before'
-activesupport (5.1.3) lib/active_support/callbacks.rb:130:in `run_callbacks'
-actionpack (5.1.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
-activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
-activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
-activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
-actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
-activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
-actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
-actionview (5.1.3) lib/action_view/rendering.rb:30:in `process'
-actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
-actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
-rack (2.0.3) lib/rack/etag.rb:25:in `call'
-rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
-rack (2.0.3) lib/rack/head.rb:12:in `call'
-rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
-rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
-activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
-activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
-actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
-web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
-rack (2.0.3) lib/rack/method_override.rb:22:in `call'
-rack (2.0.3) lib/rack/runtime.rb:22:in `call'
-activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
-rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
-rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
-railties (5.1.3) lib/rails/engine.rb:522:in `call'
-puma (3.10.0) lib/puma/configuration.rb:225:in `call'
-puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
-puma (3.10.0) lib/puma/server.rb:437:in `process_client'
-puma (3.10.0) lib/puma/server.rb:301:in `block in run'
-puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 17:38:47 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"is this twic on", "phrase"=>{"content"=>"is this twic on"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-Completed 422 Unprocessable Entity in 7ms (ActiveRecord: 0.0ms)
-
-
-  
-ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
-  
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:227:in `handle_unverified_request'
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:222:in `verify_authenticity_token'
-activesupport (5.1.3) lib/active_support/callbacks.rb:413:in `block in make_lambda'
-activesupport (5.1.3) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
-actionpack (5.1.3) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
-activesupport (5.1.3) lib/active_support/callbacks.rb:198:in `block in halting'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `block in invoke_before'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `each'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `invoke_before'
-activesupport (5.1.3) lib/active_support/callbacks.rb:130:in `run_callbacks'
-actionpack (5.1.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
-activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
-activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
-activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
-actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
-activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
-actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
-actionview (5.1.3) lib/action_view/rendering.rb:30:in `process'
-actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
-actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
-rack (2.0.3) lib/rack/etag.rb:25:in `call'
-rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
-rack (2.0.3) lib/rack/head.rb:12:in `call'
-rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
-rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
-activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
-activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
-actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
-web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
-rack (2.0.3) lib/rack/method_override.rb:22:in `call'
-rack (2.0.3) lib/rack/runtime.rb:22:in `call'
-activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
-rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
-rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
-railties (5.1.3) lib/rails/engine.rb:522:in `call'
-puma (3.10.0) lib/puma/configuration.rb:225:in `call'
-puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
-puma (3.10.0) lib/puma/server.rb:437:in `process_client'
-puma (3.10.0) lib/puma/server.rb:301:in `block in run'
-puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 17:41:24 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"testin ghit so fad sdf", "phrase"=>{"content"=>"testin ghit so fad sdf"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-Completed 422 Unprocessable Entity in 31ms (ActiveRecord: 0.0ms)
-
-
-  
-ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
-  
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:227:in `handle_unverified_request'
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:222:in `verify_authenticity_token'
-activesupport (5.1.3) lib/active_support/callbacks.rb:413:in `block in make_lambda'
-activesupport (5.1.3) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
-actionpack (5.1.3) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
-activesupport (5.1.3) lib/active_support/callbacks.rb:198:in `block in halting'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `block in invoke_before'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `each'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `invoke_before'
-activesupport (5.1.3) lib/active_support/callbacks.rb:130:in `run_callbacks'
-actionpack (5.1.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
-activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
-activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
-activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
-actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
-activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
-actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
-actionview (5.1.3) lib/action_view/rendering.rb:30:in `process'
-actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
-actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
-rack (2.0.3) lib/rack/etag.rb:25:in `call'
-rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
-rack (2.0.3) lib/rack/head.rb:12:in `call'
-rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
-rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
-activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
-activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
-actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
-web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
-rack (2.0.3) lib/rack/method_override.rb:22:in `call'
-rack (2.0.3) lib/rack/runtime.rb:22:in `call'
-activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
-rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
-rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
-railties (5.1.3) lib/rails/engine.rb:522:in `call'
-puma (3.10.0) lib/puma/configuration.rb:225:in `call'
-puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
-puma (3.10.0) lib/puma/server.rb:437:in `process_client'
-puma (3.10.0) lib/puma/server.rb:301:in `block in run'
-puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 17:44:02 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"Hello, Are you there", "phrase"=>{"content"=>"Hello, Are you there"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-Completed 422 Unprocessable Entity in 19ms (ActiveRecord: 0.0ms)
-
-
-  
-ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
-  
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:227:in `handle_unverified_request'
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:222:in `verify_authenticity_token'
-activesupport (5.1.3) lib/active_support/callbacks.rb:413:in `block in make_lambda'
-activesupport (5.1.3) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
-actionpack (5.1.3) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
-activesupport (5.1.3) lib/active_support/callbacks.rb:198:in `block in halting'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `block in invoke_before'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `each'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `invoke_before'
-activesupport (5.1.3) lib/active_support/callbacks.rb:130:in `run_callbacks'
-actionpack (5.1.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
-activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
-activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
-activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
-actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
-activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
-actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
-actionview (5.1.3) lib/action_view/rendering.rb:30:in `process'
-actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
-actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
-rack (2.0.3) lib/rack/etag.rb:25:in `call'
-rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
-rack (2.0.3) lib/rack/head.rb:12:in `call'
-rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
-rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
-activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
-activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
-actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
-web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
-rack (2.0.3) lib/rack/method_override.rb:22:in `call'
-rack (2.0.3) lib/rack/runtime.rb:22:in `call'
-activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
-rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
-rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
-railties (5.1.3) lib/rails/engine.rb:522:in `call'
-puma (3.10.0) lib/puma/configuration.rb:225:in `call'
-puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
-puma (3.10.0) lib/puma/server.rb:437:in `process_client'
-puma (3.10.0) lib/puma/server.rb:301:in `block in run'
-puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 18:27:45 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"hey", "phrase"=>{"content"=>"hey"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-Completed 422 Unprocessable Entity in 87ms (ActiveRecord: 0.0ms)
-
-
-  
-ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
-  
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:227:in `handle_unverified_request'
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:222:in `verify_authenticity_token'
-activesupport (5.1.3) lib/active_support/callbacks.rb:413:in `block in make_lambda'
-activesupport (5.1.3) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
-actionpack (5.1.3) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
-activesupport (5.1.3) lib/active_support/callbacks.rb:198:in `block in halting'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `block in invoke_before'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `each'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `invoke_before'
-activesupport (5.1.3) lib/active_support/callbacks.rb:130:in `run_callbacks'
-actionpack (5.1.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
-activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
-activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
-activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
-actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
-activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
-actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
-actionview (5.1.3) lib/action_view/rendering.rb:30:in `process'
-actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
-actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
-rack (2.0.3) lib/rack/etag.rb:25:in `call'
-rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
-rack (2.0.3) lib/rack/head.rb:12:in `call'
-rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
-rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
-activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
-activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
-actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
-web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
-rack (2.0.3) lib/rack/method_override.rb:22:in `call'
-rack (2.0.3) lib/rack/runtime.rb:22:in `call'
-activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
-rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
-rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
-railties (5.1.3) lib/rails/engine.rb:522:in `call'
-puma (3.10.0) lib/puma/configuration.rb:225:in `call'
-puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
-puma (3.10.0) lib/puma/server.rb:437:in `process_client'
-puma (3.10.0) lib/puma/server.rb:301:in `block in run'
-puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 18:28:00 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"test", "phrase"=>{"content"=>"test"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-Completed 422 Unprocessable Entity in 8ms (ActiveRecord: 0.0ms)
-
-
-  
-ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
-  
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:227:in `handle_unverified_request'
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:222:in `verify_authenticity_token'
-activesupport (5.1.3) lib/active_support/callbacks.rb:413:in `block in make_lambda'
-activesupport (5.1.3) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
-actionpack (5.1.3) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
-activesupport (5.1.3) lib/active_support/callbacks.rb:198:in `block in halting'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `block in invoke_before'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `each'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `invoke_before'
-activesupport (5.1.3) lib/active_support/callbacks.rb:130:in `run_callbacks'
-actionpack (5.1.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
-activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
-activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
-activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
-actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
-activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
-actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
-actionview (5.1.3) lib/action_view/rendering.rb:30:in `process'
-actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
-actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
-rack (2.0.3) lib/rack/etag.rb:25:in `call'
-rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
-rack (2.0.3) lib/rack/head.rb:12:in `call'
-rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
-rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
-activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
-activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
-actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
-web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
-rack (2.0.3) lib/rack/method_override.rb:22:in `call'
-rack (2.0.3) lib/rack/runtime.rb:22:in `call'
-activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
-rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
-rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
-railties (5.1.3) lib/rails/engine.rb:522:in `call'
-puma (3.10.0) lib/puma/configuration.rb:225:in `call'
-puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
-puma (3.10.0) lib/puma/server.rb:437:in `process_client'
-puma (3.10.0) lib/puma/server.rb:301:in `block in run'
-puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 18:30:18 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"this is a test", "phrase"=>{"content"=>"this is a test"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-Completed 422 Unprocessable Entity in 13ms (ActiveRecord: 0.0ms)
-
-
-  
-ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
-  
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:227:in `handle_unverified_request'
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:222:in `verify_authenticity_token'
-activesupport (5.1.3) lib/active_support/callbacks.rb:413:in `block in make_lambda'
-activesupport (5.1.3) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
-actionpack (5.1.3) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
-activesupport (5.1.3) lib/active_support/callbacks.rb:198:in `block in halting'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `block in invoke_before'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `each'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `invoke_before'
-activesupport (5.1.3) lib/active_support/callbacks.rb:130:in `run_callbacks'
-actionpack (5.1.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
-activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
-activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
-activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
-actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
-activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
-actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
-actionview (5.1.3) lib/action_view/rendering.rb:30:in `process'
-actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
-actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
-rack (2.0.3) lib/rack/etag.rb:25:in `call'
-rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
-rack (2.0.3) lib/rack/head.rb:12:in `call'
-rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
-rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
-activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
-activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
-actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
-web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
-rack (2.0.3) lib/rack/method_override.rb:22:in `call'
-rack (2.0.3) lib/rack/runtime.rb:22:in `call'
-activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
-rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
-rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
-railties (5.1.3) lib/rails/engine.rb:522:in `call'
-puma (3.10.0) lib/puma/configuration.rb:225:in `call'
-puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
-puma (3.10.0) lib/puma/server.rb:437:in `process_client'
-puma (3.10.0) lib/puma/server.rb:301:in `block in run'
-puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 18:31:05 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"hello", "phrase"=>{"content"=>"hello"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-Completed 422 Unprocessable Entity in 7ms (ActiveRecord: 0.0ms)
-
-
-  
-ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
-  
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:227:in `handle_unverified_request'
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:222:in `verify_authenticity_token'
-activesupport (5.1.3) lib/active_support/callbacks.rb:413:in `block in make_lambda'
-activesupport (5.1.3) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
-actionpack (5.1.3) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
-activesupport (5.1.3) lib/active_support/callbacks.rb:198:in `block in halting'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `block in invoke_before'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `each'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `invoke_before'
-activesupport (5.1.3) lib/active_support/callbacks.rb:130:in `run_callbacks'
-actionpack (5.1.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
-activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
-activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
-activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
-actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
-activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
-actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
-actionview (5.1.3) lib/action_view/rendering.rb:30:in `process'
-actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
-actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
-rack (2.0.3) lib/rack/etag.rb:25:in `call'
-rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
-rack (2.0.3) lib/rack/head.rb:12:in `call'
-rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
-rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
-activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
-activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
-actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
-web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
-rack (2.0.3) lib/rack/method_override.rb:22:in `call'
-rack (2.0.3) lib/rack/runtime.rb:22:in `call'
-activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
-rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
-rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
-railties (5.1.3) lib/rails/engine.rb:522:in `call'
-puma (3.10.0) lib/puma/configuration.rb:225:in `call'
-puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
-puma (3.10.0) lib/puma/server.rb:437:in `process_client'
-puma (3.10.0) lib/puma/server.rb:301:in `block in run'
-puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 18:34:51 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"hey whats up", "phrase"=>{"content"=>"hey whats up"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-Completed 422 Unprocessable Entity in 19ms (ActiveRecord: 0.0ms)
-
-
-  
-ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
-  
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:227:in `handle_unverified_request'
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:222:in `verify_authenticity_token'
-activesupport (5.1.3) lib/active_support/callbacks.rb:413:in `block in make_lambda'
-activesupport (5.1.3) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
-actionpack (5.1.3) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
-activesupport (5.1.3) lib/active_support/callbacks.rb:198:in `block in halting'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `block in invoke_before'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `each'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `invoke_before'
-activesupport (5.1.3) lib/active_support/callbacks.rb:130:in `run_callbacks'
-actionpack (5.1.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
-activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
-activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
-activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
-actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
-activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
-actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
-actionview (5.1.3) lib/action_view/rendering.rb:30:in `process'
-actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
-actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
-rack (2.0.3) lib/rack/etag.rb:25:in `call'
-rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
-rack (2.0.3) lib/rack/head.rb:12:in `call'
-rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
-rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
-activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
-activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
-actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
-web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
-rack (2.0.3) lib/rack/method_override.rb:22:in `call'
-rack (2.0.3) lib/rack/runtime.rb:22:in `call'
-activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
-rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
-rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
-railties (5.1.3) lib/rails/engine.rb:522:in `call'
-puma (3.10.0) lib/puma/configuration.rb:225:in `call'
-puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
-puma (3.10.0) lib/puma/server.rb:437:in `process_client'
-puma (3.10.0) lib/puma/server.rb:301:in `block in run'
-puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 18:35:07 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"hoal comeona d", "phrase"=>{"content"=>"hoal comeona d"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-Completed 422 Unprocessable Entity in 9ms (ActiveRecord: 0.0ms)
-
-
-  
-ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
-  
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:227:in `handle_unverified_request'
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:222:in `verify_authenticity_token'
-activesupport (5.1.3) lib/active_support/callbacks.rb:413:in `block in make_lambda'
-activesupport (5.1.3) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
-actionpack (5.1.3) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
-activesupport (5.1.3) lib/active_support/callbacks.rb:198:in `block in halting'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `block in invoke_before'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `each'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `invoke_before'
-activesupport (5.1.3) lib/active_support/callbacks.rb:130:in `run_callbacks'
-actionpack (5.1.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
-activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
-activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
-activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
-actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
-activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
-actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
-actionview (5.1.3) lib/action_view/rendering.rb:30:in `process'
-actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
-actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
-rack (2.0.3) lib/rack/etag.rb:25:in `call'
-rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
-rack (2.0.3) lib/rack/head.rb:12:in `call'
-rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
-rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
-activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
-activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
-actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
-web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
-rack (2.0.3) lib/rack/method_override.rb:22:in `call'
-rack (2.0.3) lib/rack/runtime.rb:22:in `call'
-activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
-rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
-rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
-railties (5.1.3) lib/rails/engine.rb:522:in `call'
-puma (3.10.0) lib/puma/configuration.rb:225:in `call'
-puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
-puma (3.10.0) lib/puma/server.rb:437:in `process_client'
-puma (3.10.0) lib/puma/server.rb:301:in `block in run'
-puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 18:37:48 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"another", "phrase"=>{"content"=>"another"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-Completed 422 Unprocessable Entity in 22ms (ActiveRecord: 0.0ms)
-
-
-  
-ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
-  
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:227:in `handle_unverified_request'
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:222:in `verify_authenticity_token'
-activesupport (5.1.3) lib/active_support/callbacks.rb:413:in `block in make_lambda'
-activesupport (5.1.3) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
-actionpack (5.1.3) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
-activesupport (5.1.3) lib/active_support/callbacks.rb:198:in `block in halting'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `block in invoke_before'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `each'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `invoke_before'
-activesupport (5.1.3) lib/active_support/callbacks.rb:130:in `run_callbacks'
-actionpack (5.1.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
-activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
-activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
-activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
-actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
-activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
-actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
-actionview (5.1.3) lib/action_view/rendering.rb:30:in `process'
-actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
-actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
-rack (2.0.3) lib/rack/etag.rb:25:in `call'
-rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
-rack (2.0.3) lib/rack/head.rb:12:in `call'
-rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
-rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
-activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
-activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
-actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
-web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
-rack (2.0.3) lib/rack/method_override.rb:22:in `call'
-rack (2.0.3) lib/rack/runtime.rb:22:in `call'
-activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
-rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
-rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
-railties (5.1.3) lib/rails/engine.rb:522:in `call'
-puma (3.10.0) lib/puma/configuration.rb:225:in `call'
-puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
-puma (3.10.0) lib/puma/server.rb:437:in `process_client'
-puma (3.10.0) lib/puma/server.rb:301:in `block in run'
-puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 18:38:48 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"anotehr e adf ad a", "phrase"=>{"content"=>"anotehr e adf ad a"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-Completed 422 Unprocessable Entity in 8ms (ActiveRecord: 0.0ms)
-
-
-  
-ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
-  
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:227:in `handle_unverified_request'
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:222:in `verify_authenticity_token'
-activesupport (5.1.3) lib/active_support/callbacks.rb:413:in `block in make_lambda'
-activesupport (5.1.3) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
-actionpack (5.1.3) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
-activesupport (5.1.3) lib/active_support/callbacks.rb:198:in `block in halting'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `block in invoke_before'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `each'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `invoke_before'
-activesupport (5.1.3) lib/active_support/callbacks.rb:130:in `run_callbacks'
-actionpack (5.1.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
-activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
-activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
-activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
-actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
-activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
-actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
-actionview (5.1.3) lib/action_view/rendering.rb:30:in `process'
-actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
-actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
-rack (2.0.3) lib/rack/etag.rb:25:in `call'
-rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
-rack (2.0.3) lib/rack/head.rb:12:in `call'
-rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
-rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
-activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
-activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
-actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
-web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
-rack (2.0.3) lib/rack/method_override.rb:22:in `call'
-rack (2.0.3) lib/rack/runtime.rb:22:in `call'
-activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
-rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
-rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
-railties (5.1.3) lib/rails/engine.rb:522:in `call'
-puma (3.10.0) lib/puma/configuration.rb:225:in `call'
-puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
-puma (3.10.0) lib/puma/server.rb:437:in `process_client'
-puma (3.10.0) lib/puma/server.rb:301:in `block in run'
-puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 18:47:07 -0400
-  [1m[35m (6.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"TEST AGAIN please work", "phrase"=>{"content"=>"TEST AGAIN please work"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-Completed 422 Unprocessable Entity in 16ms (ActiveRecord: 5.6ms)
-
-
-  
-ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
-  
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:227:in `handle_unverified_request'
-actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:222:in `verify_authenticity_token'
-activesupport (5.1.3) lib/active_support/callbacks.rb:413:in `block in make_lambda'
-activesupport (5.1.3) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
-actionpack (5.1.3) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
-activesupport (5.1.3) lib/active_support/callbacks.rb:198:in `block in halting'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `block in invoke_before'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `each'
-activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `invoke_before'
-activesupport (5.1.3) lib/active_support/callbacks.rb:130:in `run_callbacks'
-actionpack (5.1.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
-activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
-activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
-activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
-actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
-actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
-activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
-actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
-actionview (5.1.3) lib/action_view/rendering.rb:30:in `process'
-actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
-actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
-actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
-actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
-rack (2.0.3) lib/rack/etag.rb:25:in `call'
-rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
-rack (2.0.3) lib/rack/head.rb:12:in `call'
-rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
-rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
-activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
-activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
-actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
-web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
-rack (2.0.3) lib/rack/method_override.rb:22:in `call'
-rack (2.0.3) lib/rack/runtime.rb:22:in `call'
-activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
-rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
-rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
-railties (5.1.3) lib/rails/engine.rb:522:in `call'
-puma (3.10.0) lib/puma/configuration.rb:225:in `call'
-puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
-puma (3.10.0) lib/puma/server.rb:437:in `process_client'
-puma (3.10.0) lib/puma/server.rb:301:in `block in run'
-puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-  [1m[36mPhrase Load (49.1ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" LIMIT $1[0m  [["LIMIT", 11]]
-  [1m[36mPhoto Load (10.0ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" LIMIT $1[0m  [["LIMIT", 11]]
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 19:17:17 -0400
-  [1m[35m (4.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"now", "phrase"=>{"content"=>"now"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (12.7ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "now"], ["created_on", "2017-08-21 23:17:18.044890"]]
-  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
-  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
-Completed 404 Not Found in 114ms (ActiveRecord: 88.8ms)
-
-
-  
-ActiveRecord::RecordNotFound (Couldn't find Phrase with 'id'=):
-  
-app/controllers/phrases_controller.rb:31:in `phrase_parse'
-app/controllers/phrases_controller.rb:22:in `block in create'
-app/controllers/phrases_controller.rb:18:in `create'
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 19:21:45 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"pizza rice", "phrase"=>{"content"=>"pizza rice"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (9.2ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "pizza rice"], ["created_on", "2017-08-21 23:21:45.344159"]]
-  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
-  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
-Completed 404 Not Found in 159ms (ActiveRecord: 60.8ms)
-
-
-  
-ActiveRecord::RecordNotFound (Couldn't find Phrase with 'id'=):
-  
-app/controllers/phrases_controller.rb:31:in `phrase_parse'
-app/controllers/phrases_controller.rb:22:in `block in create'
-app/controllers/phrases_controller.rb:18:in `create'
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 19:22:44 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"now", "phrase"=>{"content"=>"now"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (2.5ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "now"], ["created_on", "2017-08-21 23:22:44.958607"]]
-  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
-  [1m[36mPhrase Load (0.5ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
-Completed 404 Not Found in 57ms (ActiveRecord: 4.2ms)
-
-
-  
-ActiveRecord::RecordNotFound (Couldn't find Phrase with 'id'=):
-  
-app/controllers/phrases_controller.rb:31:in `phrase_parse'
-app/controllers/phrases_controller.rb:22:in `block in create'
-app/controllers/phrases_controller.rb:18:in `create'
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 19:24:13 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"another test", "phrase"=>{"content"=>"another test"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (4.1ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "another test"], ["created_on", "2017-08-21 23:24:13.947942"]]
-  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
-  [1m[36mPhrase Load (0.6ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
-Completed 404 Not Found in 55ms (ActiveRecord: 6.7ms)
-
-
-  
-ActiveRecord::RecordNotFound (Couldn't find Phrase with 'id'=):
-  
-app/controllers/phrases_controller.rb:31:in `phrase_parse'
-app/controllers/phrases_controller.rb:22:in `block in create'
-app/controllers/phrases_controller.rb:18:in `create'
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 19:30:32 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"twic", "phrase"=>{"content"=>"twic"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-  [1m[35m (5.0ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (61.5ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "twic"], ["created_on", "2017-08-21 23:30:32.974703"]]
-  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
-  [1m[36mPhrase Load (3.7ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
-Completed 404 Not Found in 263ms (ActiveRecord: 71.4ms)
-
-
-  
-ActiveRecord::RecordNotFound (Couldn't find Phrase with 'id'=):
-  
-app/controllers/phrases_controller.rb:31:in `phrase_parse'
-app/controllers/phrases_controller.rb:22:in `block in create'
-app/controllers/phrases_controller.rb:18:in `create'
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 19:32:04 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"hello", "phrase"=>{"content"=>"hello"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-  [1m[35m (67.1ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (89.6ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "hello"], ["created_on", "2017-08-21 23:32:05.111140"]]
-  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
-  [1m[36mPhrase Load (6.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
-Completed 404 Not Found in 479ms (ActiveRecord: 164.1ms)
-
-
-  
-ActiveRecord::RecordNotFound (Couldn't find Phrase with 'id'=):
-  
-app/controllers/phrases_controller.rb:31:in `phrase_parse'
-app/controllers/phrases_controller.rb:22:in `block in create'
-app/controllers/phrases_controller.rb:18:in `create'
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 19:34:57 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"yes", "phrase"=>{"content"=>"yes"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-  [1m[35m (4.1ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (25.2ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "yes"], ["created_on", "2017-08-21 23:34:57.831399"]]
-  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
-  [1m[36mPhrase Load (13.1ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
-Completed 404 Not Found in 166ms (ActiveRecord: 43.0ms)
-
-
-  
-ActiveRecord::RecordNotFound (Couldn't find Phrase with 'id'=):
-  
-app/controllers/phrases_controller.rb:31:in `phrase_parse'
-app/controllers/phrases_controller.rb:22:in `block in create'
-app/controllers/phrases_controller.rb:18:in `create'
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 19:36:33 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"hello", "phrase"=>{"content"=>"hello"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-  [1m[35m (7.3ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (43.7ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "hello"], ["created_on", "2017-08-21 23:36:33.536827"]]
-  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
-  [1m[36mPhrase Load (0.7ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
-Completed 404 Not Found in 177ms (ActiveRecord: 52.8ms)
-
-
-  
-ActiveRecord::RecordNotFound (Couldn't find Phrase with 'id'=):
-  
-app/controllers/phrases_controller.rb:31:in `phrase_parse'
-app/controllers/phrases_controller.rb:22:in `block in create'
-app/controllers/phrases_controller.rb:18:in `create'
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 19:37:13 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"sun sun here it comes", "phrase"=>{"content"=>"sun sun here it comes"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (28.7ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "sun sun here it comes"], ["created_on", "2017-08-21 23:37:13.954066"]]
-  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
-  [1m[36mPhrase Load (0.8ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
-Completed 404 Not Found in 90ms (ActiveRecord: 33.3ms)
-
-
-  
-ActiveRecord::RecordNotFound (Couldn't find Phrase with 'id'=):
-  
-app/controllers/phrases_controller.rb:31:in `phrase_parse'
-app/controllers/phrases_controller.rb:22:in `block in create'
-app/controllers/phrases_controller.rb:18:in `create'
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 19:38:04 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"require json", "phrase"=>{"content"=>"require json"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "require json"], ["created_on", "2017-08-21 23:38:04.983049"]]
-  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
-  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
-Completed 404 Not Found in 81ms (ActiveRecord: 99.0ms)
-
-
-  
-ActiveRecord::RecordNotFound (Couldn't find Phrase with 'id'=):
-  
-app/controllers/phrases_controller.rb:31:in `phrase_parse'
-app/controllers/phrases_controller.rb:22:in `block in create'
-app/controllers/phrases_controller.rb:18:in `create'
-  [1m[35m (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[35m (3.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
-  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
-  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
-  [1m[35m (133.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "TweetPics_development"[0m
-  [1m[35m (123.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "TweetPics_test"[0m
-  [1m[35m (369.5ms)[0m  [1m[35mCREATE DATABASE "TweetPics_development" ENCODING = 'unicode'[0m
-  [1m[35m (248.5ms)[0m  [1m[35mCREATE DATABASE "TweetPics_test" ENCODING = 'unicode'[0m
-  [1m[35m (46.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
-  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
-  [1m[35m (1.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3784842769760408160)[0m
-  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Migrating to CreatePhrases (20170818172129)
-  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (23.4ms)[0m  [1m[35mCREATE TABLE "phrases" ("id" bigserial primary key, "content" character varying, "created_on" timestamp)[0m
-  [1m[35mSQL (9.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170818172129"]]
-  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
-Migrating to CreatePhotos (20170818172727)
-  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (36.8ms)[0m  [1m[35mCREATE TABLE "photos" ("id" bigserial primary key, "photo_url" character varying, "tags" character varying, "created_on" timestamp, "phrase_id" bigint)[0m
-  [1m[35m (7.4ms)[0m  [1m[35mCREATE  INDEX  "index_photos_on_phrase_id" ON "photos"  ("phrase_id")[0m
-  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170818172727"]]
-  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
-  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
-  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-08-21 23:48:14.642916"], ["updated_at", "2017-08-21 23:48:14.642916"]]
-  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
-  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(3784842769760408160)[0m
-  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[36mPhoto Load (1.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
-  [1m[36mPhrase Load (0.5ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 19:53:15 -0400
-  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"hello", "phrase"=>{"content"=>"hello"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "hello"], ["created_on", "2017-08-21 23:53:16.363157"]]
-  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
-  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
-Completed 404 Not Found in 38ms (ActiveRecord: 13.4ms)
-
-
-  
-ActiveRecord::RecordNotFound (Couldn't find Phrase with 'id'=):
-  
-app/controllers/phrases_controller.rb:40:in `phrase_parse'
-app/controllers/phrases_controller.rb:31:in `block in create'
-app/controllers/phrases_controller.rb:27:in `create'
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 19:53:44 -0400
-  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"test", "phrase"=>{"content"=>"test"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (3.2ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "test"], ["created_on", "2017-08-21 23:53:45.155853"]]
-  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
-  [1m[36mPhrase Load (2.6ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
-Completed 404 Not Found in 50ms (ActiveRecord: 17.4ms)
-
-
-  
-ActiveRecord::RecordNotFound (Couldn't find Phrase with 'id'=):
-  
-app/controllers/phrases_controller.rb:40:in `phrase_parse'
-app/controllers/phrases_controller.rb:31:in `block in create'
-app/controllers/phrases_controller.rb:27:in `create'
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 19:54:48 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"hello", "phrase"=>{"content"=>"hello"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (3.7ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "hello"], ["created_on", "2017-08-21 23:54:59.136764"]]
-  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
-  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
-  [1m[36mPhrase Load (1.6ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
-Completed 404 Not Found in 28ms (ActiveRecord: 8.5ms)
-
-
-  
-ActiveRecord::RecordNotFound (Couldn't find Phrase with 'id'=):
-  
-app/controllers/phrases_controller.rb:40:in `phrase_parse'
-app/controllers/phrases_controller.rb:31:in `block in create'
-app/controllers/phrases_controller.rb:27:in `create'
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 19:55:09 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"did this really work?", "phrase"=>{"content"=>"did this really work?"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "did this really work?"], ["created_on", "2017-08-21 23:55:09.958799"]]
-  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
-  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
-  [1m[36mPhrase Load (1.8ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
-Completed 404 Not Found in 19ms (ActiveRecord: 6.8ms)
-
-
-  
-ActiveRecord::RecordNotFound (Couldn't find Phrase with 'id'=):
-  
-app/controllers/phrases_controller.rb:40:in `phrase_parse'
-app/controllers/phrases_controller.rb:31:in `block in create'
-app/controllers/phrases_controller.rb:27:in `create'
-  [1m[36mPhrase Load (0.9ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" LIMIT $1[0m  [["LIMIT", 11]]
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 19:56:31 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"dgadfad adf adf", "phrase"=>{"content"=>"dgadfad adf adf"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (2.8ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "dgadfad adf adf"], ["created_on", "2017-08-21 23:56:32.150101"]]
-  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
-  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
-Completed 500 Internal Server Error in 31ms (ActiveRecord: 24.3ms)
-
-
-  
-ArgumentError (wrong number of arguments (given 1, expected 0)):
-  
-app/controllers/phrases_controller.rb:39:in `phrase_parse'
-app/controllers/phrases_controller.rb:31:in `block in create'
-app/controllers/phrases_controller.rb:27:in `create'
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 19:57:39 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"hello its me", "phrase"=>{"content"=>"hello its me"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "hello its me"], ["created_on", "2017-08-21 23:57:39.935435"]]
-  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
-  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
-Completed 500 Internal Server Error in 17ms (ActiveRecord: 3.5ms)
-
-
-  
-ArgumentError (wrong number of arguments (given 1, expected 0)):
-  
-app/controllers/phrases_controller.rb:40:in `phrase_parse'
-app/controllers/phrases_controller.rb:32:in `block in create'
-app/controllers/phrases_controller.rb:27:in `create'
-  [1m[36mPhrase Load (2.1ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" LIMIT $1[0m  [["LIMIT", 11]]
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 20:00:01 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"testing this theory", "phrase"=>{"content"=>"testing this theory"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "testing this theory"], ["created_on", "2017-08-22 00:00:01.625644"]]
-  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
-  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
-Completed 500 Internal Server Error in 307ms (ActiveRecord: 5.3ms)
-
-
-  
-NameError (undefined local variable or method `phrase_parse' for #<PhrasesController:0x007fc0bd88fc68>
-Did you mean?  phrase_params
-               phrase_path):
-  
-app/controllers/phrases_controller.rb:31:in `block in create'
-app/controllers/phrases_controller.rb:27:in `create'
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 20:00:26 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"hello try again woot", "phrase"=>{"content"=>"hello try again woot"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (5.9ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "hello try again woot"], ["created_on", "2017-08-22 00:00:26.678909"]]
-  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
-  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
-Completed 201 Created in 48ms (Views: 21.6ms | ActiveRecord: 7.3ms)
-
-
-Started GET "/phrases.json" for 127.0.0.1 at 2017-08-21 20:00:26 -0400
-Processing by PhrasesController#index as JSON
-  [1m[36mPhrase Load (12.4ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
-Completed 200 OK in 50ms (Views: 36.9ms | ActiveRecord: 12.4ms)
-
-
-Started GET "/phrases/1.json" for 127.0.0.1 at 2017-08-21 20:00:42 -0400
-Processing by PhrasesController#show as JSON
-  Parameters: {"id"=>"1"}
-  [1m[36mPhrase Load (4.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-Completed 200 OK in 92ms (Views: 2.3ms | ActiveRecord: 4.4ms)
-
-
-Started GET "/phrases.json" for 127.0.0.1 at 2017-08-21 20:00:44 -0400
-Processing by PhrasesController#index as JSON
-  [1m[36mPhrase Load (1.3ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
-Completed 200 OK in 208ms (Views: 197.9ms | ActiveRecord: 1.3ms)
-
-
-<<<<<<< HEAD
-Started GET "/phrases/9.json" for 127.0.0.1 at 2017-08-21 20:02:30 -0400
-  [1m[35m (4.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Processing by PhrasesController#show as JSON
-  Parameters: {"id"=>"9"}
-  [1m[36mPhrase Load (0.6ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
-Completed 404 Not Found in 85ms (ActiveRecord: 7.9ms)
-
-
-  
-ActiveRecord::RecordNotFound (Couldn't find Phrase with 'id'=9):
-  
-app/controllers/phrases_controller.rb:16:in `show'
-Started GET "/phrases/6.json" for 127.0.0.1 at 2017-08-21 20:02:37 -0400
-Processing by PhrasesController#show as JSON
-  Parameters: {"id"=>"6"}
-  [1m[36mPhrase Load (1.9ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
-Completed 200 OK in 52ms (Views: 2.0ms | ActiveRecord: 27.0ms)
-
-
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 20:03:10 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"yes it works", "phrase"=>{"content"=>"yes it works"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "yes it works"], ["created_on", "2017-08-22 00:03:20.934370"]]
-  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
-Completed 201 Created in 17ms (Views: 1.3ms | ActiveRecord: 2.2ms)
-
-
-Started GET "/phrases.json" for 127.0.0.1 at 2017-08-21 20:03:21 -0400
-Processing by PhrasesController#index as JSON
-  [1m[36mPhrase Load (17.0ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
-Completed 200 OK in 124ms (Views: 73.1ms | ActiveRecord: 17.0ms)
-
-
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-21 20:03:55 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"hadfdf adsf agd", "phrase"=>{"content"=>"hadfdf adsf agd"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (21.7ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "hadfdf adsf agd"], ["created_on", "2017-08-22 00:03:55.595869"]]
-  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
-  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
-Completed 201 Created in 89ms (Views: 25.8ms | ActiveRecord: 89.6ms)
-
-
-Started GET "/phrases.json" for 127.0.0.1 at 2017-08-21 20:03:55 -0400
-Processing by PhrasesController#index as JSON
-  [1m[36mPhrase Load (3.0ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
-Completed 200 OK in 23ms (Views: 17.5ms | ActiveRecord: 3.0ms)
-
-
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-22 09:27:05 -0400
-  [1m[35m (7.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"Hello I am Testing", "phrase"=>{"content"=>"Hello I am Testing"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (17.7ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "Hello I am Testing"], ["created_on", "2017-08-22 13:27:06.151948"]]
-  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
-  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
-Completed 201 Created in 56ms (Views: 1.4ms | ActiveRecord: 38.1ms)
-
-
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-22 09:27:14 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"id"=>11, "content"=>"Hello I am Testing", "created_on"=>"2017-08-22T13:27:06.151Z", "phrase"=>{"id"=>11, "content"=>"Hello I am Testing", "created_on"=>"2017-08-22T13:27:06.151Z"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-Unpermitted parameters: :id, :created_on
-  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "Hello I am Testing"], ["created_on", "2017-08-22 13:27:14.512393"]]
-  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
-  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
-Completed 201 Created in 45ms (Views: 1.4ms | ActiveRecord: 20.1ms)
-
-
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-22 09:27:41 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"Testing again", "phrase"=>{"content"=>"Testing again"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "Testing again"], ["created_on", "2017-08-22 13:27:41.190707"]]
-  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
-  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
-Completed 201 Created in 11ms (Views: 0.7ms | ActiveRecord: 4.1ms)
-
-
-Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 09:27:41 -0400
-Processing by PhrasesController#index as JSON
-  [1m[36mPhrase Load (2.5ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
-Completed 200 OK in 17ms (Views: 13.0ms | ActiveRecord: 2.5ms)
-
-
-Started GET "/phrases/13.json" for 127.0.0.1 at 2017-08-22 09:27:47 -0400
-Processing by PhrasesController#show as JSON
-  Parameters: {"id"=>"13"}
-  [1m[36mPhrase Load (1.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
-Completed 200 OK in 24ms (Views: 0.6ms | ActiveRecord: 4.2ms)
-
-
-Started GET "/phrases/13.json" for 127.0.0.1 at 2017-08-22 09:28:47 -0400
-Processing by PhrasesController#show as JSON
-  Parameters: {"id"=>"13"}
-  [1m[36mPhrase Load (0.5ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
-Completed 200 OK in 96ms (Views: 6.0ms | ActiveRecord: 54.1ms)
-
-
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-22 09:28:53 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"please work", "phrase"=>{"content"=>"please work"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "please work"], ["created_on", "2017-08-22 13:28:53.756664"]]
-  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
-  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
-Completed 201 Created in 10ms (Views: 2.9ms | ActiveRecord: 2.0ms)
-
-
-Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 09:28:53 -0400
-Processing by PhrasesController#index as JSON
-  [1m[36mPhrase Load (2.6ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
-Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 2.6ms)
-
-
-Started GET "/phrases/14.json" for 127.0.0.1 at 2017-08-22 09:28:56 -0400
-Processing by PhrasesController#show as JSON
-  Parameters: {"id"=>"14"}
-  [1m[36mPhrase Load (0.5ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
-Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.5ms)
-
-
-Started GET "/phrases/14.json" for 127.0.0.1 at 2017-08-22 09:29:58 -0400
-Processing by PhrasesController#show as JSON
-  Parameters: {"id"=>"14"}
-  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
-Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.4ms)
-
-
-Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 09:30:14 -0400
-Processing by PhrasesController#index as JSON
-  [1m[36mPhrase Load (0.5ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
-Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.5ms)
-
-
-Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 09:38:45 -0400
-Processing by PhrasesController#index as JSON
-  [1m[36mPhrase Load (0.8ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
-Completed 200 OK in 61ms (Views: 19.7ms | ActiveRecord: 17.3ms)
-
-
-  [1m[36mPhoto Load (15.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" LIMIT $1[0m  [["LIMIT", 11]]
-  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (7.2ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "basketball hoop"], ["created_on", "2017-08-22 13:39:34.280591"]]
-  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
-  [1m[36mPhoto Load (1.5ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" LIMIT $1[0m  [["LIMIT", 11]]
-Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 09:45:07 -0400
-Processing by PhrasesController#index as JSON
-  [1m[36mPhrase Load (0.9ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
-Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.9ms)
-
-
-Started GET "/phrases/10.json" for 127.0.0.1 at 2017-08-22 09:45:09 -0400
-Processing by PhrasesController#show as JSON
-  Parameters: {"id"=>"10"}
-  [1m[36mPhrase Load (0.9ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
-Completed 200 OK in 13ms (Views: 0.6ms | ActiveRecord: 0.9ms)
-
-
-Started GET "/phrases/10.json" for 127.0.0.1 at 2017-08-22 09:49:20 -0400
-Processing by PhrasesController#show as JSON
-  Parameters: {"id"=>"10"}
-  [1m[36mPhrase Load (0.8ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
-Completed 200 OK in 46ms (Views: 0.8ms | ActiveRecord: 0.8ms)
-
-
-  [1m[36mPhoto Load (2.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" LIMIT $1[0m  [["LIMIT", 11]]
-  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[35m (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
-  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
-  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
-  [1m[35m (138.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "TweetPics_development"[0m
-  [1m[35m (119.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "TweetPics_test"[0m
-  [1m[35m (336.5ms)[0m  [1m[35mCREATE DATABASE "TweetPics_development" ENCODING = 'unicode'[0m
-  [1m[35m (242.7ms)[0m  [1m[35mCREATE DATABASE "TweetPics_test" ENCODING = 'unicode'[0m
-  [1m[35m (35.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
-  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
-  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3784842769760408160)[0m
-  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Migrating to CreatePhrases (20170818172129)
-  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "phrases" ("id" bigserial primary key, "content" character varying, "created_on" timestamp)[0m
-  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170818172129"]]
-  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
-Migrating to CreatePhotos (20170818172727)
-  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (9.2ms)[0m  [1m[35mCREATE TABLE "photos" ("id" bigserial primary key, "photo_url" character varying, "tags" character varying, "created_on" timestamp, "phrase_id" bigint)[0m
-  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_photos_on_phrase_id" ON "photos"  ("phrase_id")[0m
-  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170818172727"]]
-  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
-  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
-  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-08-22 13:50:10.704840"], ["updated_at", "2017-08-22 13:50:10.704840"]]
-  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
-  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3784842769760408160)[0m
-  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Started GET "/phrases/10.json" for 127.0.0.1 at 2017-08-22 09:50:23 -0400
-  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Processing by PhrasesController#show as JSON
-  Parameters: {"id"=>"10"}
-  [1m[36mPhrase Load (0.9ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
-Completed 404 Not Found in 48ms (ActiveRecord: 9.7ms)
-
-
-  
-ActiveRecord::RecordNotFound (Couldn't find Phrase with 'id'=10):
-  
-app/controllers/phrases_controller.rb:16:in `show'
-Started GET "/phrases/10.json" for 127.0.0.1 at 2017-08-22 09:50:25 -0400
-Processing by PhrasesController#show as JSON
-  Parameters: {"id"=>"10"}
-  [1m[36mPhrase Load (1.1ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
-Completed 404 Not Found in 30ms (ActiveRecord: 14.3ms)
-
-
-  
-ActiveRecord::RecordNotFound (Couldn't find Phrase with 'id'=10):
-  
-app/controllers/phrases_controller.rb:16:in `show'
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-22 09:51:16 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"basketball court", "phrase"=>{"content"=>"basketball court"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (3.6ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "basketball court"], ["created_on", "2017-08-22 13:51:16.714356"]]
-  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
-  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
-Completed 201 Created in 21ms (Views: 1.7ms | ActiveRecord: 10.0ms)
-
-
-Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 09:51:16 -0400
-Processing by PhrasesController#index as JSON
-  [1m[36mPhrase Load (0.6ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
-Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.6ms)
-
-
-Started GET "/phrases/1.json" for 127.0.0.1 at 2017-08-22 09:51:19 -0400
-Processing by PhrasesController#show as JSON
-  Parameters: {"id"=>"1"}
-  [1m[36mPhrase Load (0.5ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 0.8ms)
-
-
-Started GET "/phrases/1.json" for 127.0.0.1 at 2017-08-22 09:51:53 -0400
-Processing by PhrasesController#show as JSON
-  Parameters: {"id"=>"1"}
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-22 09:52:03 -0400
-  [1m[36mPhrase Load (0.6ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-Completed 200 OK in 16ms (Views: 1.1ms | ActiveRecord: 0.6ms)
-
-
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"soccer shoes", "phrase"=>{"content"=>"soccer shoes"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "soccer shoes"], ["created_on", "2017-08-22 13:52:03.976615"]]
-  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
-  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
-Completed 500 Internal Server Error in 173ms (ActiveRecord: 1.9ms)
-
-
-  
-NameError (undefined local variable or method `phrase_parse' for #<PhrasesController:0x007fe6f7f779f8>
-Did you mean?  phrase_params
-               phrase_path):
-  
-app/controllers/phrases_controller.rb:32:in `block in create'
-app/controllers/phrases_controller.rb:28:in `create'
-Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 09:52:18 -0400
-Processing by PhrasesController#index as JSON
-  [1m[36mPhrase Load (0.8ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
-Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.8ms)
-
-
-Started GET "/phrases/2.json" for 127.0.0.1 at 2017-08-22 09:52:19 -0400
-Processing by PhrasesController#show as JSON
-  Parameters: {"id"=>"2"}
-  [1m[36mPhrase Load (2.5ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
-Completed 200 OK in 17ms (Views: 1.1ms | ActiveRecord: 2.5ms)
-
-
-  [1m[36mPhrase Load (0.5ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" LIMIT $1[0m  [["LIMIT", 11]]
-  [1m[36mPhoto Load (1.9ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" LIMIT $1[0m  [["LIMIT", 11]]
-Started POST "/phrases.json" for 127.0.0.1 at 2017-08-22 09:53:31 -0400
-Processing by PhrasesController#create as JSON
-  Parameters: {"content"=>"music here", "phrase"=>{"content"=>"music here"}}
-HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
-  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "music here"], ["created_on", "2017-08-22 13:53:31.489028"]]
-  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
-  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
-Completed 500 Internal Server Error in 205ms (ActiveRecord: 1.8ms)
-
-
-  
-NameError (undefined local variable or method `phrase_parse' for #<PhrasesController:0x007fe6f8f6a4a0>
-Did you mean?  phrase_params
-               phrase_path):
-  
-app/controllers/phrases_controller.rb:32:in `block in create'
-app/controllers/phrases_controller.rb:28:in `create'
-Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 09:53:39 -0400
-Processing by PhrasesController#index as JSON
-  [1m[36mPhrase Load (1.3ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
-Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 1.3ms)
-
-
-Started GET "/phrases/3.json" for 127.0.0.1 at 2017-08-22 09:53:41 -0400
-Processing by PhrasesController#show as JSON
-  Parameters: {"id"=>"3"}
-  [1m[36mPhrase Load (0.5ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
-Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.5ms)
-
-
-=======
 Started GET "/phrases.json" for 127.0.0.1 at 2017-08-21 16:45:33 -0400
   [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by PhrasesController#index as JSON
@@ -2183,9 +169,9 @@ Completed 200 OK in 33ms (Views: 5.7ms | ActiveRecord: 8.3ms)
 
 
 Started GET "/photos.json" for 127.0.0.1 at 2017-08-22 09:28:37 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/photos.json"):
-  
+
 actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -2215,39 +201,39 @@ puma (3.10.0) lib/puma/server.rb:437:in `process_client'
 puma (3.10.0) lib/puma/server.rb:301:in `block in run'
 puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 Started GET "/phrases" for 127.0.0.1 at 2017-08-22 09:29:37 -0400
-  
+
 SyntaxError (/Users/CharlesCox/wdi/projects/project3/TWiCS---Server-Side/app/controllers/phrases_controller.rb:12: syntax error, unexpected tIVAR, expecting '}'
  render json: @phrases @photos }
                               ^
 /Users/CharlesCox/wdi/projects/project3/TWiCS---Server-Side/app/controllers/phrases_controller.rb:65: syntax error, unexpected end-of-input, expecting keyword_end):
-  
+
 app/controllers/phrases_controller.rb:12: syntax error, unexpected tIVAR, expecting '}'
 app/controllers/phrases_controller.rb:65: syntax error, unexpected end-of-input, expecting keyword_end
 Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 09:29:38 -0400
-  
+
 SyntaxError (/Users/CharlesCox/wdi/projects/project3/TWiCS---Server-Side/app/controllers/phrases_controller.rb:12: syntax error, unexpected tIVAR, expecting '}'
  render json: @phrases @photos }
                               ^
 /Users/CharlesCox/wdi/projects/project3/TWiCS---Server-Side/app/controllers/phrases_controller.rb:65: syntax error, unexpected end-of-input, expecting keyword_end):
-  
+
 app/controllers/phrases_controller.rb:12: syntax error, unexpected tIVAR, expecting '}'
 app/controllers/phrases_controller.rb:65: syntax error, unexpected end-of-input, expecting keyword_end
 Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 09:29:39 -0400
-  
+
 SyntaxError (/Users/CharlesCox/wdi/projects/project3/TWiCS---Server-Side/app/controllers/phrases_controller.rb:12: syntax error, unexpected tIVAR, expecting '}'
  render json: @phrases @photos }
                               ^
 /Users/CharlesCox/wdi/projects/project3/TWiCS---Server-Side/app/controllers/phrases_controller.rb:65: syntax error, unexpected end-of-input, expecting keyword_end):
-  
+
 app/controllers/phrases_controller.rb:12: syntax error, unexpected tIVAR, expecting '}'
 app/controllers/phrases_controller.rb:65: syntax error, unexpected end-of-input, expecting keyword_end
 Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 09:29:48 -0400
-  
+
 SyntaxError (/Users/CharlesCox/wdi/projects/project3/TWiCS---Server-Side/app/controllers/phrases_controller.rb:12: syntax error, unexpected '}', expecting =>
 nder json: @phrases, @photos }
                               ^
 /Users/CharlesCox/wdi/projects/project3/TWiCS---Server-Side/app/controllers/phrases_controller.rb:65: syntax error, unexpected keyword_end, expecting '}'):
-  
+
 app/controllers/phrases_controller.rb:12: syntax error, unexpected '}', expecting =>
 app/controllers/phrases_controller.rb:65: syntax error, unexpected keyword_end, expecting '}'
 Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 09:29:59 -0400
@@ -2255,36 +241,36 @@ Processing by PhrasesController#index as JSON
 Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NameError (uninitialized constant PhrasesController::Phrases):
-  
+
 app/controllers/phrases_controller.rb:8:in `index'
 Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 09:30:13 -0400
 Processing by PhrasesController#index as JSON
 Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NoMethodError (undefined method `photo' for Phrase(id: integer, content: string, created_on: datetime):Class):
-  
+
 app/controllers/phrases_controller.rb:8:in `index'
 Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 09:30:24 -0400
 Processing by PhrasesController#index as JSON
 Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NoMethodError (undefined method `photos' for Phrase(id: integer, content: string, created_on: datetime):Class):
-  
+
 app/controllers/phrases_controller.rb:8:in `index'
 Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 09:34:33 -0400
 Processing by PhrasesController#index as JSON
 Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NoMethodError (undefined method `photos' for Phrase(id: integer, content: string, created_on: datetime):Class):
-  
+
 app/controllers/phrases_controller.rb:8:in `index'
 Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 09:36:19 -0400
   [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -2298,18 +284,18 @@ Processing by PhrasesController#index as JSON
 Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NoMethodError (undefined method `photo' for Phrase(id: integer, content: string, created_on: datetime):Class):
-  
+
 app/controllers/phrases_controller.rb:8:in `index'
 Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 09:37:09 -0400
 Processing by PhrasesController#index as JSON
 Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NoMethodError (undefined method `photo' for nil:NilClass):
-  
+
 app/controllers/phrases_controller.rb:8:in `index'
 Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 09:37:22 -0400
 Processing by PhrasesController#index as JSON
@@ -2317,10 +303,10 @@ Processing by PhrasesController#index as JSON
 Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
 
 
-  
+
   [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" LIMIT $1[0m  [["LIMIT", 11]]
 NoMethodError (undefined method `photo' for #<Phrase::ActiveRecord_Relation:0x007f84b4f3f6e8>):
-  
+
 app/controllers/phrases_controller.rb:8:in `index'
 Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 09:37:46 -0400
 Processing by PhrasesController#index as JSON
@@ -2328,10 +314,10 @@ Processing by PhrasesController#index as JSON
 Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
 
 
-  
+
   [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" LIMIT $1[0m  [["LIMIT", 11]]
 NoMethodError (undefined method `photo' for #<Phrase::ActiveRecord_Relation:0x007f84b4e45d50>):
-  
+
 app/controllers/phrases_controller.rb:8:in `index'
 Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 09:38:18 -0400
 Processing by PhrasesController#index as JSON
@@ -2339,10 +325,10 @@ Processing by PhrasesController#index as JSON
 Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
 
 
-  
+
   [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" LIMIT $1[0m  [["LIMIT", 11]]
 NoMethodError (undefined method `photo' for #<Phrase::ActiveRecord_Relation:0x007f84b4b61c38>):
-  
+
 app/controllers/phrases_controller.rb:8:in `index'
 Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 09:38:40 -0400
 Processing by PhrasesController#index as JSON
@@ -2350,10 +336,10 @@ Processing by PhrasesController#index as JSON
 Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
 
 
-  
+
   [1m[36mCACHE Phrase Load (0.1ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" LIMIT $1[0m  [["LIMIT", 11]]
 NoMethodError (undefined method `photos' for #<Phrase::ActiveRecord_Relation:0x007f84b4d4ecd0>):
-  
+
 app/controllers/phrases_controller.rb:8:in `index'
 Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 09:39:16 -0400
 Processing by PhrasesController#index as JSON
@@ -2361,10 +347,10 @@ Processing by PhrasesController#index as JSON
 Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
 
 
-  
+
   [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" LIMIT $1[0m  [["LIMIT", 11]]
 NoMethodError (undefined method `photos' for #<Phrase::ActiveRecord_Relation:0x007f84b48ba598>):
-  
+
 app/controllers/phrases_controller.rb:8:in `index'
 Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 09:39:30 -0400
   [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -2373,10 +359,10 @@ Processing by PhrasesController#index as JSON
 Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.0ms)
 
 
-  
+
   [1m[36mPhrase Load (0.5ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" LIMIT $1[0m  [["LIMIT", 11]]
 NoMethodError (undefined method `photos' for #<Phrase::ActiveRecord_Relation:0x007f8de9419e88>):
-  
+
 app/controllers/phrases_controller.rb:8:in `index'
 Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 09:39:46 -0400
 Processing by PhrasesController#index as JSON
@@ -2384,10 +370,10 @@ Processing by PhrasesController#index as JSON
 Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
 
 
-  
+
   [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" LIMIT $1[0m  [["LIMIT", 11]]
 NoMethodError (undefined method `photo' for #<Phrase::ActiveRecord_Relation:0x007f8dec7c5b38>):
-  
+
 app/controllers/phrases_controller.rb:8:in `index'
   [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" LIMIT $1[0m  [["LIMIT", 11]]
   [1m[36mPhrase Load (0.5ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" LIMIT $1[0m  [["LIMIT", 11]]
@@ -2644,9 +630,9 @@ HTTP Origin header (http://localhost:8080) didn't match request.base_url (http:/
 Completed 404 Not Found in 89ms (ActiveRecord: 73.6ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Phrase with 'id'=):
-  
+
 app/controllers/phrases_controller.rb:32:in `phrase_parse'
 app/controllers/phrases_controller.rb:36:in `block in create'
 app/controllers/phrases_controller.rb:27:in `create'
@@ -2663,9 +649,9 @@ HTTP Origin header (http://localhost:8080) didn't match request.base_url (http:/
 Completed 404 Not Found in 53ms (ActiveRecord: 24.1ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Phrase with 'id'=):
-  
+
 app/controllers/phrases_controller.rb:32:in `phrase_parse'
 app/controllers/phrases_controller.rb:36:in `block in create'
 app/controllers/phrases_controller.rb:27:in `create'
@@ -2721,7 +707,6 @@ Completed 200 OK in 2916ms (Views: 0.3ms | ActiveRecord: 17.3ms)
 
 
   [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" ORDER BY "photos"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
->>>>>>> 2c1079db07de6409d8220e18119946c04f271e67
 Started POST "/phrases.json" for 127.0.0.1 at 2017-08-22 10:44:30 -0400
   [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by PhrasesController#create as JSON
@@ -3362,47 +1347,47 @@ Completed 200 OK in 575ms (Views: 0.5ms | ActiveRecord: 4.7ms)
 
 
 Started GET "/phrases/11.json" for 127.0.0.1 at 2017-08-22 12:36:27 -0400
-  
+
 SyntaxError (/Users/Kendall/wdi/projects/twics_server/app/controllers/phrases_controller.rb:35: syntax error, unexpected ',', expecting =>
  render json: @phrase, @photo, status: :unprocessable_entity
                               ^):
-  
+
 app/controllers/phrases_controller.rb:35: syntax error, unexpected ',', expecting =>
 Started GET "/phrases/11.json" for 127.0.0.1 at 2017-08-22 12:40:27 -0400
   [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  
+
 SyntaxError (/Users/Kendall/wdi/projects/twics_server/app/controllers/phrases_controller.rb:12: `@' without identifiers is not allowed as an instance variable name
 /Users/Kendall/wdi/projects/twics_server/app/controllers/phrases_controller.rb:12: syntax error, unexpected end-of-input, expecting '('
 er json: @phrases, @phrases.@ }
                               ^):
-  
+
 app/controllers/phrases_controller.rb:12: `@' without identifiers is not allowed as an instance variable name
 app/controllers/phrases_controller.rb:12: syntax error, unexpected end-of-input, expecting '('
 Started POST "/phrases.json" for 127.0.0.1 at 2017-08-22 12:40:36 -0400
-  
+
 SyntaxError (/Users/Kendall/wdi/projects/twics_server/app/controllers/phrases_controller.rb:12: `@' without identifiers is not allowed as an instance variable name
 /Users/Kendall/wdi/projects/twics_server/app/controllers/phrases_controller.rb:12: syntax error, unexpected end-of-input, expecting '('
 er json: @phrases, @phrases.@ }
                               ^):
-  
+
 app/controllers/phrases_controller.rb:12: `@' without identifiers is not allowed as an instance variable name
 app/controllers/phrases_controller.rb:12: syntax error, unexpected end-of-input, expecting '('
 Started POST "/phrases.json" for 127.0.0.1 at 2017-08-22 12:41:01 -0400
-  
+
 SyntaxError (/Users/Kendall/wdi/projects/twics_server/app/controllers/phrases_controller.rb:12: `@' without identifiers is not allowed as an instance variable name
 /Users/Kendall/wdi/projects/twics_server/app/controllers/phrases_controller.rb:12: syntax error, unexpected end-of-input, expecting '('
 er json: @phrases, @phrases.@ }
                               ^):
-  
+
 app/controllers/phrases_controller.rb:12: `@' without identifiers is not allowed as an instance variable name
 app/controllers/phrases_controller.rb:12: syntax error, unexpected end-of-input, expecting '('
 Started POST "/phrases.json" for 127.0.0.1 at 2017-08-22 12:42:05 -0400
-  
+
 SyntaxError (/Users/Kendall/wdi/projects/twics_server/app/controllers/phrases_controller.rb:12: syntax error, unexpected '}', expecting =>
 nder json: @phrases, @photos }
                               ^
 /Users/Kendall/wdi/projects/twics_server/app/controllers/phrases_controller.rb:65: syntax error, unexpected keyword_end, expecting '}'):
-  
+
 app/controllers/phrases_controller.rb:12: syntax error, unexpected '}', expecting =>
 app/controllers/phrases_controller.rb:65: syntax error, unexpected keyword_end, expecting '}'
 Started POST "/phrases.json" for 127.0.0.1 at 2017-08-22 12:45:15 -0400
@@ -3423,10 +1408,10 @@ Processing by PhrasesController#index as JSON
 Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.0ms)
 
 
-  
+
   [1m[36mCACHE Phrase Load (0.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" LIMIT $1[0m  [["LIMIT", 11]]
 NoMethodError (undefined method `photos' for #<Phrase::ActiveRecord_Relation:0x007f9179f9bea8>):
-  
+
 app/controllers/phrases_controller.rb:8:in `index'
 Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 12:46:11 -0400
 Processing by PhrasesController#index as JSON
@@ -3472,9 +1457,9 @@ Processing by PhrasesController#show as JSON
 Completed 500 Internal Server Error in 1943ms (ActiveRecord: 21.4ms)
 
 
-  
+
 NoMethodError (undefined method `photos' for nil:NilClass):
-  
+
 app/controllers/phrases_controller.rb:18:in `show'
 Started GET "/phrases/13.json" for 127.0.0.1 at 2017-08-22 12:48:52 -0400
 Processing by PhrasesController#show as JSON
@@ -3484,9 +1469,9 @@ Processing by PhrasesController#show as JSON
 Completed 500 Internal Server Error in 80ms (ActiveRecord: 18.4ms)
 
 
-  
+
 NoMethodError (undefined method `photos' for nil:NilClass):
-  
+
 app/controllers/phrases_controller.rb:46:in `query_flickr'
 app/controllers/phrases_controller.rb:42:in `phrase_parse'
 app/controllers/phrases_controller.rb:17:in `show'
@@ -3516,9 +1501,9 @@ Processing by PhrasesController#show as JSON
 Completed 500 Internal Server Error in 10ms (ActiveRecord: 3.9ms)
 
 
-  
+
 NoMethodError (undefined method `photos' for nil:NilClass):
-  
+
 app/controllers/phrases_controller.rb:46:in `query_flickr'
 app/controllers/phrases_controller.rb:42:in `phrase_parse'
 app/controllers/phrases_controller.rb:17:in `show'
@@ -3566,9 +1551,9 @@ Processing by PhrasesController#show as JSON
 Completed 500 Internal Server Error in 2535ms (Views: 4.8ms | ActiveRecord: 17.8ms)
 
 
-  
+
 AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
-  
+
 app/controllers/phrases_controller.rb:21:in `block (2 levels) in show'
 app/controllers/phrases_controller.rb:19:in `show'
 =======
@@ -3598,9 +1583,9 @@ Processing by PhrasesController#show as JSON
 Completed 500 Internal Server Error in 2138ms (Views: 0.3ms | ActiveRecord: 24.8ms)
 
 
-  
+
 AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
-  
+
 app/controllers/phrases_controller.rb:21:in `block (2 levels) in show'
 app/controllers/phrases_controller.rb:19:in `show'
 Started GET "/phrases/15.json" for 127.0.0.1 at 2017-08-22 13:05:02 -0400
@@ -3627,9 +1612,9 @@ Processing by PhrasesController#show as JSON
 Completed 500 Internal Server Error in 2055ms (Views: 0.2ms | ActiveRecord: 32.7ms)
 
 
-  
+
 AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
-  
+
 app/controllers/phrases_controller.rb:21:in `block (2 levels) in show'
 app/controllers/phrases_controller.rb:19:in `show'
 Started GET "/phrases/15.json" for 127.0.0.1 at 2017-08-22 13:05:51 -0400
@@ -4221,18 +2206,257 @@ Processing by PhrasesController#index as JSON
 Completed 200 OK in 358ms (Views: 313.8ms | ActiveRecord: 42.2ms)
 
 
-Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 14:20:41 -0400
-  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Processing by PhrasesController#index as JSON
-Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+Started GET "/phrases.json" for 127.0.0.1 at 2017-08-22 14:27:21 -0400
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+
+SyntaxError (/Users/Kendall/wdi/projects/twics_server/app/controllers/phrases_controller.rb:35: syntax error, unexpected keyword_end, expecting end-of-input):
+
+app/controllers/phrases_controller.rb:35: syntax error, unexpected keyword_end, expecting end-of-input
+Started POST "/phrases.json" for 127.0.0.1 at 2017-08-22 14:27:30 -0400
+
+SyntaxError (/Users/Kendall/wdi/projects/twics_server/app/controllers/phrases_controller.rb:35: syntax error, unexpected keyword_end, expecting end-of-input):
+
+app/controllers/phrases_controller.rb:35: syntax error, unexpected keyword_end, expecting end-of-input
+Started POST "/phrases.json" for 127.0.0.1 at 2017-08-22 14:27:45 -0400
+
+SyntaxError (/Users/Kendall/wdi/projects/twics_server/app/controllers/phrases_controller.rb:35: syntax error, unexpected keyword_end, expecting end-of-input):
+
+app/controllers/phrases_controller.rb:35: syntax error, unexpected keyword_end, expecting end-of-input
+Started POST "/phrases" for 127.0.0.1 at 2017-08-22 14:27:54 -0400
+
+SyntaxError (/Users/Kendall/wdi/projects/twics_server/app/controllers/phrases_controller.rb:35: syntax error, unexpected keyword_end, expecting end-of-input):
+
+app/controllers/phrases_controller.rb:35: syntax error, unexpected keyword_end, expecting end-of-input
+Started POST "/phrases" for 127.0.0.1 at 2017-08-22 14:29:48 -0400
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"Basketball soccer fun times", "phrase"=>{"content"=>"Basketball soccer fun times"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "Basketball soccer fun times"], ["created_on", "2017-08-22 18:29:49.016836"]]
+  [1m[35m (1.9ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 13.6ms)
 
 
-  
-SyntaxError (/Users/CharlesCox/wdi/projects/project3/TWiCS---Server-Side/app/models/phrase.rb:7: syntax error, unexpected ...
-    photos.each do ...
-                      ^
-/Users/CharlesCox/wdi/projects/project3/TWiCS---Server-Side/app/models/phrase.rb:15: syntax error, unexpected end-of-input, expecting keyword_end):
-  
-app/models/phrase.rb:7: syntax error, unexpected ...
-app/models/phrase.rb:15: syntax error, unexpected end-of-input, expecting keyword_end
-app/controllers/phrases_controller.rb:7:in `index'
+
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+
+app/models/phrase.rb:17:in `query_flickr'
+app/models/phrase.rb:8:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:18:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-22 14:30:39 -0400
+Started POST "/phrases" for 127.0.0.1 at 2017-08-22 14:30:49 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"basketball plays", "phrase"=>{"content"=>"basketball plays"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "basketball plays"], ["created_on", "2017-08-22 18:30:49.712831"]]
+  [1m[35m (1.7ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 3.3ms)
+
+
+
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+
+app/models/phrase.rb:13:in `phrase_parse'
+app/models/phrase.rb:7:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:18:in `create'
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"basketball plays", "phrase"=>{"content"=>"basketball plays"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "basketball plays"], ["created_on", "2017-08-22 18:30:50.639597"]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.0ms)
+
+
+
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+
+app/models/phrase.rb:13:in `phrase_parse'
+app/models/phrase.rb:7:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:18:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-22 14:31:50 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"Testing this out", "phrase"=>{"content"=>"Testing this out"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "Testing this out"], ["created_on", "2017-08-22 18:31:50.203242"]]
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.4ms)
+
+
+
+NameError (undefined local variable or method `params' for #<Phrase:0x007fc58500ba20>):
+
+app/models/phrase.rb:15:in `phrase_parse'
+app/models/phrase.rb:7:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:18:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-22 14:32:40 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"please work right now", "phrase"=>{"content"=>"please work right now"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "please work right now"], ["created_on", "2017-08-22 18:32:40.853184"]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.9ms)
+
+
+
+NameError (undefined local variable or method `parsed_phrase' for #<Phrase:0x007fc581274d10>
+Did you mean?  phrase_parse):
+
+app/models/phrase.rb:9:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:18:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-22 14:33:12 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"here we go", "phrase"=>{"content"=>"here we go"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "here we go"], ["created_on", "2017-08-22 18:33:12.845874"]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.1ms)
+
+
+
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+
+app/models/phrase.rb:18:in `query_flickr'
+app/models/phrase.rb:9:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:18:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-22 14:34:02 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"baby steps", "phrase"=>{"content"=>"baby steps"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "baby steps"], ["created_on", "2017-08-22 18:34:02.883866"]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 852ms (ActiveRecord: 1.0ms)
+
+
+
+NoMethodError (undefined method `id' for nil:NilClass):
+
+app/models/phrase.rb:28:in `block in query_flickr'
+app/models/phrase.rb:19:in `each'
+app/models/phrase.rb:19:in `query_flickr'
+app/models/phrase.rb:9:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:18:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-22 14:35:34 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"almost there", "phrase"=>{"content"=>"almost there"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "almost there"], ["created_on", "2017-08-22 18:35:34.665575"]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 545ms (ActiveRecord: 2.3ms)
+
+
+
+NameError (undefined local variable or method `phrase' for #<Phrase:0x007fc5821c1200>):
+
+app/models/phrase.rb:30:in `block in query_flickr'
+app/models/phrase.rb:21:in `each'
+app/models/phrase.rb:21:in `query_flickr'
+app/models/phrase.rb:11:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:18:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-22 14:37:31 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"test ing out at phrase", "phrase"=>{"content"=>"test ing out at phrase"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "test ing out at phrase"], ["created_on", "2017-08-22 18:37:31.314878"]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 552ms (ActiveRecord: 1.2ms)
+
+
+
+NoMethodError (undefined method `id' for nil:NilClass):
+
+app/models/phrase.rb:30:in `block in query_flickr'
+app/models/phrase.rb:21:in `each'
+app/models/phrase.rb:21:in `query_flickr'
+app/models/phrase.rb:11:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:18:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-22 14:37:59 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"testing out local variabe", "phrase"=>{"content"=>"testing out local variabe"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "testing out local variabe"], ["created_on", "2017-08-22 18:37:59.487169"]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 534ms (ActiveRecord: 0.8ms)
+
+
+
+NoMethodError (undefined method `id' for nil:NilClass):
+
+app/models/phrase.rb:30:in `block in query_flickr'
+app/models/phrase.rb:21:in `each'
+app/models/phrase.rb:21:in `query_flickr'
+app/models/phrase.rb:11:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:18:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-22 14:39:00 -0400
+
+NoMethodError (undefined method `id' for Phrase(id: integer, content: string, created_on: datetime):Class
+Did you mean?  ids):
+
+app/models/phrase.rb:4:in `<class:Phrase>'
+app/models/phrase.rb:1:in `<top (required)>'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-22 14:39:40 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"self dot id is not working", "phrase"=>{"content"=>"self dot id is not working"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "self dot id is not working"], ["created_on", "2017-08-22 18:39:40.414471"]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 604ms (ActiveRecord: 9.7ms)
+
+
+
+ActiveRecord::RecordInvalid (Validation failed: Phrase must exist):
+
+app/models/phrase.rb:32:in `block in query_flickr'
+app/models/phrase.rb:23:in `each'
+app/models/phrase.rb:23:in `query_flickr'
+app/models/phrase.rb:13:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:18:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-22 14:40:44 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"hello its me", "phrase"=>{"content"=>"hello its me"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "hello its me"], ["created_on", "2017-08-22 18:40:44.472359"]]
+  [1m[36mPhrase Load (0.6ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4350/35884486194_919a80f4f5.jpg"], ["tags", "hello"], ["created_on", "2017-08-22 18:40:45.008032"], ["phrase_id", 32]]
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4413/36569489792_e15f79256a.jpg"], ["tags", "its"], ["created_on", "2017-08-22 18:40:45.593983"], ["phrase_id", 32]]
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4422/36570705022_bf64f07bbf.jpg"], ["tags", "me"], ["created_on", "2017-08-22 18:40:45.930896"], ["phrase_id", 32]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 1472ms (Views: 1.6ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/phrases" for 127.0.0.1 at 2017-08-22 14:40:46 -0400
+Processing by PhrasesController#index as HTML
+  [1m[36mPhrase Load (2.0ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
+  [1m[36mPhoto Load (1.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 1]]
+  [1m[36mPhoto Load (2.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 2]]
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 3]]
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 4]]
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 5]]
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 6]]
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 7]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 8]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 9]]
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 10]]
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 11]]
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 12]]
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 13]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 14]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 15]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 16]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 17]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 18]]
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 19]]
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 20]]
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 32]]
+Completed 200 OK in 453ms (Views: 435.4ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/phrases/32" for 127.0.0.1 at 2017-08-22 14:40:48 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mPhrase Load (0.8ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[36mPhoto Load (1.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 32]]
+Completed 200 OK in 25ms (Views: 16.4ms | ActiveRecord: 2.4ms)
