@@ -56,7 +56,6 @@ class PhrasesController < ApplicationController
     end
   end
 
-
 private
   def phrase_params
     params.require(:phrase).permit(:content)
