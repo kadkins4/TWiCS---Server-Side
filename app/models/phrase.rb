@@ -1,29 +1,47 @@
+require 'twitter'
+require 'flickraw'
+
 class Phrase < ActiveRecord::Base
   has_many :photos
 
-<<<<<<< HEAD
-  # after_create do
-  #   parsed_phrase = parse(self)
-  #   photos = query_flickr(parsed_phrase)
-  #   photos.each do ...
-  # end
-  #
-  # private
-=======
-  after_create do
-    parsed_phrase = phrase_parse(self)
-    query_flickr(parsed_phrase)
+  before_save do
+    # phrase = self.content
+    twitter_query
+    # parsed_phrase = phrase_parse(self)
+    # query_flickr(parsed_phrase)
   end
+
+  after_create do
+    query_flickr(@phrase_arr)
+  end
+
 
 private
->>>>>>> 05ba188d700603cd8fce908655d8f6084a054e85
-
-  def phrase_parse (argument)
-    argument.content.split(' ')
+  def twitter_query
+    puts 'hello'
+    client = Twitter::REST::Client.new do |config|
+      config.consumer_key        = ENV['TWITTER_API_KEY']
+      config.consumer_secret     = ENV['TWITTER_API_SECRET']
+      config.access_token        = ENV['TWITTER_ACCESS_TOKEN']
+      config.access_token_secret = ENV['TWITTER_ACCESS_TOKEN_SECRET']
+    end
+    phrase = 'x'
+    client.search("from:#{self.content} -rt -link", result_type: "recent").take(1).each do |tweet|
+      phrase = tweet.text
+    end
+    puts 'parsed'
+    @phrase_arr = phrase.split(' ')
+    # query_flickr(phrase_arr)
   end
 
+  # def phrase_parse (argument)
+  #   argument.content.split(' ')
+  # end
+
   def query_flickr (phrase_arr)
+    phrase_arr = phrase_arr[0,9]
     for x in phrase_arr
+      puts x
       FlickRaw.api_key=ENV['API_KEY']
       FlickRaw.shared_secret=ENV['SHARED_KEY']
       list = flickr.photos.search tags: x
