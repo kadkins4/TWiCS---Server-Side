@@ -5,11 +5,7 @@ class PhrasesController < ApplicationController
 
   def index
     @phrases = Phrase.all
-
-    respond_to do |format|
-      format.html { render :index }
-      format.json { render json: @phrases.as_json(include:[:photos]) }
-    end
+    render json: @phrases, include: [:photos]
   end
 
   def show
@@ -18,7 +14,7 @@ class PhrasesController < ApplicationController
 
     respond_to do |format|
       format.html { render :show }
-      format.json { render json: @phrase }
+      format.json { render json: @phrase, include: [:photos]}
     end
   end
 
@@ -53,9 +49,6 @@ class PhrasesController < ApplicationController
       secret = list.first.secret
       photo_url = "http://farm#{farm}.staticflickr.com/#{server}/#{id}_#{secret}.jpg"
       Photo.create!(photo_url: photo_url, tags: x, phrase_id: @phrase.id)
-    end
-    respond_to do |format|
-      format.json { render json: @photos }
     end
   end
 
