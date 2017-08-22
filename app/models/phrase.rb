@@ -26,20 +26,19 @@ private
       config.access_token_secret = ENV['TWITTER_ACCESS_TOKEN_SECRET']
     end
     phrase = 'x'
+    # need to validate twitter response to make sure we get back a response
     client.search("from:#{self.content} -rt -link", result_type: "recent").take(1).each do |tweet|
       phrase = tweet.text
     end
     puts 'parsed'
+    # need to validate the phrase, removing any uwanted words or symbols
     @phrase_arr = phrase.split(' ')
-    # query_flickr(phrase_arr)
   end
 
-  # def phrase_parse (argument)
-  #   argument.content.split(' ')
-  # end
-
   def query_flickr (phrase_arr)
+    # can't query flickr more than 10 times in a row
     phrase_arr = phrase_arr[0,9]
+    # need to validate that there is a response
     for x in phrase_arr
       puts x
       FlickRaw.api_key=ENV['API_KEY']
