@@ -1,6 +1,3 @@
-require 'flickraw'
-require 'JSON'
-
 class PhrasesController < ApplicationController
 
   def index
