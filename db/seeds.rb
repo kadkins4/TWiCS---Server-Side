@@ -9,3 +9,4 @@
 
 Photo.destroy_all
 Phrase.destroy_all
+Tweet.destroy_all

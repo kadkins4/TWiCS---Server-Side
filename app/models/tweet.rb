@@ -1,6 +1,7 @@
+require 'twitter'
 require 'flickraw'
 
-class Phrase < ActiveRecord::Base
+class Tweet < ActiveRecord::Base
   has_many :photos
 
   before_save do
