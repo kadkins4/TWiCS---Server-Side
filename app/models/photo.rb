@@ -1,4 +1,4 @@
 class Photo < ActiveRecord::Base
   belongs_to :phrase
-  belongs_to :tweet
+  # belongs_to :tweet
 end

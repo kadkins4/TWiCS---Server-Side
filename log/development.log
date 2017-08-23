@@ -5568,3 +5568,167 @@ Migrating to CreateTweets (20170823144307)
   [1m[36mPhoto Load (1.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
   [1m[36mPhrase Load (0.9ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
   [1m[36mTweet Load (0.9ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 11:09:58 -0400
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"hello", "phrase"=>{"content"=>"hello"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.8ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "hello"], ["created_on", "2017-08-23 15:09:59.041269"]]
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 957ms (ActiveRecord: 18.3ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Tweet must exist):
+  
+app/models/phrase.rb:26:in `block in query_flickr'
+app/models/phrase.rb:17:in `each'
+app/models/phrase.rb:17:in `query_flickr'
+app/models/phrase.rb:8:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:18:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 11:11:01 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"basketball court", "phrase"=>{"content"=>"basketball court"}}
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "basketball court"], ["created_on", "2017-08-23 15:11:01.775827"]]
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 649ms (ActiveRecord: 25.8ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Tweet must exist):
+  
+app/models/phrase.rb:26:in `block in query_flickr'
+app/models/phrase.rb:17:in `each'
+app/models/phrase.rb:17:in `query_flickr'
+app/models/phrase.rb:8:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:18:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 11:11:30 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"espn", "phrase"=>{"content"=>"espn"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "espn"], ["created_on", "2017-08-23 15:11:30.575975"]]
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 377ms (ActiveRecord: 1.4ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Tweet must exist):
+  
+app/models/phrase.rb:26:in `block in query_flickr'
+app/models/phrase.rb:17:in `each'
+app/models/phrase.rb:17:in `query_flickr'
+app/models/phrase.rb:8:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:18:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 11:12:26 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"basketball party", "phrase"=>{"content"=>"basketball party"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "basketball party"], ["created_on", "2017-08-23 15:12:26.702145"]]
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 487ms (ActiveRecord: 14.4ms)
+
+
+  
+LoadError (Unable to autoload constant Tweet, expected /Users/Kendall/wdi/projects/twics_server/app/models/tweet.rb to define it):
+  
+app/models/phrase.rb:26:in `block in query_flickr'
+app/models/phrase.rb:17:in `each'
+app/models/phrase.rb:17:in `query_flickr'
+app/models/phrase.rb:8:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:18:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 11:13:19 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"play run yeah", "phrase"=>{"content"=>"play run yeah"}}
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "play run yeah"], ["created_on", "2017-08-23 15:13:19.106672"]]
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (4.5ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4359/36710453456_8e0c8a07b0.jpg"], ["tags", "play"], ["created_on", "2017-08-23 15:13:19.599086"], ["phrase_id", 5]]
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4396/36618689191_a9062a78ea.jpg"], ["tags", "run"], ["created_on", "2017-08-23 15:13:19.993706"], ["phrase_id", 5]]
+  [1m[36mPhrase Load (0.5ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4351/36725509055_5a910f6b2d.jpg"], ["tags", "yeah"], ["created_on", "2017-08-23 15:13:20.298846"], ["phrase_id", 5]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 1209ms (Views: 1.9ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/phrases" for 127.0.0.1 at 2017-08-23 11:13:27 -0400
+Processing by PhrasesController#index as HTML
+  [1m[36mPhrase Load (0.5ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 5]]
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/phrases/5" for 127.0.0.1 at 2017-08-23 11:13:28 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPhrase Load (1.0ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPhoto Load (5.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 5]]
+Completed 200 OK in 17ms (Views: 5.3ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/phrases/5" for 127.0.0.1 at 2017-08-23 11:14:14 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 5]]
+Completed 200 OK in 117ms (Views: 24.7ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 11:14:20 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"test run", "phrase"=>{"content"=>"test run"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "test run"], ["created_on", "2017-08-23 15:14:20.809505"]]
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 510ms (ActiveRecord: 2.3ms)
+
+
+  
+LoadError (Unable to autoload constant Tweet, expected /Users/Kendall/wdi/projects/twics_server/app/models/tweet.rb to define it):
+  
+app/models/phrase.rb:26:in `block in query_flickr'
+app/models/phrase.rb:17:in `each'
+app/models/phrase.rb:17:in `query_flickr'
+app/models/phrase.rb:8:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:18:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 11:18:49 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"garden green fun", "phrase"=>{"content"=>"garden green fun"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "garden green fun"], ["created_on", "2017-08-23 15:18:49.596466"]]
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4361/36618898701_8ab4da17ee.jpg"], ["tags", "garden"], ["created_on", "2017-08-23 15:18:50.084673"], ["phrase_id", 7]]
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4378/36758097855_030e11fe4f.jpg"], ["tags", "green"], ["created_on", "2017-08-23 15:18:50.779235"], ["phrase_id", 7]]
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4429/36588453502_77ee4541e2.jpg"], ["tags", "fun"], ["created_on", "2017-08-23 15:18:51.172444"], ["phrase_id", 7]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 1595ms (Views: 1.5ms | ActiveRecord: 21.3ms)
+
+
+Started GET "/phrases" for 127.0.0.1 at 2017-08-23 11:18:52 -0400
+Processing by PhrasesController#index as HTML
+  [1m[36mPhrase Load (8.3ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
+  [1m[36mPhoto Load (1.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 5]]
+  [1m[36mPhoto Load (2.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 7]]
+Completed 200 OK in 30ms (Views: 17.0ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/phrases/7" for 127.0.0.1 at 2017-08-23 11:18:53 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 7]]
+Completed 200 OK in 10ms (Views: 3.7ms | ActiveRecord: 1.1ms)
+
+
