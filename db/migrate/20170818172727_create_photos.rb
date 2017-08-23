@@ -5,7 +5,6 @@ class CreatePhotos < ActiveRecord::Migration[5.1]
       t.string :tags
       t.datetime :created_on
       t.references :phrase
-      t.references :tweet
     end
   end
 end

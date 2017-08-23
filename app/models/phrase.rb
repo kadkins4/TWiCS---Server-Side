@@ -15,7 +15,7 @@ private
 
   def query_flickr (phrase_arr)
     for x in phrase_arr
-      if x.length > 2 && x != 'the' && x != 'she' && x != 'too' && x != 'this' && x != 'that'
+      if x.length > 2 && x != 'the' && x != 'she' && x != 'too' && x != 'this' && x != 'that' && x != 'and'
         FlickRaw.api_key=ENV['API_KEY']
         FlickRaw.shared_secret=ENV['SHARED_KEY']
         list = flickr.photos.search tags: x, safe_search: 1
