@@ -15,7 +15,7 @@ class PhrasesController < ApplicationController
 
   def create
     @phrase = Phrase.new(phrase_params)
-    @phrase.save!
+    # @phrase.save!
     if @phrase.save!
       render json: @phrase, status: :created, location: @phrase
     else
@@ -25,7 +25,7 @@ class PhrasesController < ApplicationController
 
 private
   def phrase_params
-    params.require(:phrase).permit(:content)
+    params.require(:phrase).permit(:content, :handle)
   end
 
 end

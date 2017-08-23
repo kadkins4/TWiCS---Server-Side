@@ -5732,3 +5732,1434 @@ Processing by PhrasesController#show as HTML
 Completed 200 OK in 10ms (Views: 3.7ms | ActiveRecord: 1.1ms)
 
 
+Started POST "/tweets" for 127.0.0.1 at 2017-08-23 11:35:08 -0400
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/tweets"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/tweets" for 127.0.0.1 at 2017-08-23 11:35:43 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/tweets"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (267.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "TweetPics_development"[0m
+  [1m[35m (297.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "TweetPics_test"[0m
+  [1m[35m (405.8ms)[0m  [1m[35mCREATE DATABASE "TweetPics_development" ENCODING = 'unicode'[0m
+  [1m[35m (340.7ms)[0m  [1m[35mCREATE DATABASE "TweetPics_test" ENCODING = 'unicode'[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3784842769760408160)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePhotos (20170818172727)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "photos" ("id" bigserial primary key, "photo_url" character varying, "tags" character varying, "created_on" timestamp, "phrase_id" bigint, "tweet_id" bigint)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_photos_on_phrase_id" ON "photos"  ("phrase_id")[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE  INDEX  "index_photos_on_tweet_id" ON "photos"  ("tweet_id")[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170818172727"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePhrases (20170823131130)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "phrases" ("id" bigserial primary key, "handle" character varying, "content" character varying, "created_on" timestamp)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170823131130"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-08-23 15:36:15.569918"], ["updated_at", "2017-08-23 15:36:15.569918"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3784842769760408160)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/tweets" for 127.0.0.1 at 2017-08-23 11:36:23 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/tweets"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 11:36:36 -0400
+  
+LoadError (Unable to autoload constant Phrase, expected /Users/CharlesCox/wdi/projects/project3/TWiCS---Server-Side/app/models/phrase.rb to define it):
+  
+activesupport (5.1.3) lib/active_support/dependencies.rb:511:in `load_missing_constant'
+activesupport (5.1.3) lib/active_support/dependencies.rb:202:in `const_missing'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `constantize'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:312:in `safe_constantize'
+activesupport (5.1.3) lib/active_support/core_ext/string/inflections.rb:77:in `safe_constantize'
+actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:147:in `_default_wrap_model'
+actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:94:in `block in model'
+/Users/CharlesCox/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/mutex_m.rb:74:in `synchronize'
+/Users/CharlesCox/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/mutex_m.rb:74:in `mu_synchronize'
+actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:94:in `model'
+actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:121:in `name'
+actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:259:in `_wrapper_key'
+actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:286:in `_wrapper_enabled?'
+actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:235:in `process_action'
+activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.3) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 11:37:18 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"nfl", "phrase"=>{"handle"=>"nfl"}}
+Unpermitted parameter: :handle
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 249ms (ActiveRecord: 7.4ms)
+
+
+  
+Twitter::Error::Forbidden (Unable to verify your credentials):
+  
+app/models/phrase.rb:30:in `twitter_query'
+app/models/phrase.rb:9:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:18:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 11:41:00 -0400
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"nfl", "phrase"=>{"handle"=>"nfl"}}
+Unpermitted parameter: :handle
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.7ms)[0m  [1m[32mINSERT INTO "phrases" ("created_on") VALUES ($1) RETURNING "id"[0m  [["created_on", "2017-08-23 15:41:02.345718"]]
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (4.9ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4387/35949350523_b0f36f29f4.jpg"], ["tags", "For"], ["created_on", "2017-08-23 15:41:03.269884"], ["phrase_id", 1]]
+  [1m[36mPhrase Load (0.5ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (9.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4413/36758453785_54a4aa22f1.jpg"], ["tags", "a"], ["created_on", "2017-08-23 15:41:03.985722"], ["phrase_id", 1]]
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (6.7ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4403/36756361955_044de975c1.jpg"], ["tags", "6%"], ["created_on", "2017-08-23 15:41:04.532532"], ["phrase_id", 1]]
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4357/36705656256_8dc6745cd6.jpg"], ["tags", "return,"], ["created_on", "2017-08-23 15:41:04.964680"], ["phrase_id", 1]]
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4384/36604472981_ca5abc5eb4.jpg"], ["tags", "even"], ["created_on", "2017-08-23 15:41:05.581183"], ["phrase_id", 1]]
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4354/36573519801_3fb18660c5.jpg"], ["tags", "debt"], ["created_on", "2017-08-23 15:41:06.276716"], ["phrase_id", 1]]
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4349/36588739492_5d6fbf0bb4.jpg"], ["tags", "from"], ["created_on", "2017-08-23 15:41:06.815144"], ["phrase_id", 1]]
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4422/36361040060_4fe0eb8d1a.jpg"], ["tags", "Mongolia,"], ["created_on", "2017-08-23 15:41:07.398937"], ["phrase_id", 1]]
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4432/36757145945_b85447b794.jpg"], ["tags", "Ukraine"], ["created_on", "2017-08-23 15:41:07.922355"], ["phrase_id", 1]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 7426ms (Views: 2.5ms | ActiveRecord: 41.7ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 11:54:19 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>1, "handle"=>"nfl", "content"=>nil, "created_on"=>"2017-08-23T15:41:02.345Z", "phrase"=>{"id"=>1, "handle"=>"nfl", "content"=>nil, "created_on"=>"2017-08-23T15:41:02.345Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("created_on") VALUES ($1) RETURNING "id"[0m  [["created_on", "2017-08-23 15:54:29.978437"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 1553ms (Views: 0.8ms | ActiveRecord: 2.6ms)
+
+
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" ORDER BY "phrases"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 11:56:38 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"nfl", "phrase"=>{"handle"=>"nfl"}}
+Unpermitted parameter: :handle
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "phrases" ("created_on") VALUES ($1) RETURNING "id"[0m  [["created_on", "2017-08-23 15:56:40.054953"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 1404ms (Views: 1.1ms | ActiveRecord: 10.0ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 11:57:42 -0400
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 11:57:52 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>3, "handle"=>"nfl", "content"=>nil, "created_on"=>"2017-08-23T15:56:40.054Z", "phrase"=>{"id"=>3, "handle"=>"nfl", "content"=>nil, "created_on"=>"2017-08-23T15:56:40.054Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "Syuichi Nakano from Kinki, Japan presents Cometary Photometry. @WashingtonUniv Earth &amp; Planetary Sciences (join us… https://t.co/qjF6p8xY2H"], ["created_on", "2017-08-23 15:57:53.660185"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "phrases" SET "content" = $1 WHERE "phrases"."id" = $2[0m  [["content", "@12Jbarnett I say they are even bro look at the stats from last season. And Kyrie plays no defense and takes very questionable shots."], ["id", 4]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 1581ms (Views: 0.7ms | ActiveRecord: 9.2ms)
+
+
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>3, "handle"=>"nfl", "content"=>nil, "created_on"=>"2017-08-23T15:56:40.054Z", "phrase"=>{"id"=>3, "handle"=>"nfl", "content"=>nil, "created_on"=>"2017-08-23T15:56:40.054Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "Tom Baker from Cheaper by the Dozen is a big time #FootballGuy."], ["created_on", "2017-08-23 15:57:55.286298"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "phrases" SET "content" = $1 WHERE "phrases"."id" = $2[0m  [["content", "RASFF (European Union): 2017.1233 - too high count of Escherichia coli (16000 MPN/100g) in live common cockles... https://t.co/IOwkGZr2xe"], ["id", 5]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 1266ms (Views: 0.9ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 11:58:33 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>5, "handle"=>"nfl", "content"=>"RASFF (European Union): 2017.1233 - too high count of Escherichia coli (16000 MPN/100g) in live common cockles... https://t.co/IOwkGZr2xe", "created_on"=>"2017-08-23T15:57:55.286Z", "phrase"=>{"id"=>5, "handle"=>"nfl", "content"=>"RASFF (European Union): 2017.1233 - too high count of Escherichia coli (16000 MPN/100g) in live common cockles... https://t.co/IOwkGZr2xe", "created_on"=>"2017-08-23T15:57:55.286Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "@jesselias05 Oooooo sounds hype. My cousin used to go to George Brown. From Jess Elias to Jess Alba 😂. G'luck! 👍🏾"], ["created_on", "2017-08-23 15:58:33.926791"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "phrases" SET "content" = $1 WHERE "phrases"."id" = $2[0m  [["content", "@FoxNews Someone should be held accountable from both ships, just like a car wreck is handled now"], ["id", 6]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 1184ms (Views: 0.8ms | ActiveRecord: 4.6ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:01:23 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>6, "handle"=>"nfl", "content"=>"@FoxNews Someone should be held accountable from both ships, just like a car wreck is handled now", "created_on"=>"2017-08-23T15:58:33.926Z", "phrase"=>{"id"=>6, "handle"=>"nfl", "content"=>"@FoxNews Someone should be held accountable from both ships, just like a car wreck is handled now", "created_on"=>"2017-08-23T15:58:33.926Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "@horno_el Brexit has hit people like an illness, irrational childlike behaviour from people desperate for their cou… https://t.co/DVQzhIQGvc"], ["created_on", "2017-08-23 16:01:23.893959"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "phrases" SET "content" = $1 WHERE "phrases"."id" = $2[0m  [["content", "So long from the great #NYSFair, where this bright, curious guy could smell the gluttony on me. #operationfunnelcake https://t.co/RHbD3HMn2B"], ["id", 7]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 1403ms (Views: 0.5ms | ActiveRecord: 6.3ms)
+
+
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:05:38 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>7, "handle"=>"nfl", "content"=>"So long from the great #NYSFair, where this bright, curious guy could smell the gluttony on me. #operationfunnelcake https://t.co/RHbD3HMn2B", "created_on"=>"2017-08-23T16:01:23.893Z", "phrase"=>{"id"=>7, "handle"=>"nfl", "content"=>"So long from the great #NYSFair, where this bright, curious guy could smell the gluttony on me. #operationfunnelcake https://t.co/RHbD3HMn2B", "created_on"=>"2017-08-23T16:01:23.893Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "So long from the great #NYSFair, where this bright, curious guy could smell the gluttony on me. #operationfunnelcake https://t.co/RHbD3HMn2B"], ["created_on", "2017-08-23 16:05:39.028149"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 23ms (Views: 1.2ms | ActiveRecord: 8.5ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:06:06 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>8, "handle"=>"nfl", "content"=>"So long from the great #NYSFair, where this bright, curious guy could smell the gluttony on me. #operationfunnelcake https://t.co/RHbD3HMn2B", "created_on"=>"2017-08-23T16:05:39.028Z", "phrase"=>{"id"=>8, "handle"=>"nfl", "content"=>"So long from the great #NYSFair, where this bright, curious guy could smell the gluttony on me. #operationfunnelcake https://t.co/RHbD3HMn2B", "created_on"=>"2017-08-23T16:05:39.028Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "So long from the great #NYSFair, where this bright, curious guy could smell the gluttony on me. #operationfunnelcake https://t.co/RHbD3HMn2B"], ["created_on", "2017-08-23 16:06:16.383434"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 9ms (Views: 1.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:07:37 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>9, "handle"=>"nfl", "content"=>"So long from the great #NYSFair, where this bright, curious guy could smell the gluttony on me. #operationfunnelcake https://t.co/RHbD3HMn2B", "created_on"=>"2017-08-23T16:06:16.383Z", "phrase"=>{"id"=>9, "handle"=>"nfl", "content"=>"So long from the great #NYSFair, where this bright, curious guy could smell the gluttony on me. #operationfunnelcake https://t.co/RHbD3HMn2B", "created_on"=>"2017-08-23T16:06:16.383Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "So long from the great #NYSFair, where this bright, curious guy could smell the gluttony on me. #operationfunnelcake https://t.co/RHbD3HMn2B"], ["created_on", "2017-08-23 16:07:38.012066"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 781ms (Views: 1.0ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:08:10 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>10, "handle"=>"nfl", "content"=>"@kelseyroex ahh i'm so flattered!! but comes from u lovely💕", "created_on"=>"2017-08-23T16:07:38.012Z", "phrase"=>{"id"=>10, "handle"=>"nfl", "content"=>"@kelseyroex ahh i'm so flattered!! but comes from u lovely💕", "created_on"=>"2017-08-23T16:07:38.012Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "@kelseyroex ahh i'm so flattered!! but comes from u lovely💕"], ["created_on", "2017-08-23 16:08:10.924835"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 732ms (Views: 1.1ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:09:08 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>11, "handle"=>"nfl", "content"=>"@kelseyroex ahh i'm so flattered!! but comes from u lovely💕", "created_on"=>"2017-08-23T16:08:10.924Z", "phrase"=>{"id"=>11, "handle"=>"nfl", "content"=>"@kelseyroex ahh i'm so flattered!! but comes from u lovely💕", "created_on"=>"2017-08-23T16:08:10.924Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "@kelseyroex ahh i'm so flattered!! but comes from u lovely💕"], ["created_on", "2017-08-23 16:09:09.414118"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 586ms (Views: 0.8ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:09:59 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>12, "handle"=>"nfl", "content"=>"@kelseyroex ahh i'm so flattered!! but comes from u lovely💕", "created_on"=>"2017-08-23T16:09:09.414Z", "phrase"=>{"id"=>12, "handle"=>"nfl", "content"=>"@kelseyroex ahh i'm so flattered!! but comes from u lovely💕", "created_on"=>"2017-08-23T16:09:09.414Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "@kelseyroex ahh i'm so flattered!! but comes from u lovely💕"], ["created_on", "2017-08-23 16:10:00.411804"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 691ms (Views: 0.8ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:11:10 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"nfl", "phrase"=>{"handle"=>"nfl"}}
+Unpermitted parameter: :handle
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "phrases" ("created_on") VALUES ($1) RETURNING "id"[0m  [["created_on", "2017-08-23 16:11:11.276318"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 599ms (Views: 0.4ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:12:01 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>14, "handle"=>"nfl", "content"=>nil, "created_on"=>"2017-08-23T16:11:11.276Z", "phrase"=>{"id"=>14, "handle"=>"nfl", "content"=>nil, "created_on"=>"2017-08-23T16:11:11.276Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("created_on") VALUES ($1) RETURNING "id"[0m  [["created_on", "2017-08-23 16:12:02.569916"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 724ms (Views: 0.8ms | ActiveRecord: 8.1ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:14:01 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>15, "handle"=>"nfl", "content"=>nil, "created_on"=>"2017-08-23T16:12:02.569Z", "phrase"=>{"id"=>15, "handle"=>"nfl", "content"=>nil, "created_on"=>"2017-08-23T16:12:02.569Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("created_on") VALUES ($1) RETURNING "id"[0m  [["created_on", "2017-08-23 16:14:03.096073"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 1297ms (Views: 0.8ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:14:42 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>16, "handle"=>"nfl", "content"=>nil, "created_on"=>"2017-08-23T16:14:03.096Z", "phrase"=>{"id"=>16, "handle"=>"nfl", "content"=>nil, "created_on"=>"2017-08-23T16:14:03.096Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("created_on") VALUES ($1) RETURNING "id"[0m  [["created_on", "2017-08-23 16:14:43.448266"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 880ms (Views: 0.7ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:15:19 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>17, "handle"=>"nfl", "content"=>nil, "created_on"=>"2017-08-23T16:14:43.448Z", "phrase"=>{"id"=>17, "handle"=>"nfl", "content"=>nil, "created_on"=>"2017-08-23T16:14:43.448Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("created_on") VALUES ($1) RETURNING "id"[0m  [["created_on", "2017-08-23 16:15:20.519057"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 846ms (Views: 1.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:15:59 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>18, "handle"=>"mlb", "content"=>nil, "created_on"=>"2017-08-23T16:15:20.519Z", "phrase"=>{"id"=>18, "handle"=>"mlb", "content"=>nil, "created_on"=>"2017-08-23T16:15:20.519Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("created_on") VALUES ($1) RETURNING "id"[0m  [["created_on", "2017-08-23 16:16:00.654270"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 691ms (Views: 0.7ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:16:36 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>19, "handle"=>"nfl", "content"=>nil, "created_on"=>"2017-08-23T16:16:00.654Z", "phrase"=>{"id"=>19, "handle"=>"nfl", "content"=>nil, "created_on"=>"2017-08-23T16:16:00.654Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "@LuSchmoo They go all the way, it's just that Fareham is the easiest way to find those services as they are the onl… https://t.co/vUmxW6R4LB"], ["created_on", "2017-08-23 16:16:37.112401"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 663ms (Views: 0.7ms | ActiveRecord: 2.2ms)
+
+
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" ORDER BY "phrases"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:17:55 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>20, "handle"=>"hat time", "content"=>"@LuSchmoo They go all the way, it's just that Fareham is the easiest way to find those services as they are the onl… https://t.co/vUmxW6R4LB", "created_on"=>"2017-08-23T16:16:37.112Z", "phrase"=>{"id"=>20, "handle"=>"hat time", "content"=>"@LuSchmoo They go all the way, it's just that Fareham is the easiest way to find those services as they are the onl… https://t.co/vUmxW6R4LB", "created_on"=>"2017-08-23T16:16:37.112Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "Massive congratulations to @djkhaled on going platinum your music is a masterpiece much love from the uk 🇬🇧"], ["created_on", "2017-08-23 16:17:56.785063"]]
+  [1m[35m (10.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 813ms (Views: 1.4ms | ActiveRecord: 18.9ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:18:26 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>21, "handle"=>"nfl", "content"=>"Massive congratulations to @djkhaled on going platinum your music is a masterpiece much love from the uk 🇬🇧", "created_on"=>"2017-08-23T16:17:56.785Z", "phrase"=>{"id"=>21, "handle"=>"nfl", "content"=>"Massive congratulations to @djkhaled on going platinum your music is a masterpiece much love from the uk 🇬🇧", "created_on"=>"2017-08-23T16:17:56.785Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "Hank Aaron: Colin Kaepernick Is Getting a ‘Raw Deal’ From NFL Owners https://t.co/EKdeHf5fxl via @thedailybeast"], ["created_on", "2017-08-23 16:18:37.331951"]]
+  [1m[35m (34.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 810ms (Views: 1.7ms | ActiveRecord: 35.4ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:19:13 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>22, "handle"=>"nfl", "content"=>"Hank Aaron: Colin Kaepernick Is Getting a ‘Raw Deal’ From NFL Owners https://t.co/EKdeHf5fxl via @thedailybeast", "created_on"=>"2017-08-23T16:18:37.331Z", "phrase"=>{"id"=>22, "handle"=>"nfl", "content"=>"Hank Aaron: Colin Kaepernick Is Getting a ‘Raw Deal’ From NFL Owners https://t.co/EKdeHf5fxl via @thedailybeast", "created_on"=>"2017-08-23T16:18:37.331Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "Patience from zhao 🔉"], ["created_on", "2017-08-23 16:19:14.718714"]]
+  [1m[35m (9.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 755ms (Views: 1.1ms | ActiveRecord: 10.2ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:20:11 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>23, "handle"=>"nfl", "content"=>"Patience from zhao 🔉", "created_on"=>"2017-08-23T16:19:14.718Z", "phrase"=>{"id"=>23, "handle"=>"nfl", "content"=>"Patience from zhao 🔉", "created_on"=>"2017-08-23T16:19:14.718Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "@_A__Dub Taking a break from cleaning the coal. https://t.co/AsZ4IjXCF1"], ["created_on", "2017-08-23 16:20:12.264168"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 738ms (Views: 0.8ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:25:01 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>24, "handle"=>"nfl", "content"=>"@_A__Dub Taking a break from cleaning the coal. https://t.co/AsZ4IjXCF1", "created_on"=>"2017-08-23T16:20:12.264Z", "phrase"=>{"id"=>24, "handle"=>"nfl", "content"=>"@_A__Dub Taking a break from cleaning the coal. https://t.co/AsZ4IjXCF1", "created_on"=>"2017-08-23T16:20:12.264Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "You're an idiot... Enjoy your visit from the Secret Service. @FBI @SecretService  https://t.co/Q8268v6CHs"], ["created_on", "2017-08-23 16:25:03.091294"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 1211ms (Views: 0.7ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:25:26 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>25, "handle"=>"nfl", "content"=>"You're an idiot... Enjoy your visit from the Secret Service. @FBI @SecretService  https://t.co/Q8268v6CHs", "created_on"=>"2017-08-23T16:25:03.091Z", "phrase"=>{"id"=>25, "handle"=>"nfl", "content"=>"You're an idiot... Enjoy your visit from the Secret Service. @FBI @SecretService  https://t.co/Q8268v6CHs", "created_on"=>"2017-08-23T16:25:03.091Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "@WholeFoods is it normal to include Worms in the hazelnuts I bought from your store? Literally worms!"], ["created_on", "2017-08-23 16:25:26.847442"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 678ms (Views: 0.8ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:25:52 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>26, "handle"=>"nfl", "content"=>"@WholeFoods is it normal to include Worms in the hazelnuts I bought from your store? Literally worms!", "created_on"=>"2017-08-23T16:25:26.847Z", "phrase"=>{"id"=>26, "handle"=>"nfl", "content"=>"@WholeFoods is it normal to include Worms in the hazelnuts I bought from your store? Literally worms!", "created_on"=>"2017-08-23T16:25:26.847Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "kerry from mythbusters nude pictures of naked families https://t.co/vnpTKGFD6Y"], ["created_on", "2017-08-23 16:25:52.964021"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 696ms (Views: 0.7ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:26:42 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>27, "handle"=>"nfl", "content"=>"kerry from mythbusters nude pictures of naked families https://t.co/vnpTKGFD6Y", "created_on"=>"2017-08-23T16:25:52.964Z", "phrase"=>{"id"=>27, "handle"=>"nfl", "content"=>"kerry from mythbusters nude pictures of naked families https://t.co/vnpTKGFD6Y", "created_on"=>"2017-08-23T16:25:52.964Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "@P_Deo_Sing @Jack_Septic_Eye Is it too much if I know exactly where this is from??😂😂"], ["created_on", "2017-08-23 16:26:43.456972"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 925ms (Views: 0.8ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:27:57 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>28, "handle"=>"nfl", "content"=>"@P_Deo_Sing @Jack_Septic_Eye Is it too much if I know exactly where this is from??😂😂", "created_on"=>"2017-08-23T16:26:43.456Z", "phrase"=>{"id"=>28, "handle"=>"nfl", "content"=>"@P_Deo_Sing @Jack_Septic_Eye Is it too much if I know exactly where this is from??😂😂", "created_on"=>"2017-08-23T16:26:43.456Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "#Seafood: get ready to mingle with visitors from across the Middle East at #SeaFex, Dubai, Sept 18-20. Visit:… https://t.co/pTjFdIWFtn"], ["created_on", "2017-08-23 16:27:57.657104"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 596ms (Views: 0.7ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:29:09 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>29, "handle"=>"..fs..  . , , .", "content"=>"#Seafood: get ready to mingle with visitors from across the Middle East at #SeaFex, Dubai, Sept 18-20. Visit:… https://t.co/pTjFdIWFtn", "created_on"=>"2017-08-23T16:27:57.657Z", "phrase"=>{"id"=>29, "handle"=>"..fs..  . , , .", "content"=>"#Seafood: get ready to mingle with visitors from across the Middle East at #SeaFex, Dubai, Sept 18-20. Visit:… https://t.co/pTjFdIWFtn", "created_on"=>"2017-08-23T16:27:57.657Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "#Seafood: get ready to mingle with visitors from across the Middle East at #SeaFex, Dubai, Sept 18-20. Visit:… https://t.co/pTjFdIWFtn"], ["created_on", "2017-08-23 16:29:09.768729"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 503ms (Views: 1.4ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:31:00 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>30, "handle"=>"nfl", "content"=>"#Seafood: get ready to mingle with visitors from across the Middle East at #SeaFex, Dubai, Sept 18-20. Visit:… https://t.co/pTjFdIWFtn", "created_on"=>"2017-08-23T16:29:09.768Z", "phrase"=>{"id"=>30, "handle"=>"nfl", "content"=>"#Seafood: get ready to mingle with visitors from across the Middle East at #SeaFex, Dubai, Sept 18-20. Visit:… https://t.co/pTjFdIWFtn", "created_on"=>"2017-08-23T16:29:09.768Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.9ms)
+
+
+  
+NameError (undefined local variable or method `client' for #<Phrase:0x007fc56a9395e0>):
+  
+app/models/phrase.rb:27:in `twitter'
+app/models/phrase.rb:29:in `twitter_query'
+app/models/phrase.rb:8:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:19:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:31:33 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>30, "handle"=>"nfl", "content"=>"#Seafood: get ready to mingle with visitors from across the Middle East at #SeaFex, Dubai, Sept 18-20. Visit:… https://t.co/pTjFdIWFtn", "created_on"=>"2017-08-23T16:29:09.768Z", "phrase"=>{"id"=>30, "handle"=>"nfl", "content"=>"#Seafood: get ready to mingle with visitors from across the Middle East at #SeaFex, Dubai, Sept 18-20. Visit:… https://t.co/pTjFdIWFtn", "created_on"=>"2017-08-23T16:29:09.768Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "#Seafood: get ready to mingle with visitors from across the Middle East at #SeaFex, Dubai, Sept 18-20. Visit:… https://t.co/pTjFdIWFtn"], ["created_on", "2017-08-23 16:31:34.243709"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 572ms (Views: 0.9ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:32:05 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>31, "handle"=>"nfl", "content"=>"#Seafood: get ready to mingle with visitors from across the Middle East at #SeaFex, Dubai, Sept 18-20. Visit:… https://t.co/pTjFdIWFtn", "created_on"=>"2017-08-23T16:31:34.243Z", "phrase"=>{"id"=>31, "handle"=>"nfl", "content"=>"#Seafood: get ready to mingle with visitors from across the Middle East at #SeaFex, Dubai, Sept 18-20. Visit:… https://t.co/pTjFdIWFtn", "created_on"=>"2017-08-23T16:31:34.243Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "#Seafood: get ready to mingle with visitors from across the Middle East at #SeaFex, Dubai, Sept 18-20. Visit:… https://t.co/pTjFdIWFtn"], ["created_on", "2017-08-23 16:32:05.984329"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 527ms (Views: 0.7ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:32:16 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"nfl", "phrase"=>{"handle"=>"nfl"}}
+Unpermitted parameter: :handle
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.1ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "#Seafood: get ready to mingle with visitors from across the Middle East at #SeaFex, Dubai, Sept 18-20. Visit:… https://t.co/pTjFdIWFtn"], ["created_on", "2017-08-23 16:32:17.367569"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 415ms (Views: 1.0ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:33:13 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"nfl", "phrase"=>{"handle"=>"nfl"}}
+Unpermitted parameter: :handle
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "#Seafood: get ready to mingle with visitors from across the Middle East at #SeaFex, Dubai, Sept 18-20. Visit:… https://t.co/pTjFdIWFtn"], ["created_on", "2017-08-23 16:33:14.800893"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 699ms (Views: 1.1ms | ActiveRecord: 8.4ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:34:31 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>34, "handle"=>"nfl", "content"=>"#Seafood: get ready to mingle with visitors from across the Middle East at #SeaFex, Dubai, Sept 18-20. Visit:… https://t.co/pTjFdIWFtn", "created_on"=>"2017-08-23T16:33:14.800Z", "phrase"=>{"id"=>34, "handle"=>"nfl", "content"=>"#Seafood: get ready to mingle with visitors from across the Middle East at #SeaFex, Dubai, Sept 18-20. Visit:… https://t.co/pTjFdIWFtn", "created_on"=>"2017-08-23T16:33:14.800Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "#Seafood: get ready to mingle with visitors from across the Middle East at #SeaFex, Dubai, Sept 18-20. Visit:… https://t.co/pTjFdIWFtn"], ["created_on", "2017-08-23 16:34:41.651244"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 580ms (Views: 0.8ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:35:25 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>35, "handle"=>"nfl", "content"=>"#Seafood: get ready to mingle with visitors from across the Middle East at #SeaFex, Dubai, Sept 18-20. Visit:… https://t.co/pTjFdIWFtn", "created_on"=>"2017-08-23T16:34:41.651Z", "phrase"=>{"id"=>35, "handle"=>"nfl", "content"=>"#Seafood: get ready to mingle with visitors from across the Middle East at #SeaFex, Dubai, Sept 18-20. Visit:… https://t.co/pTjFdIWFtn", "created_on"=>"2017-08-23T16:34:41.651Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "x"], ["created_on", "2017-08-23 16:35:25.180200"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 10ms (Views: 1.0ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:35:37 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>36, "handle"=>"nfl", "content"=>"x", "created_on"=>"2017-08-23T16:35:25.180Z", "phrase"=>{"id"=>36, "handle"=>"nfl", "content"=>"x", "created_on"=>"2017-08-23T16:35:25.180Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "#Seafood: get ready to mingle with visitors from across the Middle East at #SeaFex, Dubai, Sept 18-20. Visit:… https://t.co/pTjFdIWFtn"], ["created_on", "2017-08-23 16:35:37.758871"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 688ms (Views: 0.8ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:35:53 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>37, "handle"=>"nfl", "content"=>"#Seafood: get ready to mingle with visitors from across the Middle East at #SeaFex, Dubai, Sept 18-20. Visit:… https://t.co/pTjFdIWFtn", "created_on"=>"2017-08-23T16:35:37.758Z", "phrase"=>{"id"=>37, "handle"=>"nfl", "content"=>"#Seafood: get ready to mingle with visitors from across the Middle East at #SeaFex, Dubai, Sept 18-20. Visit:… https://t.co/pTjFdIWFtn", "created_on"=>"2017-08-23T16:35:37.758Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "@hiltonjohani @VegaSchool Will most definitely do so, you can expect to hear from me in the week."], ["created_on", "2017-08-23 16:35:54.179691"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 669ms (Views: 0.7ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:36:05 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>38, "handle"=>"nfl", "content"=>"@hiltonjohani @VegaSchool Will most definitely do so, you can expect to hear from me in the week.", "created_on"=>"2017-08-23T16:35:54.179Z", "phrase"=>{"id"=>38, "handle"=>"nfl", "content"=>"@hiltonjohani @VegaSchool Will most definitely do so, you can expect to hear from me in the week.", "created_on"=>"2017-08-23T16:35:54.179Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "#Seafood: get ready to mingle with visitors from across the Middle East at #SeaFex, Dubai, Sept 18-20. Visit:… https://t.co/pTjFdIWFtn"], ["created_on", "2017-08-23 16:36:06.268158"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 476ms (Views: 1.8ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:36:19 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>39, "handle"=>"nfl", "content"=>"#Seafood: get ready to mingle with visitors from across the Middle East at #SeaFex, Dubai, Sept 18-20. Visit:… https://t.co/pTjFdIWFtn", "created_on"=>"2017-08-23T16:36:06.268Z", "phrase"=>{"id"=>39, "handle"=>"nfl", "content"=>"#Seafood: get ready to mingle with visitors from across the Middle East at #SeaFex, Dubai, Sept 18-20. Visit:… https://t.co/pTjFdIWFtn", "created_on"=>"2017-08-23T16:36:06.268Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "MBA: Mortgage apps fell 0.5% from one week earlier; refis off 0.3%, purchases down 2%. Refi share up to 48.7% from 47.8%. #mortgage"], ["created_on", "2017-08-23 16:36:19.901124"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 679ms (Views: 0.8ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:38:20 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>40, "handle"=>"nfl", "content"=>"MBA: Mortgage apps fell 0.5% from one week earlier; refis off 0.3%, purchases down 2%. Refi share up to 48.7% from 47.8%. #mortgage", "created_on"=>"2017-08-23T16:36:19.901Z", "phrase"=>{"id"=>40, "handle"=>"nfl", "content"=>"MBA: Mortgage apps fell 0.5% from one week earlier; refis off 0.3%, purchases down 2%. Refi share up to 48.7% from 47.8%. #mortgage", "created_on"=>"2017-08-23T16:36:19.901Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "Senior SEC Reporting Accountant - CFS Inc. - Chicago, IL https://t.co/NcddeNtpNJ Jobs Chicago"], ["created_on", "2017-08-23 16:38:20.718602"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 670ms (Views: 0.7ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:38:38 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>41, "handle"=>"nfl", "content"=>"Senior SEC Reporting Accountant - CFS Inc. - Chicago, IL https://t.co/NcddeNtpNJ Jobs Chicago", "created_on"=>"2017-08-23T16:38:20.718Z", "phrase"=>{"id"=>41, "handle"=>"nfl", "content"=>"Senior SEC Reporting Accountant - CFS Inc. - Chicago, IL https://t.co/NcddeNtpNJ Jobs Chicago", "created_on"=>"2017-08-23T16:38:20.718Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "Note 8. Back to school gift from bae 👅👐🏾"], ["created_on", "2017-08-23 16:38:38.747965"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 689ms (Views: 0.9ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:38:54 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>42, "handle"=>"nfl", "content"=>"Note 8. Back to school gift from bae 👅👐🏾", "created_on"=>"2017-08-23T16:38:38.747Z", "phrase"=>{"id"=>42, "handle"=>"nfl", "content"=>"Note 8. Back to school gift from bae 👅👐🏾", "created_on"=>"2017-08-23T16:38:38.747Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "Protesters, paid to hate, break the law and foment violence are surprised when LE do their job. No love from left. \nhttps://t.co/YB7taYdzAH"], ["created_on", "2017-08-23 16:38:55.028976"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 652ms (Views: 0.7ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:40:09 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>43, "handle"=>"nfl", "content"=>"Protesters, paid to hate, break the law and foment violence are surprised when LE do their job. No love from left. \nhttps://t.co/YB7taYdzAH", "created_on"=>"2017-08-23T16:38:55.028Z", "phrase"=>{"id"=>43, "handle"=>"nfl", "content"=>"Protesters, paid to hate, break the law and foment violence are surprised when LE do their job. No love from left. \nhttps://t.co/YB7taYdzAH", "created_on"=>"2017-08-23T16:38:55.028Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "Brock Osweiler won't play in Browns third preseason game: https://t.co/mUv41YDMJT (via @TomPelissero) #CLEvsTB https://t.co/5SmR4CYHhB"], ["created_on", "2017-08-23 16:40:10.572880"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 600ms (Views: 0.8ms | ActiveRecord: 2.3ms)
+
+
+  [1m[36mPhrase Load (3.9ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" ORDER BY "phrases"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 12:53:14 -0400
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"nfl", "phrase"=>{"handle"=>"nfl"}}
+Unpermitted parameter: :handle
+  [1m[35m (9.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (389.6ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "Death Toll From Akita Apartment Building Blaze Rises To Five https://t.co/hD0Q79emSd"], ["created_on", "2017-08-23 16:53:15.742414"]]
+  [1m[35m (83.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 1250ms (Views: 9.1ms | ActiveRecord: 494.4ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 13:03:49 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>45, "handle"=>"nfl", "content"=>"Death Toll From Akita Apartment Building Blaze Rises To Five https://t.co/hD0Q79emSd", "created_on"=>"2017-08-23T16:53:15.742Z", "phrase"=>{"id"=>45, "handle"=>"nfl", "content"=>"Death Toll From Akita Apartment Building Blaze Rises To Five https://t.co/hD0Q79emSd", "created_on"=>"2017-08-23T16:53:15.742Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "@MayorStanton , maybe YOU can learn from @dougducey ! https://t.co/89gXdihEmx"], ["created_on", "2017-08-23 17:03:59.963936"]]
+  [1m[35m (39.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 732ms (Views: 0.8ms | ActiveRecord: 40.5ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 13:04:18 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"nfl", "phrase"=>{"handle"=>"nfl"}}
+Unpermitted parameter: :handle
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "#Fallbrook #OpenHouse on Sunday from 10am-4pm. The home is staged to sell and shows beautifully! Schedule a private… https://t.co/EObfoFYN9u"], ["created_on", "2017-08-23 17:04:19.118236"]]
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 664ms (Views: 0.6ms | ActiveRecord: 6.9ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 13:04:37 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"x  x  2 a.; ;as", "phrase"=>{"handle"=>"x  x  2 a.; ;as"}}
+Unpermitted parameter: :handle
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "@UmaruSanda Hahahahahaha.... Enjoy the view from the front.😂😂"], ["created_on", "2017-08-23 17:04:37.953805"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 811ms (Views: 0.5ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 13:05:22 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"jjj", "phrase"=>{"handle"=>"jjj"}}
+Unpermitted parameter: :handle
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "🔒⬇️ defenders?\n\nRanking the Top 5 DBs in college football: https://t.co/yuZqLYjAho (via @BuckyBrooks) https://t.co/3vwr6FMvcP"], ["created_on", "2017-08-23 17:05:23.497548"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 508ms (Views: 1.1ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 13:06:26 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"nfl", "phrase"=>{"handle"=>"nfl"}}
+Unpermitted parameter: :handle
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "x"], ["created_on", "2017-08-23 17:06:27.027230"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 271ms (Views: 1.4ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 13:07:00 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"id"=>50, "handle"=>"nfl", "content"=>"x", "created_on"=>"2017-08-23T17:06:27.027Z", "phrase"=>{"id"=>50, "handle"=>"nfl", "content"=>"x", "created_on"=>"2017-08-23T17:06:27.027Z"}}
+Unpermitted parameters: :id, :handle, :created_on
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "Just in case people think I am Rob-Biased, I give you @Billy_Moran from Once Upon A Canyon Night. https://t.co/42gmx3yRc5"], ["created_on", "2017-08-23 17:07:01.602587"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 751ms (Views: 0.8ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 13:07:41 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"nfl", "phrase"=>{"handle"=>"nfl"}}
+Unpermitted parameter: :handle
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "x"], ["created_on", "2017-08-23 17:07:41.574734"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 305ms (Views: 1.1ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 13:08:29 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"nfl", "phrase"=>{"handle"=>"nfl"}}
+Unpermitted parameter: :handle
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "@ellewcee OR you should never come back from it"], ["created_on", "2017-08-23 17:08:30.300690"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 892ms (Views: 0.8ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 13:26:11 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"nfl", "phrase"=>{"handle"=>"nfl"}}
+Unpermitted parameter: :handle
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "@ACmannftw where did you order it from? The factory in china????"], ["created_on", "2017-08-23 17:26:12.724602"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 811ms (Views: 1.6ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 13:26:53 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"nfl", "phrase"=>{"handle"=>"nfl"}}
+Unpermitted parameter: :handle
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "Got the \"Welcome Back\" letter from my daughter's HS principal.. wasn't she just starting Kindergarten yesterday? https://t.co/BZtULBSM0M"], ["created_on", "2017-08-23 17:26:53.692615"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 627ms (Views: 0.8ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 13:27:14 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"nfl", "phrase"=>{"handle"=>"nfl"}}
+Unpermitted parameter: :handle
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.1ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "@taxmarch Who defines what is rich? I've never gotten a job from a poor person. May Atlas soon shrug and wake up al… https://t.co/z6Xx1A5uaq"], ["created_on", "2017-08-23 17:27:15.213280"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 664ms (Views: 0.8ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 13:27:30 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"nfl", "phrase"=>{"handle"=>"nfl"}}
+Unpermitted parameter: :handle
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.9ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 2.1ms)
+
+
+  
+NoMethodError (undefined method `json' for #<Phrase id: nil, handle: nil, content: nil, created_on: nil>):
+  
+app/models/phrase.rb:18:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:19:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 13:27:47 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"nfl", "phrase"=>{"handle"=>"nfl"}}
+Unpermitted parameter: :handle
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "Good article about cell tower license agreements from real estate owner's perspective. https://t.co/lJY8yKysAI"], ["created_on", "2017-08-23 17:27:48.370711"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 599ms (Views: 0.8ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 13:28:46 -0400
+  
+SyntaxError (/Users/CharlesCox/wdi/projects/project3/TWiCS---Server-Side/app/controllers/phrases_controller.rb:28: syntax error, unexpected ':', expecting ')'
+ire(:phrase).permit(:content :handle)
+                              ^):
+  
+app/controllers/phrases_controller.rb:28: syntax error, unexpected ':', expecting ')'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 13:29:01 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"nfl", "phrase"=>{"handle"=>"nfl"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "phrases" ("handle", "content", "created_on") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "nfl"], ["content", "🔒⬇️ defenders?\n\nRanking the Top 5 DBs in college football: https://t.co/yuZqLYjAho (via @BuckyBrooks) https://t.co/3vwr6FMvcP"], ["created_on", "2017-08-23 17:29:02.378684"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 716ms (Views: 1.0ms | ActiveRecord: 8.2ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 13:29:50 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"mlb", "phrase"=>{"handle"=>"mlb"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("handle", "content", "created_on") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "mlb"], ["content", "Hey, two feet is two feet. 😂\n\n@TheJudge44's HR: https://t.co/nRn6wNoXdP\n@ElGarySanchez's HR: https://t.co/jibWoPAvIa https://t.co/RbRhZIlTbM"], ["created_on", "2017-08-23 17:29:51.432562"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 485ms (Views: 0.7ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 13:30:33 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>". .. f /", "phrase"=>{"handle"=>". .. f /"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("handle", "content", "created_on") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", ". .. f /"], ["content", "Tehiyah Day School @ 10:30 Temp: 61°F↑ Rel. humidity 91%↓ 29.6(mmHg)→ Wind 3→ from SW. Rain for today: 0.00"], ["created_on", "2017-08-23 17:30:34.133990"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 554ms (Views: 0.8ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 13:31:00 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>". .. f /", "phrase"=>{"handle"=>". .. f /"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "phrases" ("handle", "content", "created_on") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", ". .. f /"], ["content", "We're happy to share that the SKULL HACKER F&amp;F card is the winner from our vote earlier this week! Thanks for votin… https://t.co/w160YMn8aI"], ["created_on", "2017-08-23 17:31:01.268197"]]
+  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 624ms (Views: 0.7ms | ActiveRecord: 9.3ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 13:34:14 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"nfl", "phrase"=>{"handle"=>"nfl"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 329ms (ActiveRecord: 5.4ms)
+
+
+  
+NoMethodError (undefined method `x!' for #<Phrase id: nil, handle: "nfl", content: nil, created_on: nil>):
+  
+app/models/phrase.rb:16:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:19:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 13:34:41 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"nfl", "phrase"=>{"handle"=>"nfl"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("handle", "content", "created_on") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "nfl"], ["content", "No time to do your homework? @NFLfantasy has you covered.\n\n2017 Fantasy Football Guide: https://t.co/Rn7xAKH6fn (vi… https://t.co/tER1VmMjqy"], ["created_on", "2017-08-23 17:34:42.562923"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 810ms (Views: 0.8ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 13:34:58 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>",, sfdf fuck", "phrase"=>{"handle"=>",, sfdf fuck"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 200ms (ActiveRecord: 0.5ms)
+
+
+  
+Twitter::Error::NotFound (User not found.):
+  
+app/models/phrase.rb:15:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:19:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 13:36:02 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"kind // ..", "phrase"=>{"handle"=>"kind // .."}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 241ms (ActiveRecord: 5.7ms)
+
+
+  
+Twitter::Error::NotFound (User not found.):
+  
+app/models/phrase.rb:16:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:19:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 13:36:29 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>".. s,. ,", "phrase"=>{"handle"=>".. s,. ,"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 213ms (ActiveRecord: 0.6ms)
+
+
+  
+Twitter::Error::NotFound (User not found.):
+  
+app/models/phrase.rb:16:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:19:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 13:38:31 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"nfl", "phrase"=>{"handle"=>"nfl"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "phrases" ("handle", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["handle", "nfl"], ["created_on", "2017-08-23 17:38:32.041396"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 281ms (Views: 1.6ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 13:38:45 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"... ///", "phrase"=>{"handle"=>"... ///"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 210ms (ActiveRecord: 0.6ms)
+
+
+  
+Twitter::Error::NotFound (User not found.):
+  
+app/models/phrase.rb:16:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:19:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 14:15:11 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"nfl", "phrase"=>{"handle"=>"nfl"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "phrases" ("handle", "content", "created_on") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "nfl"], ["content", "Jay Cutler.\n@TheJaylonSmith.\nAnd MORE.\n\nNFL Numbers: Preseason Week 2 Edition https://t.co/k9kAtasb06"], ["created_on", "2017-08-23 18:15:12.788462"]]
+  [1m[35m (33.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 792ms (Views: 1.0ms | ActiveRecord: 41.0ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 14:21:33 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"nfl", "phrase"=>{"handle"=>"nfl"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("handle", "content", "created_on") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "nfl"], ["content", "Jay Cutler.\n@TheJaylonSmith.\nAnd MORE.\n\nNFL Numbers: Preseason Week 2 Edition https://t.co/k9kAtasb06"], ["created_on", "2017-08-23 18:21:43.718807"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 598ms (Views: 0.7ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 14:29:56 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"nfl", "phrase"=>{"handle"=>"nfl"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("handle", "content", "created_on") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "nfl"], ["content", "Jay Cutler.\n@TheJaylonSmith.\nAnd MORE.\n\nNFL Numbers: Preseason Week 2 Edition https://t.co/k9kAtasb06"], ["created_on", "2017-08-23 18:29:57.655637"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 653ms (Views: 0.8ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 14:31:04 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"nfl", "phrase"=>{"handle"=>"nfl"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "phrases" ("handle", "content", "created_on") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "nfl"], ["content", "Is Anquan Boldin heading to the @ProFootballHOF? https://t.co/s65sxVo3aR https://t.co/MwpCcBt2aP"], ["created_on", "2017-08-23 18:31:04.980300"]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 1166ms (ActiveRecord: 1.3ms)
+
+
+  
+NoMethodError (undefined method `farm' for nil:NilClass):
+  
+app/models/phrase.rb:74:in `block in query_flickr'
+app/models/phrase.rb:69:in `each'
+app/models/phrase.rb:69:in `query_flickr'
+app/models/phrase.rb:38:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:19:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 14:31:53 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"nfl", "phrase"=>{"handle"=>"nfl"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("handle", "content", "created_on") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "nfl"], ["content", "Is Anquan Boldin heading to the @ProFootballHOF? https://t.co/s65sxVo3aR https://t.co/MwpCcBt2aP"], ["created_on", "2017-08-23 18:31:54.645195"]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 1132ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `farm' for nil:NilClass):
+  
+app/models/phrase.rb:74:in `block in query_flickr'
+app/models/phrase.rb:69:in `each'
+app/models/phrase.rb:69:in `query_flickr'
+app/models/phrase.rb:38:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:19:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 14:35:10 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"nfl", "phrase"=>{"handle"=>"nfl"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "phrases" ("handle", "content", "created_on") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "nfl"], ["content", "Is Anquan Boldin heading to the @ProFootballHOF? https://t.co/s65sxVo3aR https://t.co/MwpCcBt2aP"], ["created_on", "2017-08-23 18:35:11.386161"]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 1135ms (ActiveRecord: 1.2ms)
+
+
+  
+NoMethodError (undefined method `farm' for nil:NilClass):
+  
+app/models/phrase.rb:75:in `block in query_flickr'
+app/models/phrase.rb:70:in `each'
+app/models/phrase.rb:70:in `query_flickr'
+app/models/phrase.rb:38:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:19:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 14:35:31 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"nfl", "phrase"=>{"handle"=>"nfl"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("handle", "content", "created_on") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "nfl"], ["content", "Is Anquan Boldin heading to the @ProFootballHOF? https://t.co/s65sxVo3aR https://t.co/MwpCcBt2aP"], ["created_on", "2017-08-23 18:35:32.264272"]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 2040ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `farm' for nil:NilClass):
+  
+app/models/phrase.rb:74:in `block in query_flickr'
+app/models/phrase.rb:70:in `each'
+app/models/phrase.rb:70:in `query_flickr'
+app/models/phrase.rb:38:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:19:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 14:36:29 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"nfl", "phrase"=>{"handle"=>"nfl"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("handle", "content", "created_on") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "nfl"], ["content", "Is Anquan Boldin heading to the @ProFootballHOF? https://t.co/s65sxVo3aR https://t.co/MwpCcBt2aP"], ["created_on", "2017-08-23 18:36:30.524260"]]
+  [1m[36mPhrase Load (4.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  [1m[35mSQL (6.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4403/36591525482_7faeba094c.jpg"], ["tags", "Is Anquan Boldin"], ["created_on", "2017-08-23 18:36:30.945881"], ["phrase_id", 71]]
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4403/36591525482_7faeba094c.jpg"], ["tags", "@ProFootballHOF"], ["created_on", "2017-08-23 18:36:31.314009"], ["phrase_id", 71]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 1585ms (Views: 1.0ms | ActiveRecord: 19.7ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 14:53:13 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"nfl", "phrase"=>{"handle"=>"nfl"}}
+  [1m[35m (5.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "phrases" ("handle", "content", "created_on") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "nfl"], ["content", "Is Anquan Boldin heading to the @ProFootballHOF? https://t.co/s65sxVo3aR https://t.co/MwpCcBt2aP"], ["created_on", "2017-08-23 18:53:14.592206"]]
+  [1m[36mPhrase Load (0.5ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4364/36364991260_13e15ab94d.jpg"], ["tags", "Is"], ["created_on", "2017-08-23 18:53:15.168147"], ["phrase_id", 72]]
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm3.staticflickr.com/2884/11049655925_742490c98c.jpg"], ["tags", "Anquan"], ["created_on", "2017-08-23 18:53:15.773457"], ["phrase_id", 72]]
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm8.staticflickr.com/7418/12915826833_f42002dc92.jpg"], ["tags", "Boldin"], ["created_on", "2017-08-23 18:53:16.385005"], ["phrase_id", 72]]
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm9.staticflickr.com/8009/7460495580_e6eaf88dc3.jpg"], ["tags", "@ProFootballHOF"], ["created_on", "2017-08-23 18:53:17.099543"], ["phrase_id", 72]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 3511ms (Views: 1.1ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/phrases" for 127.0.0.1 at 2017-08-23 14:53:43 -0400
+Processing by PhrasesController#index as HTML
+  [1m[36mPhrase Load (2.1ms)[0m  [1m[34mSELECT "phrases".* FROM "phrases"[0m
+  [1m[36mPhoto Load (1.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 1]]
+  [1m[36mPhoto Load (8.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 2]]
+  [1m[36mPhoto Load (1.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 3]]
+  [1m[36mPhoto Load (3.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 4]]
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 5]]
+  [1m[36mPhoto Load (15.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 6]]
+  [1m[36mPhoto Load (3.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 7]]
+  [1m[36mPhoto Load (10.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 8]]
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 9]]
+  [1m[36mPhoto Load (6.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 10]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 11]]
+  [1m[36mPhoto Load (2.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 12]]
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 13]]
+  [1m[36mPhoto Load (6.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 14]]
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 15]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 16]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 17]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 18]]
+  [1m[36mPhoto Load (11.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 19]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 20]]
+  [1m[36mPhoto Load (2.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 21]]
+  [1m[36mPhoto Load (9.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 22]]
+  [1m[36mPhoto Load (6.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 23]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 24]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 25]]
+  [1m[36mPhoto Load (1.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 26]]
+  [1m[36mPhoto Load (13.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 27]]
+  [1m[36mPhoto Load (2.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 28]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 29]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 30]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 31]]
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 32]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 33]]
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 34]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 35]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 36]]
+  [1m[36mPhoto Load (2.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 37]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 38]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 39]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 40]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 41]]
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 42]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 43]]
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 44]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 45]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 46]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 47]]
+  [1m[36mPhoto Load (3.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 48]]
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 49]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 50]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 51]]
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 52]]
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 53]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 54]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 55]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 56]]
+  [1m[36mPhoto Load (1.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 57]]
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 58]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 59]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 60]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 61]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 62]]
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 63]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 64]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 65]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 66]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 71]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 72]]
+Completed 200 OK in 429ms (Views: 293.6ms | ActiveRecord: 135.3ms)
+
+
+Started GET "/phrases" for 127.0.0.1 at 2017-08-23 14:56:04 -0400
+Processing by PhrasesController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/CharlesCox/wdi/projects/project3/TWiCS---Server-Side/app/models/phrase.rb:39: formal argument cannot be an instance variable
+ def query_flickr (@phrase_arr)
+                              ^):
+  
+app/models/phrase.rb:39: formal argument cannot be an instance variable
+app/controllers/phrases_controller.rb:7:in `index'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 14:56:12 -0400
+  
+SyntaxError (/Users/CharlesCox/wdi/projects/project3/TWiCS---Server-Side/app/models/phrase.rb:39: formal argument cannot be an instance variable
+ def query_flickr (@phrase_arr)
+                              ^):
+  
+app/models/phrase.rb:39: formal argument cannot be an instance variable
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 14:56:36 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"nfl", "phrase"=>{"handle"=>"nfl"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "phrases" ("handle", "content", "created_on") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "nfl"], ["content", "Is Anquan Boldin heading to the @ProFootballHOF? https://t.co/s65sxVo3aR https://t.co/MwpCcBt2aP"], ["created_on", "2017-08-23 18:56:37.330336"]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 660ms (ActiveRecord: 8.4ms)
+
+
+  
+NoMethodError (undefined method `query_flickr' for #<Phrase:0x007ffc2f010670>):
+  
+app/models/phrase.rb:38:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:19:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 14:57:08 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"nfl", "phrase"=>{"handle"=>"nfl"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("handle", "content", "created_on") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "nfl"], ["content", "Is Anquan Boldin heading to the @ProFootballHOF? https://t.co/s65sxVo3aR https://t.co/MwpCcBt2aP"], ["created_on", "2017-08-23 18:57:08.766613"]]
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4364/36364991260_13e15ab94d.jpg"], ["tags", "Is"], ["created_on", "2017-08-23 18:57:09.415161"], ["phrase_id", 74]]
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm3.staticflickr.com/2884/11049655925_742490c98c.jpg"], ["tags", "Anquan"], ["created_on", "2017-08-23 18:57:09.851289"], ["phrase_id", 74]]
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm8.staticflickr.com/7418/12915826833_f42002dc92.jpg"], ["tags", "Boldin"], ["created_on", "2017-08-23 18:57:10.232563"], ["phrase_id", 74]]
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm9.staticflickr.com/8009/7460495580_e6eaf88dc3.jpg"], ["tags", "@ProFootballHOF"], ["created_on", "2017-08-23 18:57:10.569340"], ["phrase_id", 74]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 2464ms (Views: 0.8ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/phrases/74" for 127.0.0.1 at 2017-08-23 14:57:10 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"74"}
+  [1m[36mPhrase Load (0.9ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 74]]
+Completed 200 OK in 45ms (Views: 28.7ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 14:57:48 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"readdonaldtrump", "phrase"=>{"handle"=>"readdonaldtrump"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("handle", "content", "created_on") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "readdonaldtrump"], ["content", "x"], ["created_on", "2017-08-23 18:57:49.390968"]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 407ms (Views: 0.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/phrases/75" for 127.0.0.1 at 2017-08-23 14:57:49 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"75"}
+  [1m[36mPhrase Load (11.5ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 75]]
+Completed 200 OK in 34ms (Views: 10.1ms | ActiveRecord: 12.1ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 14:57:57 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"espn", "phrase"=>{"handle"=>"espn"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("handle", "content", "created_on") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "espn"], ["content", "Will Liverpool's Champions League journey continue?\n\nWatch the Reds vs. Hoffenheim in Spanish on Deportes or here:… https://t.co/wJETWkGlNm"], ["created_on", "2017-08-23 18:57:58.444068"]]
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4353/36621188061_ae170b8f6a.jpg"], ["tags", "Will"], ["created_on", "2017-08-23 18:57:59.019681"], ["phrase_id", 76]]
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4429/36591941782_34040a30df.jpg"], ["tags", "Liverpool"], ["created_on", "2017-08-23 18:57:59.391015"], ["phrase_id", 76]]
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4422/36706347466_ce74ea965a.jpg"], ["tags", "Champions"], ["created_on", "2017-08-23 18:57:59.935717"], ["phrase_id", 76]]
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4354/36364981010_2a2777a8eb.jpg"], ["tags", "League"], ["created_on", "2017-08-23 18:58:00.362947"], ["phrase_id", 76]]
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4358/36760954525_f247ab249a.jpg"], ["tags", "journey"], ["created_on", "2017-08-23 18:58:00.962939"], ["phrase_id", 76]]
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4348/36591970172_6283653e7e.jpg"], ["tags", "Watch"], ["created_on", "2017-08-23 18:58:01.479639"], ["phrase_id", 76]]
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4341/35927144894_fe3ea53eab.jpg"], ["tags", "Reds"], ["created_on", "2017-08-23 18:58:02.297025"], ["phrase_id", 76]]
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4368/35942746933_a89151e4be.jpg"], ["tags", "Hoffenheim"], ["created_on", "2017-08-23 18:58:02.805849"], ["phrase_id", 76]]
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4339/36759396165_fcd9b0fb51.jpg"], ["tags", "Deportes"], ["created_on", "2017-08-23 18:58:03.207052"], ["phrase_id", 76]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 5332ms (Views: 0.4ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/phrases/76" for 127.0.0.1 at 2017-08-23 14:58:03 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"76"}
+  [1m[36mPhrase Load (8.8ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[36mPhoto Load (3.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 76]]
+Completed 200 OK in 29ms (Views: 12.1ms | ActiveRecord: 12.0ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 14:58:53 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"kadkins4", "phrase"=>{"handle"=>"kadkins4"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("handle", "content", "created_on") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "kadkins4"], ["content", "x"], ["created_on", "2017-08-23 18:58:53.697874"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 384ms (Views: 0.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/phrases/77" for 127.0.0.1 at 2017-08-23 14:58:53 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"77"}
+  [1m[36mPhrase Load (5.9ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 77]]
+Completed 200 OK in 34ms (Views: 25.9ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 14:59:07 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"handle"=>"andlizsays", "phrase"=>{"handle"=>"andlizsays"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("handle", "content", "created_on") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "andlizsays"], ["content", "This fucking show #ThronesYall"], ["created_on", "2017-08-23 18:59:07.571495"]]
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4337/36762045645_59c69d391b.jpg"], ["tags", "show"], ["created_on", "2017-08-23 18:59:08.037023"], ["phrase_id", 78]]
+  [1m[36mPhrase Load (0.4ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4424/36396210416_47fe2e2d5e.jpg"], ["tags", "ThronesYall"], ["created_on", "2017-08-23 18:59:08.324902"], ["phrase_id", 78]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 1260ms (Views: 0.5ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/phrases/78" for 127.0.0.1 at 2017-08-23 14:59:08 -0400
+Processing by PhrasesController#show as HTML
+  Parameters: {"id"=>"78"}
+  [1m[36mPhrase Load (3.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."phrase_id" = $1[0m  [["phrase_id", 78]]
+Completed 200 OK in 17ms (Views: 9.3ms | ActiveRecord: 4.1ms)
+
+
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 15:00:48 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"realDonaldTrump", "phrase"=>{"content"=>"realDonaldTrump"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "Here is how to watch all the action from Pittsburgh this weekend- 📷: @MotoAmerica1 - #PartsUnlimited… https://t.co/0xBnYSJL0L"], ["created_on", "2017-08-23 19:00:49.375359"]]
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 79], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4366/36591152022_7a355c5374.jpg"], ["tags", "action"], ["created_on", "2017-08-23 19:00:49.741058"], ["phrase_id", 79]]
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 79], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4419/36622507491_87f12cb31d.jpg"], ["tags", "Pittsburgh"], ["created_on", "2017-08-23 19:00:50.236437"], ["phrase_id", 79]]
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 79], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4354/36364981010_2a2777a8eb.jpg"], ["tags", "weekend-"], ["created_on", "2017-08-23 19:00:50.751062"], ["phrase_id", 79]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 2569ms (ActiveRecord: 3.1ms)
+
+
+  
+NoMethodError (undefined method `farm' for nil:NilClass):
+  
+app/models/phrase.rb:47:in `block in query_flickr'
+app/models/phrase.rb:43:in `each'
+app/models/phrase.rb:43:in `query_flickr'
+app/models/phrase.rb:38:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:19:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 15:01:54 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"realDonaldTrump", "phrase"=>{"content"=>"realDonaldTrump"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "D’Angelo Drops Three Remixes From ‘Brown Sugar’ Re-Release https://t.co/aDS9wSVTyS #FeedHubb Via #2DBZ"], ["created_on", "2017-08-23 19:01:55.237999"]]
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4175/34635063451_fac39a4433.jpg"], ["tags", "DAngelo"], ["created_on", "2017-08-23 19:01:56.093439"], ["phrase_id", 80]]
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4352/35850977903_be3146d268.jpg"], ["tags", "Remixes"], ["created_on", "2017-08-23 19:01:56.775561"], ["phrase_id", 80]]
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4344/35927347204_c9e4f38212.jpg"], ["tags", "Brown"], ["created_on", "2017-08-23 19:01:57.208009"], ["phrase_id", 80]]
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4391/36620380131_10b7b55899.jpg"], ["tags", "Sugar"], ["created_on", "2017-08-23 19:01:57.676182"], ["phrase_id", 80]]
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4416/35992036000_65609af0d2.jpg"], ["tags", "ReRelease"], ["created_on", "2017-08-23 19:01:58.153889"], ["phrase_id", 80]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 4079ms (ActiveRecord: 4.2ms)
+
+
+  
+NoMethodError (undefined method `farm' for nil:NilClass):
+  
+app/models/phrase.rb:47:in `block in query_flickr'
+app/models/phrase.rb:43:in `each'
+app/models/phrase.rb:43:in `query_flickr'
+app/models/phrase.rb:38:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:19:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 15:02:42 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"realDonaldTrump", "phrase"=>{"content"=>"realDonaldTrump"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "@Clever_Network @BretonCrackers Hello from Atlanta  #BetterWithBreton https://t.co/jdbANHBDLA"], ["created_on", "2017-08-23 19:02:43.613647"]]
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 1026ms (ActiveRecord: 2.2ms)
+
+
+  
+NoMethodError (undefined method `farm' for nil:NilClass):
+  
+app/models/phrase.rb:47:in `block in query_flickr'
+app/models/phrase.rb:43:in `each'
+app/models/phrase.rb:43:in `query_flickr'
+app/models/phrase.rb:38:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:19:in `create'
+Started POST "/phrases" for 127.0.0.1 at 2017-08-23 15:03:46 -0400
+Processing by PhrasesController#create as HTML
+  Parameters: {"content"=>"realDonaldTrump", "phrase"=>{"content"=>"realDonaldTrump"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "phrases" ("content", "created_on") VALUES ($1, $2) RETURNING "id"[0m  [["content", "Check out my broadcast from my PlayStation 4! #PS4live (Madden NFL 18)  live at https://t.co/5OwCbsSND7"], ["created_on", "2017-08-23 19:03:46.937267"]]
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4419/36618974191_a4ef5a78f0.jpg"], ["tags", "Check"], ["created_on", "2017-08-23 19:03:47.512974"], ["phrase_id", 82]]
+  [1m[36mPhrase Load (0.2ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4333/36585540222_f20b39bea1.jpg"], ["tags", "broadcast"], ["created_on", "2017-08-23 19:03:48.016660"], ["phrase_id", 82]]
+  [1m[36mPhrase Load (0.3ms)[0m  [1m[34mSELECT  "phrases".* FROM "phrases" WHERE "phrases"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "photos" ("photo_url", "tags", "created_on", "phrase_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["photo_url", "http://farm5.staticflickr.com/4424/35920467344_be310a835f.jpg"], ["tags", "PlayStation"], ["created_on", "2017-08-23 19:03:48.421963"], ["phrase_id", 82]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 2514ms (ActiveRecord: 10.3ms)
+
+
+  
+NoMethodError (undefined method `farm' for nil:NilClass):
+  
+app/models/phrase.rb:47:in `block in query_flickr'
+app/models/phrase.rb:43:in `each'
+app/models/phrase.rb:43:in `query_flickr'
+app/models/phrase.rb:38:in `block in <class:Phrase>'
+app/controllers/phrases_controller.rb:19:in `create'
