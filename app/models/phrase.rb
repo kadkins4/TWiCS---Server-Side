@@ -43,7 +43,7 @@ private
       puts x
       FlickRaw.api_key=ENV['API_KEY']
       FlickRaw.shared_secret=ENV['SHARED_KEY']
-      list = flickr.photos.search tags: x
+      list = flickr.photos.search tags: x, safe_search: 1
       farm = list.first.farm
       server = list.first.server
       id = list.first.id
