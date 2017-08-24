@@ -1,7 +1,6 @@
 class Phrase < ActiveRecord::Base
   has_many :photos
 
-
   after_create do
     tgr = EngTagger.new
     # Sample text
@@ -12,7 +11,6 @@ class Phrase < ActiveRecord::Base
     for x in nps do
       new_arr << x[0]
     end
-    puts "new_arr: #{new_arr}"
     @phrase_arr = new_arr
     # parsed_phrase = phrase_parse(self)
     query_flickr(@phrase_arr)
