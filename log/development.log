@@ -11843,3 +11843,12 @@ Processing by TweetsController#show as JSON
 Completed 200 OK in 114ms (Views: 5.4ms | ActiveRecord: 7.5ms)
 
 
+Started GET "/tweets/28.json" for 127.0.0.1 at 2017-08-24 13:10:13 -0400
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TweetsController#show as JSON
+  Parameters: {"id"=>"28"}
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.5ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."tweet_id" = $1[0m  [["tweet_id", 28]]
+Completed 200 OK in 162ms (Views: 57.4ms | ActiveRecord: 22.4ms)
+
+
