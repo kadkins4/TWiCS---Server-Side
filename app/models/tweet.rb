@@ -22,7 +22,7 @@ class Tweet < ActiveRecord::Base
     else
       rtn_tweet = 'x'
       # need to validate twitter response to make sure we get back a response
-      client.search("from:#{self.handle} -rt -link", result_type: 'recent').take(1).each do |tweet|
+      @client.search("from:#{self.handle} -rt -link", result_type: 'recent').take(1).each do |tweet|
         rtn_tweet = tweet.text
       end
       self.content = rtn_tweet

@@ -11852,3 +11852,112 @@ Processing by TweetsController#show as JSON
 Completed 200 OK in 162ms (Views: 57.4ms | ActiveRecord: 22.4ms)
 
 
+Started POST "/tweets.json" for 127.0.0.1 at 2017-08-24 13:17:04 -0400
+  [1m[35m (7.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TweetsController#create as JSON
+  Parameters: {"handle"=>"espn", "tweet"=>{"handle"=>"espn"}}
+HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 342ms (ActiveRecord: 7.1ms)
+
+
+  
+NameError (undefined local variable or method `client' for #<Tweet id: nil, handle: "espn", content: nil, created_on: nil>
+Did you mean?  @client):
+  
+app/models/tweet.rb:25:in `block in <class:Tweet>'
+app/controllers/tweets_controller.rb:16:in `create'
+Started POST "/tweets.json" for 127.0.0.1 at 2017-08-24 13:17:06 -0400
+Processing by TweetsController#create as JSON
+  Parameters: {"handle"=>"espn", "tweet"=>{"handle"=>"espn"}}
+HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 286ms (ActiveRecord: 18.7ms)
+
+
+  
+NameError (undefined local variable or method `client' for #<Tweet id: nil, handle: "espn", content: nil, created_on: nil>
+Did you mean?  @client):
+  
+app/models/tweet.rb:25:in `block in <class:Tweet>'
+app/controllers/tweets_controller.rb:16:in `create'
+Started POST "/tweets.json" for 127.0.0.1 at 2017-08-24 13:17:23 -0400
+Processing by TweetsController#create as JSON
+  Parameters: {"handle"=>"espn", "tweet"=>{"handle"=>"espn"}}
+HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 263ms (ActiveRecord: 0.9ms)
+
+
+  
+NameError (undefined local variable or method `client' for #<Tweet id: nil, handle: "espn", content: nil, created_on: nil>
+Did you mean?  @client):
+  
+app/models/tweet.rb:25:in `block in <class:Tweet>'
+app/controllers/tweets_controller.rb:16:in `create'
+Started POST "/tweets.json" for 127.0.0.1 at 2017-08-24 13:17:34 -0400
+Processing by TweetsController#create as JSON
+  Parameters: {"handle"=>"realdonaldtrump", "tweet"=>{"handle"=>"realdonaldtrump"}}
+HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 255ms (ActiveRecord: 0.3ms)
+
+
+  
+NameError (undefined local variable or method `client' for #<Tweet:0x007fe33f2d3aa0>
+Did you mean?  @client):
+  
+app/models/tweet.rb:25:in `block in <class:Tweet>'
+app/controllers/tweets_controller.rb:16:in `create'
+Started POST "/tweets.json" for 127.0.0.1 at 2017-08-24 13:18:45 -0400
+  [1m[35m (7.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TweetsController#create as JSON
+  Parameters: {"handle"=>"espn", "tweet"=>{"handle"=>"espn"}}
+HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 310ms (ActiveRecord: 8.5ms)
+
+
+  
+NameError (undefined local variable or method `client' for #<Tweet id: nil, handle: "espn", content: nil, created_on: nil>
+Did you mean?  @client):
+  
+app/models/tweet.rb:25:in `block in <class:Tweet>'
+app/controllers/tweets_controller.rb:16:in `create'
+Started POST "/tweets.json" for 127.0.0.1 at 2017-08-24 13:19:11 -0400
+Processing by TweetsController#create as JSON
+  Parameters: {"handle"=>"espn", "tweet"=>{"handle"=>"espn"}}
+HTTP Origin header (http://localhost:8080) didn't match request.base_url (http://localhost:3000)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.4ms)[0m  [1m[32mINSERT INTO "tweets" ("handle", "content", "created_on") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "espn"], ["content", "ICYMI: Sportsmanship took center stage at the LLWS, showing #RealWinnersCare in this @DoveMen video. https://t.co/9euf3sMFDC"], ["created_on", "2017-08-24 17:19:21.926624"]]
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "pictures" ("picture_url", "tags", "created_on", "tweet_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["picture_url", "http://farm9.staticflickr.com/8761/28051196490_fac7753fcd.jpg"], ["tags", "ICYMI"], ["created_on", "2017-08-24 17:19:22.843173"], ["tweet_id", 29]]
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pictures" ("picture_url", "tags", "created_on", "tweet_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["picture_url", "http://farm5.staticflickr.com/4383/36689238326_b9160f581d.jpg"], ["tags", "Sportsmanship"], ["created_on", "2017-08-24 17:19:23.654799"], ["tweet_id", 29]]
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "pictures" ("picture_url", "tags", "created_on", "tweet_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["picture_url", "http://farm5.staticflickr.com/4380/36609473732_610eee4317.jpg"], ["tags", "center"], ["created_on", "2017-08-24 17:19:24.462781"], ["tweet_id", 29]]
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pictures" ("picture_url", "tags", "created_on", "tweet_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["picture_url", "http://farm5.staticflickr.com/4357/35944733554_a9659704ce.jpg"], ["tags", "stage"], ["created_on", "2017-08-24 17:19:25.181268"], ["tweet_id", 29]]
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pictures" ("picture_url", "tags", "created_on", "tweet_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["picture_url", "http://farm5.staticflickr.com/4335/36627608616_e61928e745.jpg"], ["tags", "LLWS"], ["created_on", "2017-08-24 17:19:26.203213"], ["tweet_id", 29]]
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pictures" ("picture_url", "tags", "created_on", "tweet_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["picture_url", "http://farm7.staticflickr.com/6235/6320283859_ab6b2957f0.jpg"], ["tags", "@DoveMen"], ["created_on", "2017-08-24 17:19:27.120543"], ["tweet_id", 29]]
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "pictures" ("picture_url", "tags", "created_on", "tweet_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["picture_url", "http://farm5.staticflickr.com/4359/36732535956_1b7da6abc2.jpg"], ["tags", "video"], ["created_on", "2017-08-24 17:19:27.827695"], ["tweet_id", 29]]
+  [1m[35m (10.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 6710ms (Views: 2.6ms | ActiveRecord: 28.0ms)
+
+
+Started GET "/tweets/29.json" for 127.0.0.1 at 2017-08-24 13:19:27 -0400
+Processing by TweetsController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[36mTweet Load (0.9ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.7ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."tweet_id" = $1[0m  [["tweet_id", 29]]
+Completed 200 OK in 279ms (Views: 29.2ms | ActiveRecord: 14.3ms)
+
+
