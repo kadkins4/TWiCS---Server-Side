@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
   resources :phrases
-  # resources :photos
+  resources :tweets
 
 end
