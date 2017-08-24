@@ -64,6 +64,10 @@ GEM
     concurrent-ruby (1.0.5)
     domain_name (0.5.20170404)
       unf (>= 0.0.5, < 1.0.0)
+    dotenv (2.2.1)
+    dotenv-rails (2.2.1)
+      dotenv (= 2.2.1)
+      railties (>= 3.2, < 5.2)
     engtagger (0.2.1)
     equalizer (0.0.11)
     erubi (1.6.1)
@@ -219,6 +223,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
+  dotenv-rails
   engtagger
   flickraw
   jbuilder (~> 2.5)

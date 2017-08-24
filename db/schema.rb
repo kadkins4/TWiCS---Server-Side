@@ -32,8 +32,8 @@ ActiveRecord::Schema.define(version: 20170824143558) do
     t.string "picture_url"
     t.string "tags"
     t.datetime "created_on"
-    t.bigint "tweets_id"
-    t.index ["tweets_id"], name: "index_pictures_on_tweets_id"
+    t.bigint "tweet_id"
+    t.index ["tweet_id"], name: "index_pictures_on_tweet_id"
   end
 
   create_table "tweets", force: :cascade do |t|

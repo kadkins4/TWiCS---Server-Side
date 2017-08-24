@@ -9,17 +9,20 @@ class Tweet < ActiveRecord::Base
       config.access_token        = ENV['TWITTER_ACCESS_TOKEN']
       config.access_token_secret = ENV['TWITTER_ACCESS_TOKEN_SECRET']
     end
-    tweet = 'x'
+    rtn_tweet = 'x'
     # need to validate twitter response to make sure we get back a response
     client.search("from:#{self.handle} -rt -link", result_type: 'recent').take(1).each do |tweet|
-      tweet = tweet.text
+      rtn_tweet = tweet.text
     end
-    self.content = tweet
+    self.content = rtn_tweet
+    puts 'self'
+    puts self
+    puts self.id
     # need to validate the tweet, removing any uwanted words or symbols
     tgr = EngTagger.new
     # Sample text
     # Add part-of-speech tags to text
-    tagged = tgr.add_tags(tweet.gsub(/(?:f|ht)tps?:\/[^\s]+/, ''))
+    tagged = tgr.add_tags(rtn_tweet.gsub(/(?:f|ht)tps?:\/[^\s]+/, ''))
     nps = tgr.get_nouns(tagged)
     new_arr = []
     for x in nps do
@@ -39,7 +42,7 @@ class Tweet < ActiveRecord::Base
     for x in tweet_arr
       FlickRaw.api_key=ENV['API_KEY']
       FlickRaw.shared_secret=ENV['SHARED_KEY']
-      list = flickr.pictures.search tags: x, safe_search: 1
+      list = flickr.photos.search tags: x, safe_search: 1
       farm = list.first.farm
       server = list.first.server
       id = list.first.id
