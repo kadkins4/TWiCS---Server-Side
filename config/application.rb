@@ -24,6 +24,6 @@ module Twics
   end
 end
 
-Dotenv::Railtie.load
-#
-HOSTNAME = ENV['http://localhost:3000']
+# Dotenv::Railtie.load
+# #
+# HOSTNAME = ENV['http://localhost:3000']
