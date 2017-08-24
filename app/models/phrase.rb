@@ -5,7 +5,7 @@ class Phrase < ActiveRecord::Base
     tgr = EngTagger.new
     # Sample text
     # Add part-of-speech tags to text
-    tagged = tgr.add_tags(phrase)
+    tagged = tgr.add_tags(self.content)
     nps = tgr.get_nouns(tagged)
     new_arr = []
     for x in nps do
